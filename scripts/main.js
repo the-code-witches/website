@@ -7,21 +7,42 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 sections.forEach((s) => observer.observe(s));
 
-// Active link highlight on scroll
+// Active link highlight based on viewport center
 const links = document.querySelectorAll('.nav__link');
 const sectionMap = [...sections].reduce((acc, s) => (acc[s.id] = s, acc), {});
 
-const onScroll = () => {
-  const pos = window.scrollY + 90; // header offset
-  let current = 'hero';
+const getCurrentSectionId = () => {
+  const viewportCenter = window.scrollY + window.innerHeight / 2;
+  let bestId = 'hero';
+  let smallestDistance = Infinity;
   for (const id in sectionMap) {
     const el = sectionMap[id];
-    if (el.offsetTop <= pos) current = id;
+    const elCenter = el.offsetTop + el.offsetHeight / 2;
+    const d = Math.abs(elCenter - viewportCenter);
+    if (d < smallestDistance) { smallestDistance = d; bestId = id; }
   }
+  return bestId;
+};
+
+const onScroll = () => {
+  const current = getCurrentSectionId();
   links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
 };
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
+
+// Centered scroll on nav click
+links.forEach((a) => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const id = a.getAttribute('href')?.slice(1);
+    const target = id ? document.getElementById(id) : null;
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'auto', block: 'center' });
+    // ensure active state updates after scroll
+    setTimeout(onScroll, 0);
+  });
+});
 
 // (Optional) Language toggle scaffold
 document.querySelector('.lang-toggle')?.addEventListener('click', () => {
