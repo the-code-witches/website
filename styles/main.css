@@ -5,29 +5,18 @@
   --secondary: #5A4FCF;   /* primary logo color */
   --text: #494554;        /* dark professional text */
   --muted: #A29BB0;       /* soft muted secondary */
-  --header-blur: rgba(244,244,248,0.75); /* translucent light overlay */
 }
-* {
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: auto;
-  scroll-snap-type: y mandatory;
-}
-body {
-  margin: 0;
-  font-family:
-    "Lexend",
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    sans-serif;
-  font-weight: 300;
+*{ box-sizing: border-box; }
+html{ scroll-behavior: auto; scroll-snap-type: y mandatory; }
+body{
+  margin:0;
+  font-family: 'Lexend', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
   text-transform: lowercase;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.65;
+  line-height: 1.85;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,15 +28,13 @@ body {
 }
 
 /* Header / Nav */
-.site-header {
-  position: fixed;
-  inset: 0 0 auto 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 1.25rem;
+.site-header{
+  position:fixed; inset:0 0 auto 0;
+  display:flex; align-items:center; justify-content:space-between;
+  height: 4rem;
+  /* padding: 2rem 1.25rem; */
   backdrop-filter: saturate(140%) blur(8px);
-  background: var(--header-blur);
+  background: var(--bg);
   z-index: 1000;
 }
 .nav {
@@ -131,21 +118,9 @@ body {
 }
 
 /* Hero */
-.hero__logo {
-  width: 256px;
-  margin-bottom: 0.8rem;
-}
-.hero__title {
-  font-size: clamp(2.2rem, 4.5vw, 3rem);
-  font-weight: 600;
-  color: var(--accent);
-}
-h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2rem);
-  font-weight: 600;
-  color: var(--secondary);
-  margin: 0.25rem 0 1rem;
-}
+.hero__logo{ width: 256px; margin-bottom: .8rem; }
+.hero__title{ font-size: clamp(2.2rem, 4.5vw, 3.0rem); font-weight:600; color: var(--accent); }
+h2{ font-size: clamp(1.8rem, 3.5vw, 2.2rem); font-weight:600; color: var(--secondary); margin: .25rem 0 1rem; }
 
 /* Columns */
 .columns {
@@ -188,7 +163,7 @@ h2 {
 
 .clients-grid {
   display: grid;
-  width: 100%;
+  width: calc(100vw - 8rem);
   height: 100vh;
   /* This setup creates a 2-column grid and automatically adds rows, perfect for 4, 6, 8, etc. */
   grid-template-columns: repeat(2, 1fr);
@@ -225,11 +200,10 @@ h2 {
 
 .client-block.block1:hover, .client-block.block2:hover {
   background-color: var(--bg);
-  /*color: var(--text);*/
 }
 
 .client-block__title {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-size: clamp(1.5rem, 4vw, 2.2rem); 
   font-weight: 600;
   margin: 0;
   opacity: 1;
@@ -238,9 +212,9 @@ h2 {
 }
 
 .client-block__description {
-  font-weight: 450;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-weight: 500;
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+  line-height: 1.65;
   max-width: 40ch;
   margin: 0 auto;
   transition: opacity 0.3s ease-in-out;
@@ -251,7 +225,7 @@ h2 {
   transform: translate(-50%, -50%);
   width: 90%; /* To prevent text touching edges */
   display: none;
-  color: var(--accent);
+  color: var(--muted);
 }
 
 .client-block:hover .client-block__title {
