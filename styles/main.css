@@ -1,10 +1,11 @@
 :root {
-  --bg: #fefedf; /* clean, light professional background */
-  --accent: #ff5852; /* coral-orange rebellious accent */
-  --secondary: #5a4fcf; /* primary logo color */
-  --text: #494554; /* dark professional text */
-  --muted: #a29bb0; /* soft muted secondary */
-  --header-blur: rgba(244, 244, 248, 0.75); /* translucent light overlay */
+  --bg: #fefedf;
+  --accent: #FF5852;      /* coral-orange rebellious accent */
+  --accent-secondary: #F9F871;          
+  --secondary: #5A4FCF;   /* primary logo color */
+  --text: #494554;        /* dark professional text */
+  --muted: #A29BB0;       /* soft muted secondary */
+  --header-blur: rgba(244,244,248,0.75); /* translucent light overlay */
 }
 * {
   box-sizing: border-box;
@@ -92,15 +93,10 @@ body {
 }
 
 /* Sections */
-.section {
-  min-height: 100vh;
-  padding: 7rem 1.25rem 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 0.75rem;
+.section{
+  min-height:calc(100vh - 7rem); padding: 7rem 1.25rem 4rem;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; gap: .75rem;
   /* center each section in the viewport */
   opacity: 0;
   transform: translateY(40px);
@@ -184,57 +180,109 @@ h2 {
   color: var(--muted);
 }
 
-/* Clients */
-.clients {
+.section--clients {
+  padding: 7rem 0 0; /* Add top padding for header, remove others
+  width: 100%;
+  justify-content: flex-end; /* Align grid to the top of the section */
+}
+
+.clients-grid {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  /* This setup creates a 2-column grid and automatically adds rows, perfect for 4, 6, 8, etc. */
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr; /* Make all rows equal height */
+}
+
+.client-block {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
+  color: var(--bg); /* Light text for contrast */
+  cursor: default;
 }
-.client {
-  font-size: clamp(1.25rem, 3vw, 1.6rem);
+
+.client-block__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-block.block1 {
+  background-color: var(--secondary);
+}
+
+.client-block.block2 {
+  background-color: var(--accent-secondary);
+}
+
+.client-block.block1:hover, .client-block.block2:hover {
+  background-color: var(--bg);
+  /*color: var(--text);*/
+}
+
+.client-block__title {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
   font-weight: 600;
-  color: var(--text);
-  text-decoration: none;
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  color: var(--accent)
 }
-.client:hover {
+
+.client-block__description {
+  font-weight: 450;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 40ch;
+  margin: 0 auto;
+  transition: opacity 0.3s ease-in-out;
+  /* Position absolutely to not affect layout */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* To prevent text touching edges */
+  display: none;
   color: var(--accent);
 }
 
+.client-block:hover .client-block__title {
+  display: none;
+}
+
+.client-block:hover .client-block__description {
+  display: block;
+}
+
 /* Footer */
-.site-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: var(--muted);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  background: #0d0f12;
-  font-size: 0.875rem;
+.site-footer{
+  text-align:center; padding: 2rem 1rem; color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: .875rem;
 }
 
 /* Small screens */
-@media (max-width: 640px) {
-  .nav {
-    gap: 0.6rem;
-    position: static;
-    transform: none;
-    justify-content: center;
+@media (max-width: 768px){
+  .nav{ gap:.6rem; position:static; transform:none; justify-content:center; }
+  .nav__link{ font-size:.95rem; }
+  .lang-toggle{ display:none; } /* hide for now */
+  .section{ padding-top: 6.5rem; }
+  .columns{ grid-template-columns: 1fr; text-align:center; }
+  .column--left, .column--right{ align-items:center; text-align:center; }
+
+  .clients-grid {
+    grid-template-columns: 1fr; /* Stack blocks vertically */
+    height: auto;
   }
-  .nav__link {
-    font-size: 0.95rem;
-  }
-  .lang-toggle {
-    display: none;
-  } /* hide for now */
-  .section {
-    padding-top: 6.5rem;
-  }
-  .columns {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .column--left,
-  .column--right {
-    align-items: center;
-    text-align: center;
+  .client-block {
+    min-height: 50vh;
   }
 }
