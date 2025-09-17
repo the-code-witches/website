@@ -1,10 +1,10 @@
-:root{
-  --bg: #111418;
-  --accent: #FF5CF0;
-  --secondary: #5A4FCF;
-  --text: #ECECEC;
-  --muted: #8c88aa;
-  --header-blur: rgba(17,20,24,0.75);
+:root {
+  --bg: #fefedf;          /* clean, light professional background */
+  --accent: #FF5852;      /* coral-orange rebellious accent */
+  --secondary: #5A4FCF;   /* primary logo color */
+  --text: #494554;        /* dark professional text */
+  --muted: #A29BB0;       /* soft muted secondary */
+  --header-blur: rgba(244,244,248,0.75); /* translucent light overlay */
 }
 *{ box-sizing: border-box; }
 html{ scroll-behavior: auto; scroll-snap-type: y mandatory; }
