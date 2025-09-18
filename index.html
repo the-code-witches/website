@@ -29,25 +29,27 @@
     <section id="hero" class="section hero">
       <img class="hero__logo" src="assets/logo.svg" alt="The Code Witches Logo" />
       <h1 class="hero__title">the code witches</h1>
-      <p class="subtitle">rebels by heart, coders by craft.</p>
-      <p class="subtitle">your favorite female tech tandem.</p>
+      <div class="hero__box">
+        <p class="subtitle">rebels by heart, coders by craft.</p>
+        <p class="subtitle">your favorite female tech tandem.</p>
+      </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
-      <h2>about</h2>
+      <h2 class="section__title">about</h2>
       <div class="content">
-        <p>We are two experienced developers with more than 20 years of combined practice in building software and data products. 
+        <p>two experienced developers with 20+ years of combined practice in building software and data products. 
           Our passion lies in understanding complex systems, writing clean code, and creating clear communication that builds bridges.
           We engage with your vision and bring clarity, so you're empowered to be on top of your project at all times.
         </p>
       </div>
       <div class="columns">
-        <div class="column column--left">
+        <div class="column column__left">
           <h3 class="subhead">sehera</h3>
           <p>Sehera has been coding since forever—whether it’s building 3D renderers in C++ or spinning up systems in any language you can name. She thrives on speed, agility, and breaking through perfection with quick, sharp cycles. With her warmth and can-do attitude, she keeps projects moving and people energized.</p>
         </div>
-        <div class="column column--right">
+        <div class="column column__right">
           <h3 class="subhead">denise</h3>
           <p>Denise is a self-taught builder who grew from empirical research into data pipelines, algorithms, and full-stack development. She brings calm structure and crystal-clear thinking to complex problems, cutting through noise with precision. Her humor and grounded presence make even the toughest challenges feel navigable.</p>
         </div>
@@ -56,89 +58,86 @@
 
     <!-- Services -->
     <section id="services" class="section">
-      <h2>services</h2>
-      <div class="content">
-        <p>We help turn your software ideas into reality. As long-term partners or short-term fixers we can assist you with..</p>
+        <h2 class="section__title">services</h2>
+      <div class="services__box">
+        <p>We help turn your software ideas into reality. </p>
+        <p>As long-term partners or short-term fixers, we're here for you.</p>
       </div>
       <div class="columns">
-        <div class="column column--left">
-          <h3 class="subhead">consulting</h3>
-          <p>Defining your MVP and Roadmaps //</p>
-          <p>Strategy Workshops //</p>
-          <p>Choosing the right tech stack and people //</p>
+        <div class="column column__left">
+          <h3 class="subhead">the talk:<br>consulting</h3>
+          <ul>
+            <li>defining mvp and roadmap to your vision</li>
+            <li>choosing the right tech stack and people</li>
+            <li>simplify / optimize / digitize / automate complex processes</li>
+            <li>filling the gap as interim cto</li>
+          </ul>
         </div>
-        <div class="column column--right">
-          <h3 class="subhead">programming</h3>
-          <p>// Implementing full-stack MVPs</p>
-          <p>// Bringing Prototypes into production</p>
-          <p>// Migrating and restructuring existing systems</p>
-          <p>// Language-agnostic with a focus on Python and React</p>
+        <div class="column column__right">
+          <h3 class="subhead">the walk:<br>programming</h3>
+          <ul>
+            <li>implementing fullstack mvps</li>
+            <li>bringing prototypes into production</li>
+            <li>migration / restructuring / extension / connection of existing tools</li>
+            <li>setting your system up for scalability</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- Clients -->
     <section id="clients" class="section section--clients">
-      <div class="clients-grid">
-        <div class="client-block block1">
-          <div class="client-block__content">
-            <h3 class="client-block__title">Process Automation</h3>
-            <p class="client-block__description">End-to-end solution to manage reforestation projects from seed purchase to production to efficient tour management and drone flight planning for Skyseed.</p>
+       <h2 class="section__title">projects</h2>
+      <div class="clients__grid">
+        <div class="client__block block1">
+          <div class="client__block__content">
+            <h3 class="client__block__title">Process Automation</h3>
+            <p class="client__block__description">End-to-end solution to manage reforestation projects from seed purchase to production to efficient tour management and drone flight planning for Skyseed.</p>
           </div>
         </div>
-        <div class="client-block block2">
-          <div class="client-block__content">
-            <h3 class="client-block__title">Booking System</h3>
-            <p class="client-block__description">For Freie Kunst Akademie Augsburg we restructured and extended their course booking system with core features.</p>
+        <div class="client__block block2">
+          <div class="client__block__content">
+            <h3 class="client__block__title">Booking System</h3>
+            <p class="client__block__description">For Freie Kunst Akademie Augsburg we restructured and extended their course booking system with core features.</p>
           </div>
         </div>
-        <div class="client-block block2">
-          <div class="client-block__content">
-            <h3 class="client-block__title">Matching Algorithm</h3>
-            <p class="client-block__description">Forests are (suprise) highly regulated in Germany. For Skyseed we built a matching system that always automatically matches the right seeds to the right area that will respect legal requirements and a wide range of other factors and is fully integrated into existing systems.</p>
+        <div class="client__block block2">
+          <div class="client__block__content">
+            <h3 class="client__block__title">Matching Algorithm</h3>
+            <p class="client__block__description">Forests are (suprise) highly regulated in Germany. For Skyseed we built a matching system that always automatically matches the right seeds to the right area that will respect legal requirements and a wide range of other factors and is fully integrated into existing systems.</p>
           </div>
         </div>
-        <div class="client-block block1">
-          <div class="client-block__content">
-            <h3 class="client-block__title">Product Configurator</h3>
-            <p class="client-block__description">Configurator to understand Skyseeds product palette and automatically generates an Offer. In order to get qualified leads it seamlessly integrates with existing backend and CRM tool.</p>
+        <div class="client__block block1">
+          <div class="client__block__content">
+            <h3 class="client__block__title">Product Configurator</h3>
+            <p class="client__block__description">Configurator to understand Skyseeds product palette and automatically generates an Offer. In order to get qualified leads it seamlessly integrates with existing backend and CRM tool.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
-      <h2>contact</h2>
-      <div class="content">
-        <p>Let’s talk about your ideas.</p>
-        <p><a class="link-accent" href="mailto:hi@thecodewitches.de">hi@thecodewitches.de</a></p>
+    <section id="contact" class="section section--contact">
+      <div>
+         <h2 class="section__title">contact</h2>
+        <div class="content">
+          <p>Let's talk about your ideas.</p>
+          <p><a class="link__accent" href="mailto:hi@thecodewitches.de">hi@thecodewitches.de</a></p>
+        </div>
       </div>
+      <div class="gif__box">
+        <div class="tenor-gif-embed" data-postid="15163215706967441284" data-share-method="host" data-aspect-ratio="1.04184" data-width="100%">
+          <a href="https://tenor.com/view/witch-cat-riding-broomstick-witch-cat-cat-broomstick-gif-15163215706967441284">Witch Cat Riding Broomstick Cat Broomstick GIF</a>from <a href="https://tenor.com/search/witch+cat+riding+broomstick-gifs">Witch Cat Riding Broomstick GIFs</a>
+        </div> 
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      </div>
+      <footer class="site-footer">
+        © code witches | Sengül & Nawaz GbR · All rights reserved
+      </footer>  
     </section>
   </main>
 
-  <footer class="site-footer">
-    © code witches | Sengül & Nawaz GbR · All rights reserved
-  </footer>
-
-  <script>
-    // Simple script to add 'visible' class to sections on scroll
-    document.addEventListener('DOMContentLoaded', function() {
-      const sections = document.querySelectorAll('.section');
-
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    });
-  </script>
+  <script defer src="scripts/main.js"></script>
 </body>
 </html>
 
