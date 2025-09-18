@@ -1,0 +1,22 @@
+/* Contact Section Styles */
+
+.section__contact {
+  padding: 7rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background: var(--secondary);
+}
+
+.section__contact .section__title {
+  color: var(--bg);
+}
+
+.gif__box {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

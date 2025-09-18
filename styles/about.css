@@ -1,0 +1,8 @@
+/* About Section Styles */
+
+.section__about {
+  position: relative;
+  justify-content: flex-start;
+  padding-top: 8rem;
+}
+

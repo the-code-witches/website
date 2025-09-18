@@ -1,0 +1,20 @@
+/* Services Section Styles */
+
+.section__services {
+  background: var(--brand);
+  position: relative;
+  justify-content: flex-start;
+  padding-top: 8rem;
+}
+
+.section__services .section__title {
+  color: var(--bg);
+}
+
+.section__services .column__left {
+  background: var(--primary);
+}
+
+.section__services .column__left:hover {
+  background: var(--bg);
+}

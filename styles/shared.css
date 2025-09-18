@@ -1,0 +1,125 @@
+/* Shared Styles Used Across Multiple Sections */
+
+/* Columns (used in About and Services sections) */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 40vh;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  padding: 2rem;
+  overflow: hidden;
+  cursor: default;
+  position: relative;
+}
+
+.column__left {
+  text-align: left;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--brand);
+  padding-left: var(--header-height);
+  color: var(--bg);
+}
+
+.column__right {
+  text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--secondary);
+  padding-right: var(--header-height);
+  color: var(--bg);
+}
+
+.column__left p,
+.column__right p {
+  display: none;
+}
+
+.column__left:hover p,
+.column__right:hover p {
+  display: block;
+}
+
+.column__left:hover,
+.column__right:hover {
+  background: var(--bg);
+  color: var(--muted);
+}
+
+.subhead {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  color: var(--text);
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  white-space: pre-line;
+}
+
+.column ul {
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-s);
+  line-height: 1.65;
+  max-width: 40ch;
+  margin: 0 auto;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  display: none;
+  color: var(--muted);
+  list-style: none;
+  padding: 0;
+}
+
+.column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.column:hover .subhead {
+  display: none;
+}
+
+.column:hover ul {
+  display: block;
+}
+
+/* Content container (used across multiple sections) */
+.content {
+  max-width: 940px;
+  margin: 0 auto;
+  /* color: var(--text); */
+}
+
+/* Section titles (used across all sections) */
+.section__title {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+  color: var(--brand);
+  margin: 0.25rem 0 0.25rem;
+}
+
+/* Link accent (used in multiple sections) */
+.link__accent {
+  color: var(--text);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.link__accent:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
