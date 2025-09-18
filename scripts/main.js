@@ -48,3 +48,31 @@ links.forEach((a) => {
 document.querySelector('.lang-toggle')?.addEventListener('click', () => {
   alert('Language toggle coming soon ✨'); // replace with real i18n if needed
 });
+
+// About section image movement on column hover
+document.addEventListener('DOMContentLoaded', () => {
+  const aboutImage = document.querySelector('.about__image');
+  const leftColumn = document.querySelector('.column__left');
+  const rightColumn = document.querySelector('.column__right');
+  
+  if (aboutImage && leftColumn && rightColumn) {
+    // When hovering left column, move image to the right to expose left column
+    leftColumn.addEventListener('mouseenter', () => {
+      aboutImage.classList.add('move-right');
+      aboutImage.classList.remove('move-left');
+    });
+    
+    // When hovering right column, move image to the left to expose right column
+    rightColumn.addEventListener('mouseenter', () => {
+      aboutImage.classList.add('move-left');
+      aboutImage.classList.remove('move-right');
+    });
+    
+    // Reset position when not hovering any column
+    [leftColumn, rightColumn].forEach(column => {
+      column.addEventListener('mouseleave', () => {
+        aboutImage.classList.remove('move-left', 'move-right');
+      });
+    });
+  }
+});

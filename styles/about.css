@@ -6,3 +6,30 @@
   padding-top: 8rem;
 }
 
+.about__image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  max-height: 40vh;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.about__image:hover {
+  transform: translateX(-50%) scale(1.05);
+  filter: brightness(1.1) saturate(1.2);
+}
+
+/* Move image when hovering columns */
+.about__image.move-left {
+  transform: translateX(-100%) !important;
+}
+
+.about__image.move-right {
+  transform: translateX(0%) !important;
+}
+
