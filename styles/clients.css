@@ -8,11 +8,10 @@
 }
 
 .clients__grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   width: 100vw;
   height: calc(70vh);
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr;
 }
 
 .client__block {
@@ -24,6 +23,7 @@
   overflow: hidden;
   color: var(--bg);
   cursor: default;
+  flex: 1 1 50%;
 }
 
 .client__block__content {
@@ -79,4 +79,49 @@
 
 .client__block:hover .client__block__description {
   display: block;
+}
+
+/* Desktop reordering for proper 2x2 grid layout */
+@media (min-width: 769px) {
+  .client__block:nth-child(1) { order: 1; } /* Process Automation - top left */
+  .client__block:nth-child(2) { order: 2; } /* Booking System - top right */
+  .client__block:nth-child(3) { order: 4; } /* Matching Algorithm - bottom right */
+  .client__block:nth-child(4) { order: 3; } /* Product Configurator - bottom left */
+}
+
+/* Mobile styles for clients section */
+@media (max-width: 768px) {
+  .section__clients {
+    padding-bottom: 2rem;
+  }
+
+  .clients__grid {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .client__block {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 20vh;
+    padding: 0;
+  }
+  
+  .client__block__content {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .client__block__description {
+    font-size: var(--font-size-xs);
+    max-width: 100%;
+  }
+
+  .client__block__title {
+    font-size: var(--font-size-s);
+  }
 }

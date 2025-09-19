@@ -112,6 +112,22 @@
   margin: 0.25rem 0 0.25rem;
 }
 
+@media (max-width: 768px) {
+  .section__title {
+    margin: 0.2rem 0 0.1rem;
+  }
+  
+  .section__clients .section__title,
+  .section__services .section__title {
+    margin-bottom: 0.1rem;
+  }
+  
+  .content {
+    padding: 0 2rem;
+    font-size: var(--font-size-xs);
+  }
+}
+
 /* Link accent (used in multiple sections) */
 .link__accent {
   color: var(--text);
@@ -123,3 +139,4 @@
   color: var(--primary);
   text-decoration: none;
 }
+

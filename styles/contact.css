@@ -10,12 +10,18 @@
   background: var(--secondary);
 }
 
+.section__contact .content {
+  max-width: calc(100vw - 2 * var(--header-height));
+  /* width: 100%; */
+}
+
 .section__contact .section__title {
   color: var(--bg);
 }
 
 .gif__box {
   width: 20vw;
+  min-width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;

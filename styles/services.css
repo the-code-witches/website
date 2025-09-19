@@ -1,10 +1,10 @@
 /* Services Section Styles */
 
 .section__services {
+  padding: 7rem 0 0;
   background: var(--brand);
   position: relative;
   justify-content: flex-start;
-  padding-top: 8rem;
 }
 
 .section__services .section__title {
@@ -17,4 +17,61 @@
 
 .section__services .column__left:hover {
   background: var(--bg);
+}
+
+/* Mobile styles for services section */
+@media (max-width: 768px) {
+  .section__services {
+    min-height: 120vh;
+    padding-bottom: 2rem;
+    justify-content: center;
+  }
+
+  .section__services .columns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 1rem;
+    gap: 0;
+  }
+
+  .section__services .column {
+    width: 100%;
+    min-height: 20vh;
+    padding: 0;
+  }
+
+  .section__services .column__left,
+  .section__services .column__right {
+    padding: 2rem;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .section__services .column ul {
+    font-size: var(--font-size-xs);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: none;
+  }
+  
+  .section__services .column:active ul,
+  .section__services .column.active ul {
+    display: block;
+  }
+  
+  .section__services .column:active .subhead,
+  .section__services .column.active .subhead {
+    display: none;
+  }
+  
+  .section__services .column .subhead {
+    font-size: var(--font-size-s);
+    text-align: left;
+  }
 }

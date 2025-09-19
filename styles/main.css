@@ -173,6 +173,7 @@ body {
     position: static;
     transform: none;
     justify-content: center;
+    width: 100%;
   }
 
   .nav__link {
