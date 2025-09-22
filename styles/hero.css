@@ -11,7 +11,7 @@
 .hero__title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  color: var(--secondary);
+  color: var(--text);
 }
 
 .hero__subtitle {

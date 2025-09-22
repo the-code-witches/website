@@ -60,6 +60,7 @@
   .section__about .column__right {
     padding: 2rem;
     text-align: left;
+    color: var(--bg);
   }
   
   .section__about .column p {
@@ -85,6 +86,7 @@
   .section__about .column .subhead {
     font-size: var(--font-size-s);
     text-align: left;
+    color: var(--bg);
   }
 
   .about__image {

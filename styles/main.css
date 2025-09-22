@@ -155,7 +155,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text);
+  color: var(--bg);
   /* border-top: 2px solid var(--primary); */
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-normal);

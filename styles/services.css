@@ -1,18 +1,9 @@
 /* Services Section Styles */
 
 .section__services {
-  padding: 7rem 0 0;
-  background: var(--brand);
+  padding: 8rem 0 0;
   position: relative;
   justify-content: flex-start;
-}
-
-.section__services .section__title {
-  color: var(--bg);
-}
-
-.section__services .column__left {
-  background: var(--primary);
 }
 
 .section__services .column__left:hover {
