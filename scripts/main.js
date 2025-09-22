@@ -7,21 +7,21 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 sections.forEach((s) => observer.observe(s));
 
-// Active link highlight based on viewport center
+// Active link highlight based on scroll position
 const links = document.querySelectorAll('.nav__link');
-const sectionMap = [...sections].reduce((acc, s) => (acc[s.id] = s, acc), {});
 
 const getCurrentSectionId = () => {
-  const viewportCenter = window.scrollY + window.innerHeight / 2;
-  let bestId = 'hero';
-  let smallestDistance = Infinity;
-  for (const id in sectionMap) {
-    const el = sectionMap[id];
-    const elCenter = el.offsetTop + el.offsetHeight / 2;
-    const d = Math.abs(elCenter - viewportCenter);
-    if (d < smallestDistance) { smallestDistance = d; bestId = id; }
+  const scrollY = window.scrollY;
+  const offset = 100; // Small offset to account for header
+  
+  // Find the section that's currently at the top of the viewport
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const section = sections[i];
+    if (section.offsetTop <= scrollY + offset) {
+      return section.id;
+    }
   }
-  return bestId;
+  return 'hero'; // Default to hero if at very top
 };
 
 const onScroll = () => {
@@ -31,16 +31,16 @@ const onScroll = () => {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// Centered scroll on nav click
+// Simple scroll to top of section on nav click
 links.forEach((a) => {
   a.addEventListener('click', (e) => {
     e.preventDefault();
     const id = a.getAttribute('href')?.slice(1);
     const target = id ? document.getElementById(id) : null;
     if (!target) return;
-    target.scrollIntoView({ behavior: 'auto', block: 'center' });
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     // ensure active state updates after scroll
-    setTimeout(onScroll, 0);
+    setTimeout(onScroll, 100);
   });
 });
 
