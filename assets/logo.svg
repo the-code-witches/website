@@ -38,17 +38,18 @@
        y="60"
        width="60"
        height="8"
-       rx="2"
+       rx="1"
        id="rect4"
        style="fill:#5a4fcf;fill-opacity:1" />
     <text
        x="50"
-       y="90"
+       y="92.5"
        dominant-baseline="middle"
        text-anchor="middle"
        font-size="28px"
+       font-family="Lexend, sans-serif"
        fill="#F4F4F9"
        id="text6"
-       style="fill:#fff7e5;fill-opacity:1">{ }</text>
+       style="fill:#0a1a1a;fill-opacity:1">{ }</text>
   </g>
 </svg>
