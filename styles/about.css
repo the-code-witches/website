@@ -19,19 +19,35 @@
   cursor: pointer;
 }
 
+/* Desktop: keep image at bottom */
+@media (min-width: 769px) {
+  .about__image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    max-height: 40vh;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .about__image.move-left {
+    transform: translateX(-100%) !important;
+  }
+
+  .about__image.move-right {
+    transform: translateX(0%) !important;
+  }
+}
+
 .about__image:hover {
   transform: translateX(-50%);
   filter: brightness(1.2) saturate(1.3);
 }
 
-/* Move image when hovering columns */
-.about__image.move-left {
-  transform: translateX(-100%) !important;
-}
-
-.about__image.move-right {
-  transform: translateX(0%) !important;
-}
 
 /* Mobile styles for about section */
 @media (max-width: 768px) {
@@ -52,7 +68,7 @@
 
   .section__about .column {
     width: 100%;
-    min-height: 20vh;
+    min-height: 30vh;
     padding: 0;
   }
 
@@ -90,24 +106,11 @@
   }
 
   .about__image {
-    position: absolute;
-    bottom: 20vh;
-    left: 0;
-    transform: none;
-    width: 100%;
+    position: relative;
+    width: 100vw;
     height: auto;
     z-index: 20;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .about__image.move-down {
-    bottom: 10vh;
-    transform: none !important;
-  }
-
-  .about__image.move-up {
-    bottom: 30vh;
-    transform: none !important;
+    margin-bottom: 0;
   }
 }
 

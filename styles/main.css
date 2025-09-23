@@ -164,6 +164,8 @@ body {
   margin-top: 2rem;
   position: relative;
   z-index: 10;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Small screens */
@@ -186,5 +188,10 @@ body {
 
   .section {
     padding-top: 6.5rem;
+  }
+
+  .site-footer {
+    font-size: 0.85rem;
+    padding: 0 1rem;
   }
 }

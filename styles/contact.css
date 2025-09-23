@@ -11,7 +11,7 @@
 }
 
 .section__contact .content {
-  max-width: calc(100vw - 2 * var(--header-height));
+  max-width: calc(100vw - 2rem);
   /* width: 100%; */
   color: var(--bg);
 }
@@ -26,4 +26,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Blurred edge effect - smooth circular fade
+  mask: radial-gradient(circle at center, black 50%, transparent 80%);
+  -webkit-mask: radial-gradient(circle at center, black 50%, transparent 80%); */
+}
+
+.gif__box video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: default;
+  pointer-events: none;
 }

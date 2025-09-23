@@ -92,7 +92,7 @@
 /* Mobile styles for clients section */
 @media (max-width: 768px) {
   .section__clients {
-    padding-bottom: 2rem;
+    padding-bottom: 0;
   }
 
   .clients__grid {
@@ -123,5 +123,9 @@
 
   .client__block__title {
     font-size: var(--font-size-s);
+  }
+
+  .client__block:last-child {
+    margin-bottom: 0;
   }
 }
