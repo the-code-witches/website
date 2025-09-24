@@ -195,10 +195,15 @@ body {
 
   .site-footer {
     font-size: 0.85rem;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     gap: 0.25rem;
-    width: calc(100vw - 2 * var(--header-height));
+    width: calc(100vw - var(--header-height));
     flex-wrap: wrap;
+    height: auto;
+  }
+
+  .footer__separator {
+    display: none;
   }
   
   .site-footer p {
