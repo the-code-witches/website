@@ -71,6 +71,10 @@ body {
   background-position-y: -100vh;
 }
 
+/* ul li::marker {
+  content: "▶ ";
+} */
+
 /* Header / Nav */
 .site-header {
   position: fixed;
