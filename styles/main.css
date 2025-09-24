@@ -172,7 +172,7 @@ body {
 }
 
 /* Small screens */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .nav {
     gap: 0.6rem;
     position: static;

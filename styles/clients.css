@@ -43,11 +43,6 @@
   background-color: var(--secondary);
 }
 
-.client__block.block1:hover,
-.client__block.block2:hover {
-  background-color: var(--bg);
-}
-
 .client__block__title {
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
@@ -73,12 +68,20 @@
   color: var(--muted);
 }
 
-.client__block:hover .client__block__title {
-  display: none;
-}
+/* Desktop hover effects */
+@media (min-width: 768px) {
+  .client__block.block1:hover,
+  .client__block.block2:hover {
+    background-color: var(--bg);
+  }
 
-.client__block:hover .client__block__description {
-  display: block;
+  .client__block:hover .client__block__title {
+    display: none;
+  }
+
+  .client__block:hover .client__block__description {
+    display: block;
+  }
 }
 
 /* Desktop reordering for proper 2x2 grid layout */
@@ -90,7 +93,7 @@
 }
 
 /* Mobile styles for clients section */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .section__clients {
     padding-bottom: 0;
   }
