@@ -155,17 +155,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   color: var(--bg);
-  /* border-top: 2px solid var(--primary); */
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-normal);
-  /* background: var(--bg); */
   width: 100vw;
   margin-top: 2rem;
   position: relative;
   z-index: 10;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  flex-wrap: wrap;
+}
+
+.site-footer p {
+  margin: 0;
+  white-space: nowrap;
 }
 
 /* Small screens */
@@ -193,5 +196,10 @@ body {
   .site-footer {
     font-size: 0.85rem;
     padding: 0 1rem;
+    gap: 0.25rem;
+  }
+  
+  .site-footer p {
+    white-space: normal;
   }
 }

@@ -19,29 +19,14 @@
   cursor: pointer;
 }
 
-/* Desktop: keep image at bottom */
-@media (min-width: 769px) {
-  .about__image {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    max-height: 40vh;
-    width: auto;
-    object-fit: contain;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-
-  .about__image.move-left {
-    transform: translateX(-100%) !important;
-  }
-
-  .about__image.move-right {
-    transform: translateX(0%) !important;
-  }
+.about__image.move-left {
+  transform: translateX(-100%) !important;
 }
+
+.about__image.move-right {
+  transform: translateX(0%) !important;
+}
+
 
 .about__image:hover {
   transform: translateX(-50%);

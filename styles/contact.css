@@ -1,17 +1,18 @@
 /* Contact Section Styles */
 
 .section__contact {
-  padding: 7rem 0 0;
+  padding: calc(7rem - var(--header-height)) 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: center;
   background: var(--brand);
+  min-height: calc(100vh - var(--header-height));
 }
 
 .section__contact .content {
-  max-width: calc(100vw - 2rem);
+  max-width: calc(100vw - 2 * var(--header-height));
   /* width: 100%; */
   color: var(--bg);
 }

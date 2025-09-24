@@ -141,3 +141,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Video autoplay handling for mobile devices
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.querySelector('.gif__box video');
+  
+  if (video) {
+    // Ensure video plays automatically on mobile
+    const playVideo = () => {
+      video.play().catch(error => {
+        console.log('Video autoplay failed:', error);
+        // If autoplay fails, try again after user interaction
+        document.addEventListener('touchstart', () => {
+          video.play().catch(e => console.log('Video play failed:', e));
+        }, { once: true });
+      });
+    };
+    
+    // Try to play immediately
+    playVideo();
+    
+    // Also try when the video comes into view
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          playVideo();
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    videoObserver.observe(video);
+  }
+});
