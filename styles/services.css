@@ -12,6 +12,11 @@
 
 /* Mobile styles for services section */
 @media (max-width: 767px) {
+
+  .section__services .content {
+    text-align: left;
+  }
+
   .section__services .column .subhead br {
     display: none;
   }

@@ -86,6 +86,7 @@
 
 /* Desktop reordering for proper 2x2 grid layout */
 @media (min-width: 769px) {
+
   .client__block:nth-child(1) { order: 1; } /* Process Automation - top left */
   .client__block:nth-child(2) { order: 2; } /* Booking System - top right */
   .client__block:nth-child(3) { order: 4; } /* Matching Algorithm - bottom right */
@@ -96,6 +97,10 @@
 @media (max-width: 767px) {
   .section__clients {
     padding-bottom: 0;
+  }
+
+  .section__clients .section__title {
+    margin-bottom: 1rem;
   }
 
   .clients__grid {
