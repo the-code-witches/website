@@ -100,13 +100,13 @@ links.forEach((a) => {
     links.forEach((link) => link.classList.remove('active'));
     a.classList.add('active');
     
-    // Scroll to section
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Scroll to section (let CSS scroll-snap handle the smooth behavior)
+    target.scrollIntoView({ behavior: 'auto', block: 'start' });
     
     // Ensure active state updates after scroll completes
     setTimeout(() => {
       onScroll();
-    }, 500); // Longer delay to account for smooth scroll duration
+    }, 100); // Short delay since we're using instant scroll now
   });
 });
 
