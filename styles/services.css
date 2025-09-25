@@ -7,14 +7,41 @@
 }
 
 .section__services .content {
-  text-align: center;
+  text-align: justify;
+}
+
+/* Desktop triangle bullets - directional */
+@media (min-width: 768px) {
+  /* Left column triangles point right */
+  .section__services .column__left ul li::before {
+    content: "▶";
+    color: var(--muted);
+    margin-right: 0.5rem;
+  }
+
+  /* Right column triangles point left */
+  .section__services .column__right ul li::before {
+    content: "◀";
+    color: var(--muted);
+    margin-left: 0.5rem;
+    margin-right: 0;
+    float: right;
+    position: absolute;
+    right: -1rem;
+  }
+
+  /* Adjust right column list items for left-pointing triangles */
+  .section__services .column__right ul li {
+    position: relative;
+    padding-right: 1.5rem;
+  }
 }
 
 /* Mobile styles for services section */
 @media (max-width: 767px) {
 
   .section__services .content {
-    text-align: left;
+    text-align: justify;
   }
 
   .section__services .column .subhead br {
@@ -38,6 +65,13 @@
 
   .section__services .column ul li {
     margin-bottom: 0.5rem;
+  }
+
+  /* Triangle bullets for mobile - all point right */
+  .section__services .column ul li::before {
+    content: "▶";
+    color: var(--muted);
+    margin-right: 0.5rem;
   }
 
   .section__services .column .subhead {
