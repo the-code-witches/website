@@ -10,25 +10,79 @@ sections.forEach((s) => observer.observe(s));
 // Active link highlight based on scroll position
 const links = document.querySelectorAll('.nav__link');
 
-const getCurrentSectionId = () => {
-  const scrollY = window.scrollY;
-  const offset = 100; // Small offset to account for header
-  
-  // Find the section that's currently at the top of the viewport
-  for (let i = sections.length - 1; i >= 0; i--) {
-    const section = sections[i];
-    if (section.offsetTop <= scrollY + offset) {
-      return section.id;
-    }
-  }
-  return 'hero'; // Default to hero if at very top
+// Cache header height to avoid DOM queries on every scroll
+const getHeaderHeight = () => {
+  const header = document.querySelector('.site-header');
+  return header ? header.offsetHeight : 64; // Fallback to 64px if header not found
 };
 
-const onScroll = () => {
-  const current = getCurrentSectionId();
-  links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+let cachedHeaderHeight = null;
+
+const getCurrentSectionId = () => {
+  const scrollY = window.scrollY;
+  const viewportHeight = window.innerHeight;
+  
+  // Get header height (cached after first call)
+  if (cachedHeaderHeight === null) {
+    cachedHeaderHeight = getHeaderHeight();
+  }
+  const headerHeight = cachedHeaderHeight;
+  
+  // Use intersection-based detection for more accurate results
+  let currentSection = 'hero';
+  let maxVisibleArea = 0;
+  
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const sectionTop = rect.top;
+    const sectionBottom = rect.bottom;
+    const sectionHeight = rect.height;
+    
+    // Calculate how much of the section is visible
+    const visibleTop = Math.max(sectionTop, headerHeight);
+    const visibleBottom = Math.min(sectionBottom, viewportHeight);
+    const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+    const visibleRatio = visibleHeight / sectionHeight;
+    
+    // Section is considered "current" if:
+    // 1. It's the most visible section (by area), OR
+    // 2. Its top is within the upper portion of the viewport
+    if (visibleRatio > 0.3 && visibleHeight > maxVisibleArea) {
+      maxVisibleArea = visibleHeight;
+      currentSection = section.id;
+    } else if (sectionTop <= headerHeight + 50 && sectionBottom > headerHeight + 100) {
+      // If section top is near the header, prioritize it
+      currentSection = section.id;
+    }
+  });
+  
+  return currentSection;
 };
+
+let scrollTimeout;
+const onScroll = () => {
+  // Debounce scroll events to prevent rapid state changes
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    const current = getCurrentSectionId();
+    // Clear all active states first to prevent multiple active links
+    links.forEach((a) => a.classList.remove('active'));
+    // Then set the current one
+    links.forEach((a) => {
+      if (a.getAttribute('href') === '#' + current) {
+        a.classList.add('active');
+      }
+    });
+  }, 50); // Small delay to debounce
+};
+
 window.addEventListener('scroll', onScroll, { passive: true });
+
+// Recalculate header height on resize (in case it changes with screen size)
+window.addEventListener('resize', () => {
+  cachedHeaderHeight = null; // Reset cache to force recalculation
+}, { passive: true });
+
 onScroll();
 
 // Simple scroll to top of section on nav click
@@ -38,9 +92,21 @@ links.forEach((a) => {
     const id = a.getAttribute('href')?.slice(1);
     const target = id ? document.getElementById(id) : null;
     if (!target) return;
+    
+    // Clear any existing scroll timeout to prevent conflicts
+    clearTimeout(scrollTimeout);
+    
+    // Immediately update active state for better UX
+    links.forEach((link) => link.classList.remove('active'));
+    a.classList.add('active');
+    
+    // Scroll to section
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // ensure active state updates after scroll
-    setTimeout(onScroll, 100);
+    
+    // Ensure active state updates after scroll completes
+    setTimeout(() => {
+      onScroll();
+    }, 500); // Longer delay to account for smooth scroll duration
   });
 });
 

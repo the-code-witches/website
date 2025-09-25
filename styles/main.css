@@ -144,7 +144,7 @@ body {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 800ms ease, transform 800ms ease;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 
 .section.visible {
