@@ -61,6 +61,9 @@ const getCurrentSectionId = () => {
 
 let scrollTimeout;
 const onScroll = () => {
+  // Skip if navigation is in progress to prevent conflicts
+  if (window.navigationInProgress) return;
+  
   // Debounce scroll events to prevent rapid state changes
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(() => {
@@ -96,17 +99,30 @@ links.forEach((a) => {
     // Clear any existing scroll timeout to prevent conflicts
     clearTimeout(scrollTimeout);
     
-    // Immediately update active state for better UX
+    // Get header height for proper offset calculation
+    const headerHeight = getHeaderHeight();
+    
+    // Calculate target position accounting for fixed header
+    const targetRect = target.getBoundingClientRect();
+    const targetPosition = window.scrollY + targetRect.top - headerHeight;
+    
+    // Scroll to section with proper offset
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+    
+    // Immediately update active state and prevent scroll handler from overriding
     links.forEach((link) => link.classList.remove('active'));
     a.classList.add('active');
     
-    // Scroll to section (let CSS scroll-snap handle the smooth behavior)
-    target.scrollIntoView({ behavior: 'auto', block: 'start' });
+    // Set a flag to temporarily disable scroll-based highlighting
+    window.navigationInProgress = true;
     
-    // Ensure active state updates after scroll completes
+    // Re-enable scroll-based highlighting after scroll completes
     setTimeout(() => {
-      onScroll();
-    }, 100); // Short delay since we're using instant scroll now
+      window.navigationInProgress = false;
+    }, 800); // Allow time for smooth scroll to complete
   });
 });
 
