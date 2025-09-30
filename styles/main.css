@@ -142,7 +142,7 @@ body {
   text-align: justify;
   gap: 0.75rem;
   opacity: 0;
-  transform: translateY(40px);
+  /* transform: translateY(40px); */
   transition: opacity 800ms ease, transform 800ms ease;
   scroll-snap-align: start;
 }
