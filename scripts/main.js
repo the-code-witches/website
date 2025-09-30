@@ -1,190 +1,129 @@
 // Intersection Observer for fade-in
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.2 });
+const sections = document.querySelectorAll(".section");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  },
+  { threshold: 0.2 }
+);
 sections.forEach((s) => observer.observe(s));
 
 // Active link highlight based on scroll position
-const links = document.querySelectorAll('.nav__link');
+const links = document.querySelectorAll(".nav__link");
+const header = document.querySelector(".site-header");
 
-// Cache header height to avoid DOM queries on every scroll
 const getHeaderHeight = () => {
-  const header = document.querySelector('.site-header');
-  return header ? header.offsetHeight : 64; // Fallback to 64px if header not found
+  return header ? header.offsetHeight : 64;
 };
 
-let cachedHeaderHeight = null;
-
+// Simplified and more robust way to find the current section
 const getCurrentSectionId = () => {
-  const scrollY = window.scrollY;
-  const viewportHeight = window.innerHeight;
-  
-  // Get header height (cached after first call)
-  if (cachedHeaderHeight === null) {
-    cachedHeaderHeight = getHeaderHeight();
-  }
-  const headerHeight = cachedHeaderHeight;
-  
-  // Use intersection-based detection for more accurate results
-  let currentSection = 'hero';
-  let maxVisibleArea = 0;
-  
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    const sectionTop = rect.top;
-    const sectionBottom = rect.bottom;
-    const sectionHeight = rect.height;
-    
-    // Calculate how much of the section is visible
-    const visibleTop = Math.max(sectionTop, headerHeight);
-    const visibleBottom = Math.min(sectionBottom, viewportHeight);
-    const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-    const visibleRatio = visibleHeight / sectionHeight;
-    
-    // Section is considered "current" if:
-    // 1. It's the most visible section (by area), OR
-    // 2. Its top is within the upper portion of the viewport
-    if (visibleRatio > 0.3 && visibleHeight > maxVisibleArea) {
-      maxVisibleArea = visibleHeight;
-      currentSection = section.id;
-    } else if (sectionTop <= headerHeight + 50 && sectionBottom > headerHeight + 100) {
-      // If section top is near the header, prioritize it
-      currentSection = section.id;
+  const headerHeight = getHeaderHeight();
+  const scrollOffset = headerHeight + 50;
+  let currentSectionId = "hero";
+
+  sections.forEach((section) => {
+    if (window.scrollY >= section.offsetTop - scrollOffset) {
+      currentSectionId = section.id;
     }
   });
-  
-  return currentSection;
+
+  return currentSectionId;
 };
 
 let scrollTimeout;
 const onScroll = () => {
-  // Skip if navigation is in progress to prevent conflicts
-  if (window.navigationInProgress) return;
-  
-  // Debounce scroll events to prevent rapid state changes
+  // NOTE: The 'navigationInProgress' flag has been removed to fix the bug.
+
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(() => {
-    const current = getCurrentSectionId();
-    // Clear all active states first to prevent multiple active links
-    links.forEach((a) => a.classList.remove('active'));
-    // Then set the current one
-    links.forEach((a) => {
-      if (a.getAttribute('href') === '#' + current) {
-        a.classList.add('active');
-      }
+    const currentId = getCurrentSectionId();
+
+    // This loop is now the single source of truth for the active class.
+    links.forEach((link) => {
+      link.classList.toggle(
+        "active",
+        link.getAttribute("href") === "#" + currentId
+      );
     });
-  }, 50); // Small delay to debounce
+  }, 50);
 };
 
-window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll(); // Initial call
 
-// Recalculate header height on resize (in case it changes with screen size)
-window.addEventListener('resize', () => {
-  cachedHeaderHeight = null; // Reset cache to force recalculation
-}, { passive: true });
-
-onScroll();
-
-// Simple scroll to top of section on nav click
-links.forEach((a) => {
-  a.addEventListener('click', (e) => {
+// Handle smooth scrolling on nav link click
+links.forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    const id = a.getAttribute('href')?.slice(1);
-    const target = id ? document.getElementById(id) : null;
-    if (!target) return;
-    
-    // Clear any existing scroll timeout to prevent conflicts
-    clearTimeout(scrollTimeout);
-    
-    // Get header height for proper offset calculation
+
+    const id = link.getAttribute("href").slice(1);
+    const targetSection = document.getElementById(id);
+
+    if (!targetSection) return;
+
+    const scrollBuffer = 1;
     const headerHeight = getHeaderHeight();
-    
-    // Calculate target position accounting for fixed header
-    const targetRect = target.getBoundingClientRect();
-    const targetPosition = window.scrollY + targetRect.top - headerHeight;
-    
-    // Scroll to section with proper offset
+    const targetPosition =
+      targetSection.offsetTop - headerHeight + scrollBuffer;
+
+    // NOTE: Manual class manipulation and flags have been removed from here.
+    // The onScroll handler will now manage the active state during the scroll.
     window.scrollTo({
       top: targetPosition,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-    
-    // Immediately update active state and prevent scroll handler from overriding
-    links.forEach((link) => link.classList.remove('active'));
-    a.classList.add('active');
-    
-    // Set a flag to temporarily disable scroll-based highlighting
-    window.navigationInProgress = true;
-    
-    // Re-enable scroll-based highlighting after scroll completes
-    setTimeout(() => {
-      window.navigationInProgress = false;
-    }, 800); // Allow time for smooth scroll to complete
   });
 });
 
 // (Optional) Language toggle scaffold
-document.querySelector('.lang-toggle')?.addEventListener('click', () => {
-  alert('Language toggle coming soon ✨'); // replace with real i18n if needed
+document.querySelector(".lang-toggle")?.addEventListener("click", () => {
+  alert("Language toggle coming soon ✨");
 });
 
 // About section image movement on column hover (desktop only)
-document.addEventListener('DOMContentLoaded', () => {
-  const aboutImage = document.querySelector('.about__image');
-  const leftColumn = document.querySelector('.column__left');
-  const rightColumn = document.querySelector('.column__right');
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const aboutImage = document.querySelector(".about__image");
+  const leftColumn = document.querySelector(".column__left");
+  const rightColumn = document.querySelector(".column__right");
+
   if (aboutImage && leftColumn && rightColumn && window.innerWidth >= 768) {
-    // When hovering left column, move image to the right
-    leftColumn.addEventListener('mouseenter', () => {
-      aboutImage.style.transform = 'translateX(0%)';
+    leftColumn.addEventListener("mouseenter", () => {
+      aboutImage.style.transform = "translateX(0%)";
     });
-    
-    // When hovering right column, move image to the left
-    rightColumn.addEventListener('mouseenter', () => {
-      aboutImage.style.transform = 'translateX(-100%)';
+    rightColumn.addEventListener("mouseenter", () => {
+      aboutImage.style.transform = "translateX(-100%)";
     });
-    
-    // Reset position when not hovering any column
-    [leftColumn, rightColumn].forEach(column => {
-      column.addEventListener('mouseleave', () => {
-        aboutImage.style.transform = 'translateX(-50%)';
+    [leftColumn, rightColumn].forEach((column) => {
+      column.addEventListener("mouseleave", () => {
+        aboutImage.style.transform = "translateX(-50%)";
       });
     });
   }
 });
 
 // Video autoplay handling for mobile devices
-document.addEventListener('DOMContentLoaded', () => {
-  const video = document.querySelector('.gif__box video');
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".gif__box video");
   if (video) {
-    // Ensure video plays automatically on mobile
     const playVideo = () => {
-      video.play().catch(error => {
-        console.log('Video autoplay failed:', error);
-        // If autoplay fails, try again after user interaction
-        document.addEventListener('touchstart', () => {
-          video.play().catch(e => console.log('Video play failed:', e));
-        }, { once: true });
+      video.play().catch((error) => {
+        console.log("Video autoplay failed:", error);
       });
     };
-    
-    // Try to play immediately
     playVideo();
-    
-    // Also try when the video comes into view
-    const videoObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          playVideo();
-        }
-      });
-    }, { threshold: 0.5 });
-    
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            playVideo();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
     videoObserver.observe(video);
   }
 });
