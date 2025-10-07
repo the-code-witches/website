@@ -19,27 +19,28 @@
 
   /* palette v2 - SOFT */
   --bg: #fff7e5;
-  --primary: #ffc255;      
-  --secondary: #007c7a;          
-  --brand: #5A4FCF;   
-  --text: #0a1a1a;        
-  --muted: #9b98a6;       
+  --primary: #ffc255;
+  --secondary: #007c7a;
+  --brand: #5a4fcf;
+  --text: #0a1a1a;
+  --muted: #5e5c64;
   /* alternativ: */
+  /* --muted: #9b98a6 */
   /* --muted: #a29bb0 */
 
   /* reusable */
-  --header-height: 4rem;  
-  
+  --header-height: 4rem;
+
   /* font weights */
   --font-weight-normal: 500;
   --font-weight-bold: 600;
-  
+
   /* font sizes */
   --font-size-xs: 0.95rem;
   --font-size-s: clamp(1.2rem, 3.5vw, 1.4rem);
   --font-size-m: clamp(1.5rem, 4vw, 2.2rem);
   --font-size-l: clamp(1.8rem, 3.5vw, 2.2rem);
-  --font-size-xl: clamp(2.2rem, 4.5vw, 3.0rem);
+  --font-size-xl: clamp(2.2rem, 4.5vw, 3rem);
 }
 
 * {
@@ -53,7 +54,13 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Lexend', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family:
+    "Lexend",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-s);
   text-transform: lowercase;
@@ -143,7 +150,9 @@ body {
   gap: 0.75rem;
   opacity: 0;
   /* transform: translateY(40px); */
-  transition: opacity 800ms ease, transform 800ms ease;
+  transition:
+    opacity 800ms ease,
+    transform 800ms ease;
   scroll-snap-align: start;
 }
 
@@ -209,7 +218,7 @@ body {
   .footer__separator {
     display: none;
   }
-  
+
   .site-footer p {
     white-space: normal;
   }

@@ -47,7 +47,6 @@
   display: none;
 }
 
-
 .subhead {
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
@@ -84,7 +83,7 @@
 .content {
   max-width: 940px;
   margin: 0 auto;
-  /* color: var(--text); */
+  color: var(--muted);
 }
 
 /* Section titles (used across all sections) */
@@ -94,7 +93,6 @@
   color: var(--text);
   margin: 0.25rem 0 0.25rem;
 }
-
 
 /* Link accent (used in multiple sections) */
 .link__accent {
@@ -129,20 +127,19 @@
     display: block;
   }
 
-  .link__accent:hover, .link__accent__light:hover {
+  .link__accent:hover,
+  .link__accent__light:hover {
     color: var(--primary);
     text-decoration: none;
   }
 }
-
-
 
 /* Mobile styles */
 @media (max-width: 767px) {
   .section__title {
     margin: 0.2rem 0 0.1rem;
   }
-  
+
   .section__clients .section__title,
   .section__services .section__title {
     margin-bottom: 0.1rem;
@@ -157,16 +154,18 @@
     position: relative;
   }
 
-  .column, .column__left, .column__right {
+  .column,
+  .column__left,
+  .column__right {
     text-align: left;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     height: auto;
     min-height: 30vh;
-    padding: calc(0.5*var(--header-height));
+    padding: calc(0.5 * var(--header-height));
   }
-  
+
   .content {
     padding: 0 2rem;
     font-size: var(--font-size-xs);
