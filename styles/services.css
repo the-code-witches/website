@@ -70,7 +70,7 @@
   /* Triangle bullets for mobile - all point right */
   .section__services .column ul li::before {
     content: "▶";
-    color: var(--muted);
+    color: var(--bg);
     margin-right: 0.5rem;
   }
 
