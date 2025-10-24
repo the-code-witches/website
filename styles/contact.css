@@ -39,3 +39,32 @@
   cursor: default;
   pointer-events: none;
 }
+
+.linkedin-link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.linkedin-bg {
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  width: calc(1.5em - 0.4em);
+  height: calc(1.5em - 0.4em);
+  background-color: var(--brand);
+  transition: background-color 0.2s ease;
+  z-index: 1;
+}
+
+.linkedin-link:hover .linkedin-bg {
+  background-color: var(--primary);
+}
+
+.linkedin-link img {
+  height: 1.5em;
+  width: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
