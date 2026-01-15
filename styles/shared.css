@@ -81,7 +81,7 @@
 
 /* Content container (used across multiple sections) */
 .content {
-  max-width: 940px;
+  max-width: 75vw;
   margin: 0 auto;
   color: var(--muted);
 }
