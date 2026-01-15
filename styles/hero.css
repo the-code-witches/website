@@ -1,22 +1,20 @@
 /* Hero Section Styles */
 
-/* .section__hero {
-} */
-
-.hero__logo {
-  width: 256px;
-  margin-bottom: 0.8rem;
-}
+.section__hero {
+  max-width: 75vw;
+} 
 
 .hero__title {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-normal);
   color: var(--text);
+  text-align: left;
 }
 
 .hero__subtitle {
-  color: var(--muted);
-  font-size: var(--font-size-s);
+  color: var(--text);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-m);
   margin: 0.1rem 0;
-  text-align: center;
+  text-align: left;
 }
