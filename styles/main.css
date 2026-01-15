@@ -36,7 +36,7 @@
   --font-weight-bold: 600;
 
   /* font sizes */
-  --font-size-xs: 0.95rem;
+  --font-size-xs: 1.2rem;
   --font-size-s: clamp(1.2rem, 3.5vw, 1.4rem);
   --font-size-m: clamp(1.5rem, 4vw, 2.2rem);
   --font-size-l: clamp(1.8rem, 3.5vw, 2.2rem);
