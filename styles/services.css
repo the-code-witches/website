@@ -3,14 +3,12 @@
 .section__services {
   min-height: auto;
   height: auto;
-  padding: 8rem 0 2rem;
   justify-content: flex-start;
 }
 
 .section__services .content {
   text-align: justify;
 }
-
 
 .service-cards {
   display: flex;
@@ -19,7 +17,6 @@
   width: 100vw;
   margin-top: 2rem;
 }
-
 
 .service-card {
   flex: 1;
@@ -33,7 +30,9 @@
   cursor: default;
   position: relative;
   overflow: hidden;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
   margin: 0 1rem 1rem 1rem;
 }
 
@@ -51,7 +50,9 @@
   visibility: hidden;
   max-width: 40ch;
   text-align: left;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
 }
 
 .service-card__description p {

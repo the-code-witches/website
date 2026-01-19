@@ -61,6 +61,7 @@
 .content {
   max-width: min(940px, 75vw);
   color: var(--muted);
+  padding: 0rem 4rem;
 }
 
 /* Section titles (used across all sections) */
@@ -69,6 +70,7 @@
   font-weight: var(--font-weight-bold);
   color: var(--text);
   margin: 0.25rem 0 0.25rem;
+  padding: 0rem 4rem;
 }
 
 /* Link accent (used in multiple sections) */

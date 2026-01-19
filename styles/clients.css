@@ -1,7 +1,6 @@
 /* Clients/Projects Section Styles */
 
 .section__clients {
-  padding: 4rem 0 0;
   width: 100%;
   justify-content: space-between;
   background: var(--primary);
@@ -90,11 +89,18 @@
 
 /* Desktop reordering for proper 2x2 grid layout */
 @media (min-width: 769px) {
-
-  .client__block:nth-child(1) { order: 1; } /* Process Automation - top left */
-  .client__block:nth-child(2) { order: 2; } /* Booking System - top right */
-  .client__block:nth-child(3) { order: 4; } /* Matching Algorithm - bottom right */
-  .client__block:nth-child(4) { order: 3; } /* Product Configurator - bottom left */
+  .client__block:nth-child(1) {
+    order: 1;
+  } /* Process Automation - top left */
+  .client__block:nth-child(2) {
+    order: 2;
+  } /* Booking System - top right */
+  .client__block:nth-child(3) {
+    order: 4;
+  } /* Matching Algorithm - bottom right */
+  .client__block:nth-child(4) {
+    order: 3;
+  } /* Product Configurator - bottom left */
 }
 
 /* Mobile styles for clients section */
@@ -117,13 +123,13 @@
     flex: 0 0 auto;
     width: 100%;
     height: auto;
-    padding: calc(0.5*var(--header-height));
+    padding: calc(0.5 * var(--header-height));
     text-align: left;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
   }
-  
+
   .client__block__content {
     height: 100%;
     display: flex;
