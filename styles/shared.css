@@ -59,9 +59,20 @@
 
 /* Content container (used across multiple sections) */
 .content {
-  max-width: min(940px, 75vw);
+  max-width: min(940px, 50vw);
   color: var(--muted);
   padding: 0rem 4rem;
+}
+
+.two-col-wrap {
+  color: var(--muted);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0rem 4rem;
+}
+.two-col-item {
+  max-width: 46%;
 }
 
 /* Section titles (used across all sections) */

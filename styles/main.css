@@ -167,6 +167,18 @@ body::before {
   color: var(--primary);
 }
 
+.cta {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.2px;
+  padding: 0.25rem 0.75rem;
+}
+
+.cta:hover {
+  color: var(--brand);
+}
+
 .lang__toggle {
   appearance: none;
   background: transparent;
