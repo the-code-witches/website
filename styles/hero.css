@@ -14,7 +14,7 @@
 
 .hero__logo {
   order: 1;
-  height: calc(2*var(--font-size-xl));
+  height: calc(2 * var(--font-size-xl));
   margin-left: 2rem;
 }
 

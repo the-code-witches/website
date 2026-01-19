@@ -57,32 +57,9 @@
   white-space: pre-line;
 }
 
-.column ul {
-  font-weight: var(--font-weight-normal);
-  font-size: var(--font-size-s);
-  line-height: 1.65;
-  max-width: 40ch;
-  margin: 0 auto;
-  transition: opacity 0.3s ease-in-out;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  display: none;
-  color: var(--muted);
-  list-style: none;
-  padding: 0;
-}
-
-.column ul li {
-  margin-bottom: 0.5rem;
-}
-
 /* Content container (used across multiple sections) */
 .content {
-  max-width: 940px;
-  /* margin: 0 auto; */
+  max-width: min(940px, 75vw);
   color: var(--muted);
 }
 
@@ -121,10 +98,6 @@
 
   .column:hover .subhead {
     display: none;
-  }
-
-  .column:hover ul {
-    display: block;
   }
 
   .link__accent:hover,

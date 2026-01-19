@@ -1,8 +1,9 @@
 /* Services Section Styles */
 
 .section__services {
-  padding: 8rem 0 0;
-  position: relative;
+  min-height: auto;
+  height: auto;
+  padding: 8rem 0 2rem;
   justify-content: flex-start;
 }
 
@@ -10,73 +11,111 @@
   text-align: justify;
 }
 
-/* Desktop triangle bullets - directional */
+
+.service-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100vw;
+  margin-top: 2rem;
+}
+
+
+.service-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand);
+  color: var(--bg);
+  padding: 2rem;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.service-card__title {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  color: var(--bg);
+  margin: 0;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.service-card__description {
+  opacity: 0;
+  visibility: hidden;
+  max-width: 40ch;
+  text-align: left;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.service-card__description p {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.65;
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.service-card__description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Desktop hover effects */
 @media (min-width: 768px) {
-  /* Left column triangles point right */
-  .section__services .column__left ul li::before {
-    content: "▶";
+  .service-card:hover {
+    background: var(--bg);
     color: var(--muted);
-    margin-right: 0.5rem;
   }
 
-  /* Right column triangles point left */
-  .section__services .column__right ul li::before {
-    content: "◀";
-    color: var(--muted);
-    margin-left: 0.5rem;
-    margin-right: 0;
-    float: right;
-    position: absolute;
-    right: -1rem;
+  .service-card:hover .service-card__title {
+    opacity: 0;
+    visibility: hidden;
   }
 
-  /* Adjust right column list items for left-pointing triangles */
-  .section__services .column__right ul li {
-    position: relative;
-    padding-right: 1.5rem;
+  .service-card:hover .service-card__description {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-/* Mobile styles for services section */
+/* Mobile styles */
 @media (max-width: 767px) {
-
   .section__services .content {
     text-align: justify;
   }
 
-  .section__services .column .subhead br {
-    display: none;
+  .service-cards {
+    flex-direction: column;
   }
 
-  .section__services .column ul {
-    font-size: var(--font-size-xs);
+  .service-card {
+    padding: calc(0.5 * var(--header-height));
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .service-card__title {
     position: static;
-    display: block;
-    color: var(--bg);
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    width: auto;
-    max-width: none;
-    transform: none;
-    top: auto;
-    left: auto;
-  }
-
-  .section__services .column ul li {
-    margin-bottom: 0.5rem;
-  }
-
-  /* Triangle bullets for mobile - all point right */
-  .section__services .column ul li::before {
-    content: "▶";
-    color: var(--bg);
-    margin-right: 0.5rem;
-  }
-
-  .section__services .column .subhead {
     font-size: var(--font-size-s);
     text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .service-card__description {
+    opacity: 1;
+    visibility: visible;
+    max-width: none;
+    text-align: left;
+  }
+
+  .service-card__description p {
+    font-size: var(--font-size-xs);
     color: var(--bg);
   }
 }
