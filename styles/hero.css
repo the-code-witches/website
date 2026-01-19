@@ -33,3 +33,26 @@
   margin: 0;
   text-align: left;
 }
+
+@media (max-width: 767px) {
+  .section__hero {
+    max-width: 100vw;
+  }
+  .hero__header {
+    padding: 0rem;
+    align-items: stretch;
+    max-width: 75vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero__logo {
+    height: calc(4 * var(--font-size-l));
+    left: 0;
+  }
+  .hero__title {
+    font-size: var(--font-size-l);
+  }
+  .hero__subtitle {
+    font-size: var(--font-size-s);
+  }
+}

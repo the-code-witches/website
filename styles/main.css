@@ -248,7 +248,7 @@ body::before {
   }
 
   .nav__left {
-    gap: 0.6rem;
+    display: none;
   }
 
   .nav__link {
