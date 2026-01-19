@@ -59,7 +59,7 @@
 
 /* Content container (used across multiple sections) */
 .content {
-  max-width: min(1240px, 75vw);
+  max-width: min(1240px, 80vw);
   color: var(--muted);
   padding: 0rem 4rem;
 }
@@ -124,6 +124,7 @@
 @media (max-width: 767px) {
   .section__title {
     margin: 0.2rem 0 0.1rem;
+    padding: 0 2.5rem;
   }
 
   .section__clients .section__title,

@@ -1,7 +1,6 @@
 /* Clients/Projects Section Styles */
 
 .section__clients {
-  width: 100%;
   justify-content: space-between;
   background: var(--primary);
 }
@@ -145,7 +144,6 @@
     text-align: left;
     color: var(--bg);
     margin: 0 0 1rem 0;
-    order: 1;
   }
 
   .client__block__details {

@@ -6,10 +6,6 @@
   justify-content: flex-start;
 }
 
-.section__services .content {
-  text-align: justify;
-}
-
 .service-cards {
   display: flex;
   flex-direction: row;
@@ -88,7 +84,7 @@
 /* Mobile styles */
 @media (max-width: 767px) {
   .section__services .content {
-    text-align: justify;
+    text-align: left;
   }
 
   .service-cards {
