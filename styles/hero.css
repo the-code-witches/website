@@ -2,13 +2,28 @@
 
 .section__hero {
   max-width: 75vw;
-} 
+}
+
+.hero__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.hero__logo {
+  order: 1;
+  height: calc(2*var(--font-size-xl));
+  margin-left: 2rem;
+}
 
 .hero__title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-normal);
   color: var(--text);
   text-align: left;
+  margin: 0;
 }
 
 .hero__subtitle {
