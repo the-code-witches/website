@@ -127,3 +127,63 @@ document.addEventListener("DOMContentLoaded", () => {
     videoObserver.observe(video);
   }
 });
+
+// Google Calendar popup scheduling
+const CALENDAR_URL =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0guq06Owsw0Y6NXpFZsFTVvfDoWqTi9cEKwSyCyArnnXoICXHcX6kOCikamSvCMGlZUKBzsnWT?gv=true";
+const calendarTargets = document.querySelectorAll(".calendar-btn");
+const calendarTriggers = document.querySelectorAll("[data-calendar-trigger]");
+let calendarButton = null;
+let pendingCalendarOpen = false;
+
+const findCalendarButton = () =>
+  document.querySelector(".calendar-btn button, .calendar-btn a") ||
+  document.querySelector(".calendar-scheduling-button") ||
+  document.querySelector("button");
+
+const openCalendarPopup = () => {
+  if (!calendarButton) {
+    calendarButton = findCalendarButton();
+  }
+
+  if (calendarButton) {
+    calendarButton.click();
+  } else {
+    pendingCalendarOpen = true;
+  }
+};
+
+calendarTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    openCalendarPopup();
+  });
+});
+
+window.addEventListener("load", () => {
+  if (!window.calendar) return;
+
+  calendarTargets.forEach((target) => {
+    const label = target.dataset.label || "Book appointment";
+    calendar.schedulingButton.load({
+      url: CALENDAR_URL,
+      label: label,
+      color: "#039BE5",
+      target: target,
+    });
+  });
+
+  calendarButton = findCalendarButton();
+
+  if (calendarButton) {
+    calendarButton.setAttribute("aria-hidden", "true");
+    calendarButton.style.display = "none";
+    calendarButton.tabIndex = -1;
+  }
+
+  if (pendingCalendarOpen && calendarButton) {
+    pendingCalendarOpen = false;
+    calendarButton.click();
+  }
+});
+

@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="styles/services.css" />
   <link rel="stylesheet" href="styles/clients.css" />
   <link rel="stylesheet" href="styles/contact.css" />
+  <!-- Google Calendar Appointment Scheduling -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
 </head>
 
 <body>
@@ -37,7 +40,7 @@
         <a class="nav__link" href="#contact">contact</a>
       </div>
       <div class="nav__right">
-        <a class="nav__cta" href="#">BOOK FREE SESSION</a>
+        <a class="nav__cta calendar-trigger" href="#" data-calendar-trigger>BOOK FREE SESSION</a>
       </div>
     </nav>
   </header>
@@ -49,11 +52,12 @@
         <img class="hero__logo" src="assets/logo.svg" alt="The Code Witches Logo" />
         <h1 class="hero__title">the code witches</h1>
         <p class="hero__subtitle">rebels by heart, coders by craft.</p>
-        <p class="hero__subtitle">your favorite female tech tandem.</p>        
+        <p class="hero__subtitle">your favorite female tech tandem.</p>
       </div>
       <div class="content">
-        <p>We're a developer team with 20+ years of combined practice in building software and data products. combining in-depth tech know-how with real experience in how organizational processes
-        grow and change.</p>
+        <p>We're a developer team with 20+ years of combined practice in building software and data products. combining
+          in-depth tech know-how with real experience in how organizational processes
+          grow and change.</p>
       </div>
     </section>
 
@@ -64,13 +68,15 @@
         <p>
           Our passion lies in understanding complex systems, writing clean code, and creating clear communication that
           builds bridges.
-          We engage with your vision and our main objective is to bring you clarity: Clarity about what you’re building, why you’re building it, and what the next sensible steps are.</p>
+          We engage with your vision and our main objective is to bring you clarity: Clarity about what you’re building,
+          why you’re building it, and what the next sensible steps are.</p>
 
         </p>
 
-         <p>We work as a tandem: giving you the service and reliability of an agency, with the flexibility and direct communication of a freelancer.</p>
+        <p>We work as a tandem: giving you the service and reliability of an agency, with the flexibility and direct
+          communication of a freelancer.</p>
 
-        
+
       </div>
       <img class="about__image" src="assets/about.jpg" alt="About us" />
       <div class="columns">
@@ -93,34 +99,42 @@
     <section id="services" class="section section__services">
       <h2 class="section__title">services</h2>
       <div class="content">
-        <p>Good software takes more than clean code and a stable architecture. Decisions, communication, and organizational
-        processes shape products just as much as technology does. We pay attention to how ideas turn into decisions, how
-        priorities are set, and how feedback flows.</p>
+        <p>Good software takes more than clean code and a stable architecture. Decisions, communication, and
+          organizational
+          processes shape products just as much as technology does. We pay attention to how ideas turn into decisions,
+          how
+          priorities are set, and how feedback flows.</p>
 
         <p> We combine in-depth tech know-how far beyond vibecoding with real experience in
-        how organizational processes grow and change. Together we’ll get you moving forward.</p>
+          how organizational processes grow and change. Together we’ll get you moving forward.</p>
 
-        <p>We do the programming, but we also help you understand what to build and how to get there. Our work combines deep technical
-        expertise beyond vibecoding with real experience in how organizations and products evolve.</p>
+        <p>We do the programming, but we also help you understand what to build and how to get there. Our work combines
+          deep technical
+          expertise beyond vibecoding with real experience in how organizations and products evolve.</p>
 
         <p>Have an idea but not enough tech knowledge? Stuck with your current setup? Hitting bottlenecks in your
-        organization's workflow?  We are sure one of our predefined packages will fit your needs and will bring you the clarity you seek.</p>
-        <p> book yourself a free <a class="cta" href="#">FREE SESSION</a> and we can figgure it out together </p>
+          organization's workflow? We are sure one of our predefined packages will fit your needs and will bring you the
+          clarity you seek.</p>
+        <p> book yourself a free <a class="cta calendar-trigger" href="#" data-calendar-trigger>FREE SESSION</a> and we
+          can figgure it out together </p>
       </div>
       <div class="service-cards">
         <div class="service-card">
           <h3 class="service-card__title">1h sparring</h3>
           <div class="service-card__description">
             <p>A minimal investment to find out if working together feels right and is worth your time and money.</p>
-            <p>This session is for sharing where you’re at, having two experienced IT brains ask you questions and structure your biggest challenges.</p>
+            <p>This session is for sharing where you’re at, having two experienced IT brains ask you questions and
+              structure your biggest challenges.</p>
             <p>You'll get a summary of what we've discussed and recommendations for steps ahead.</p>
           </div>
         </div>
         <div class="service-card">
           <h3 class="service-card__title">deep dive</h3>
           <div class="service-card__description">
-            <p>we prepare a tailored workshop for you and together we develop solutions for your most pressing pain point</p>
-            <p>Depending on the subject, this can be: suggestions for your architecture including discussion, planning an mvp or new feature together, a technical input, ...</p>
+            <p>we prepare a tailored workshop for you and together we develop solutions for your most pressing pain
+              point</p>
+            <p>Depending on the subject, this can be: suggestions for your architecture including discussion, planning
+              an mvp or new feature together, a technical input, ...</p>
             <p>We document and summarize what we’ve discussed.</p>
           </div>
         </div>
@@ -134,33 +148,37 @@
         </div>
       </div>
       <div class="content">
-        
+
 
         <!-- <p>We offer fully integrated hands-on programming and technical consulting from a single source.</p>
         <p>Have an idea but not enough technical grounding? Stuck with an existing setup? Hitting bottlenecks in your workflows or
         decision-making?</p> -->
-        
+
         <p> </p>
         <!-- EXTRA SECTION? <p> Hier was über agile cycles und wie wir arbeiten, stages + phasen etc </p> -->
 
       </div>
-      
+
     </section>
 
     <!-- Clients -->
     <section id="clients" class="section section__clients">
-       <h2 class="section__title">projects</h2>
-       <div class="content">
+      <h2 class="section__title">projects</h2>
+      <div class="content">
         <p>
-          all of our reference projects include direct stakeholder communication, managing requirements, ongoing support as well as custom deploys to self-managed environments.
+          all of our reference projects include direct stakeholder communication, managing requirements, ongoing support
+          as well as custom deploys to self-managed environments.
         </p>
-       </div>
+      </div>
       <div class="clients__grid">
         <div class="client__block block1">
           <div class="client__block__content">
             <h3 class="client__block__title">Process Digitization</h3>
             <div class="client__block__details">
-              <p class="client__block__description">For our partner <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> we built an end-to-end platform that manages the full lifecycle of reforestation projects. One efficient system that consolidates complex processes from seed purchasing and production to tour planning and drone flight management.</p>
+              <p class="client__block__description">For our partner <a href="https://www.skyseed.eco"
+                  class="client__link">Skyseed</a> we built an end-to-end platform that manages the full lifecycle of
+                reforestation projects. One efficient system that consolidates complex processes from seed purchasing
+                and production to tour planning and drone flight management.</p>
               <span class="client__block__stack">ReactJS, Python, Django REST, Celery, PostgreSQL, NGINX</span>
             </div>
           </div>
@@ -169,7 +187,10 @@
           <div class="client__block__content">
             <h3 class="client__block__title">Booking System</h3>
             <div class="client__block__details">
-              <p class="client__block__description">For the <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a>, we restructured and expanded their course booking platform, modernizing core functions and adding new features while ensuring a smooth transition within their established workflows.</p>
+              <p class="client__block__description">For the <a href="https://freie-kunst-akademie-augsburg.de/"
+                  class="client__link">Freie Kunst Akademie Augsburg</a>, we restructured and expanded their course
+                booking platform, modernizing core functions and adding new features while ensuring a smooth transition
+                within their established workflows.</p>
               <span class="client__block__stack">Drupal, PHP, Javascript, MySQL, SCSS</span>
             </div>
           </div>
@@ -178,7 +199,10 @@
           <div class="client__block__content">
             <h3 class="client__block__title">Matching Algorithm</h3>
             <div class="client__block__details">
-              <p class="client__block__description">Together with <a href="https://www.skyseed.eco" class="client__link">Skyseed</a>, we developed an intelligent matching engine that automatically assigns the right seeds to each forest area in compliance with German regulations and ecological factors, fully embedded in their existing infrastructure.</p>
+              <p class="client__block__description">Together with <a href="https://www.skyseed.eco"
+                  class="client__link">Skyseed</a>, we developed an intelligent matching engine that automatically
+                assigns the right seeds to each forest area in compliance with German regulations and ecological
+                factors, fully embedded in their existing infrastructure.</p>
               <span class="client__block__stack">Python, Django REST, Celery, PostgreSQL</span>
             </div>
           </div>
@@ -187,7 +211,10 @@
           <div class="client__block__content">
             <h3 class="client__block__title">Product Configurator</h3>
             <div class="client__block__details">
-              <p class="client__block__description">We created a product configurator for <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> that interactively guides users through their portfolio and generates tailored offers and qualified leads by integrating seamlessly with existing backend services and CRM system.</p>
+              <p class="client__block__description">We created a product configurator for <a
+                  href="https://www.skyseed.eco" class="client__link">Skyseed</a> that interactively guides users
+                through their portfolio and generates tailored offers and qualified leads by integrating seamlessly with
+                existing backend services and CRM system.</p>
               <span class="client__block__stack">ReactJS, Webflow, Pipedrive API</span>
             </div>
           </div>
@@ -224,6 +251,7 @@
     </section>
   </main>
 
+  <div class="calendar-btn" data-label="Book appointment" aria-hidden="true"></div>
   <script defer src="scripts/main.js"></script>
 </body>
 

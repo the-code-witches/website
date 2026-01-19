@@ -179,6 +179,14 @@ body::before {
   color: var(--brand);
 }
 
+.calendar-btn {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .lang__toggle {
   appearance: none;
   background: transparent;
