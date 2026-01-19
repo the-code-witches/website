@@ -6,6 +6,10 @@
   justify-content: flex-start;
 }
 
+.section__services .content {
+  max-width: 100%;
+}
+
 .service-cards {
   display: flex;
   flex-direction: row;
@@ -52,7 +56,7 @@
 }
 
 .service-card__description p {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-s);
   font-weight: var(--font-weight-normal);
   line-height: 1.65;
   margin: 0 0 1rem;
@@ -89,12 +93,14 @@
 
   .service-cards {
     flex-direction: column;
+    height: auto;
   }
 
   .service-card {
     padding: calc(0.5 * var(--header-height));
     align-items: flex-start;
     justify-content: flex-start;
+    min-height: 50vh;
   }
 
   .service-card__title {
@@ -112,7 +118,7 @@
   }
 
   .service-card__description p {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-s);
     color: var(--bg);
   }
 }
