@@ -74,11 +74,6 @@ links.forEach((link) => {
   })
 })
 
-// (Optional) Language toggle scaffold
-document.querySelector(".lang-toggle")?.addEventListener("click", () => {
-  alert("Language toggle coming soon ✨")
-})
-
 // About section image movement on column hover (desktop only)
 document.addEventListener("DOMContentLoaded", () => {
   const aboutImage = document.querySelector(".about__image")
@@ -92,11 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
     rightColumn.addEventListener("mouseenter", () => {
       aboutImage.style.transform = "translateX(-100%)"
     })
-    ;[leftColumn, rightColumn].forEach((column) => {
-      column.addEventListener("mouseleave", () => {
-        aboutImage.style.transform = "translateX(-50%)"
+      ;[leftColumn, rightColumn].forEach((column) => {
+        column.addEventListener("mouseleave", () => {
+          aboutImage.style.transform = "translateX(-50%)"
+        })
       })
-    })
   }
 })
 
