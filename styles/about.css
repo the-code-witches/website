@@ -6,14 +6,27 @@
   padding-top: 4rem;
 }
 
+.section__about .about__stack {
+  margin-top: 2rem;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
 
 /* Desktop hover effects for image movement */
 @media (min-width: 768px) {
 
+  .section__about .about__stack {
+    height: 40vh;
+  }
+
   .about__image {
     position: absolute;
-    bottom: 0;
+    display: block;
+    margin: 0;
     left: 50%;
+    bottom: 0;
     transform: translateX(-50%);
     z-index: 10;
     max-height: 40vh;
@@ -33,7 +46,16 @@
 @media (max-width: 767px) {
 
   .about__image {
+    position: relative;
     width: 100vw;
+    height: auto;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .section__about .about__stack {
     height: auto;
   }
 
@@ -43,19 +65,19 @@
   }
 
   .section__about .columns {
-    margin-top: -1rem; /* close the gap btw img and cols */
+    margin-top: -1rem;
+    /* close the gap btw img and cols */
   }
-  
+
   .section__about .column p {
     font-size: var(--font-size-xs);
     position: relative;
     display: flex;
   }
-  
+
   .section__about .column .subhead {
     font-size: var(--font-size-s);
     text-align: left;
     color: var(--bg);
   }
 }
-
