@@ -34,7 +34,7 @@
   /* font weights */
   --font-weight-light: 200;
   --font-weight-normal: 400;
-  --font-weight-bold: 600;
+  --font-weight-bold: 400;
 
   /* font sizes */
   --font-size-xs: 0.95rem;
@@ -158,6 +158,7 @@ body::before {
   color: var(--text);
   text-decoration: none;
   font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
   letter-spacing: 0.2px;
   padding: 0.25rem 0.75rem;
 }
@@ -170,6 +171,7 @@ body::before {
   color: var(--text);
   text-decoration: none;
   font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
   letter-spacing: 0.2px;
   padding: 0.25rem 0.75rem;
 }
@@ -195,6 +197,7 @@ body::before {
   border-radius: 0.6rem;
   cursor: pointer;
   font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
 }
 
 .lang__toggle:hover {
