@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="styles/services.css" />
   <link rel="stylesheet" href="styles/clients.css" />
   <link rel="stylesheet" href="styles/contact.css" />
+  <link rel="stylesheet" href="styles/modal.css" />
   <!-- Google Calendar Appointment Scheduling -->
   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
   <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -55,9 +56,7 @@
         <p class="hero__subtitle">your favorite female tech tandem.</p>
       </div>
       <div class="content">
-        <p>We're a developer team with 20+ years of combined practice in building software and data products. combining
-          in-depth tech know-how with real experience in how organizational processes
-          grow and change.</p>
+        <p>We help founders and impact teams turn big ideas into software that actually works. Together, we create resilient systems that fit your organization, give you confidence, and make building fun again.</p>
       </div>
     </section>
 
@@ -243,15 +242,86 @@
         </video>
       </div>
       <footer class="site-footer">
-        <p class="footer__left">© code witches | Sengül & Nawaz GbR </p>
+        <p>© code witches | Sengül & Nawaz GbR </p>
         <p class="footer__separator"> &middot; </p>
-        <p class="footer__right"> All rights reserved</p>
+        <p> All rights reserved</p>
+        <p class="footer__separator"> &middot; </p>
+        <p class=""> <a href="#agb-modal" class="modal-link">AGB</a> </p>
+        <p class="footer__separator"> &middot; </p>
+        <p> <a href="#impressum-modal" class="modal-link">impressum</a> </p>
+        
       </footer>
     </section>
   </main>
 
   <div class="calendar-btn" data-label="Book appointment" aria-hidden="true"></div>
   <script defer src="scripts/main.js"></script>
+  
+
+  <!-- AGB Modal -->
+  <div id="agb-modal" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <section id="agb">
+        <h2>Unsere Spielregeln – The Code Witches</h2>
+
+        <h3>1. Was wir machen</h3>
+        <p>Wir bauen Software, beraten Teams und Gründer:innen und helfen euch, eure Ideen in funktionierende Systeme zu verwandeln. Wir liefern Code, Konzepte und unsere Erfahrung – keine Rechts- oder Finanzberatung.</p>
+
+        <h3>2. Wie ein Projekt zustande kommt</h3>
+        <p>Ein Projekt startet, wenn wir uns auf ein Angebot geeinigt haben. Angebote gelten in der Regel 30 Tage. Änderungen besprechen wir gemeinsam.</p>
+
+        <h3>3. Was wir von euch brauchen</h3>
+        <p>Damit alles flutscht, brauchen wir eure Infos, Zugänge und Feedback rechtzeitig. So können wir konzentriert arbeiten und echte Ergebnisse liefern.</p>
+
+        <h3>4. Zeit und Ablauf</h3>
+        <p>Wir geben euch grobe Zeitpläne und Meilensteine. Manchmal ändern sich Dinge – wir halten euch auf dem Laufenden und passen Pläne an.</p>
+
+        <h3>5. Geld &amp; Bezahlung</h3>
+        <p>Wir arbeiten nach Stunden- oder Projektbasis, je nach Vereinbarung. Zahlungen bitte nach Plan. Wenn es mal hakt, behalten wir uns Mahngebühren vor.</p>
+
+        <h3>6. Änderungen während des Projekts</h3>
+        <p>Neue Ideen oder Änderungen am Projektumfang besprechen wir gemeinsam. Sie können Zeit oder Kosten beeinflussen – wir halten euch immer im Loop.</p>
+
+        <h3>7. Wer was besitzt</h3>
+        <p>Ihr bekommt die Rechte an der Software, die wir für euch erstellen. Wir behalten Rechte an eigenen Tools oder Bibliotheken, die wir einsetzen.</p>
+
+        <h3>8. Vertraulichkeit</h3>
+        <p>Alles, was wir voneinander erfahren, behandeln wir vertraulich. Punkt.</p>
+
+        <h3>9. Haftung</h3>
+        <p>Wir haften nur, wenn wir etwas wirklich grob falsch machen. Für indirekte Schäden, entgangene Gewinne oder Datenverlust übernehmen wir keine Verantwortung.</p>
+
+        <h3>10. Beenden eines Projekts</h3>
+        <p>Beide Seiten können ein Projekt kündigen, wenn nötig. Schon erbrachte Leistungen werden fair abgerechnet.</p>
+
+        <h3>11. Datenschutz</h3>
+        <p>Wir behandeln persönliche Daten nach DSGVO. Details stehen in unserer Datenschutzerklärung.</p>
+
+        <h3>12. Kleines Kleingedrucktes</h3>
+        <ul>
+          <li>Es gilt deutsches Recht.</li>
+          <li>Gerichtsstand ist unser Sitz.</li>
+          <li>Sollte ein Punkt unwirksam sein, bleibt der Rest gültig.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  <div id="impressum-modal" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <section id="impressum">
+  <h2>Impressum</h2>
+
+  <p><strong>code witches | Sengül & Nawaz GbR</strong></p>
+
+  <img src="assets/impressum.png"/>
+
+</section>
+
+    </div>
+  </div>
+
 </body>
 
 </html>
