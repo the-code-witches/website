@@ -37,7 +37,7 @@
   text-align: right;
   align-items: center;
   justify-content: flex-end;
-  background: var(--secondary);
+  background: var(--brand);
   padding-right: var(--header-height);
   color: var(--bg);
 }
@@ -66,6 +66,14 @@
   padding: 0rem 4rem;
 }
 
+.content p {
+  margin: 0;
+}
+
+.content p+p {
+  margin-top: calc(0.5 * var(--header-height));
+}
+
 .two-col-wrap {
   color: var(--text);
   font-weight: var(--font-weight-light);
@@ -85,7 +93,7 @@
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   color: var(--text);
-  margin: 0.25rem 0 0.25rem;
+  margin: 0 0 0.25rem;
   padding: 0rem 4rem;
 }
 
