@@ -57,7 +57,8 @@
   display: none;
   width: 90%;
   text-align: left;
-  color: var(--muted);
+  color: var(--text);
+  font-weight: var(--font-weight-light);
   font-size: var(--font-size-s);
   line-height: 1.5;
 }
@@ -74,6 +75,7 @@
 
 /* Desktop hover effects */
 @media (min-width: 768px) {
+
   .client__block.block1:hover,
   .client__block.block2:hover {
     background-color: var(--bg);
@@ -92,16 +94,24 @@
 @media (min-width: 769px) {
   .client__block:nth-child(1) {
     order: 1;
-  } /* Process Automation - top left */
+  }
+
+  /* Process Automation - top left */
   .client__block:nth-child(2) {
     order: 2;
-  } /* Booking System - top right */
+  }
+
+  /* Booking System - top right */
   .client__block:nth-child(3) {
     order: 4;
-  } /* Matching Algorithm - bottom right */
+  }
+
+  /* Matching Algorithm - bottom right */
   .client__block:nth-child(4) {
     order: 3;
-  } /* Product Configurator - bottom left */
+  }
+
+  /* Product Configurator - bottom left */
 }
 
 /* Mobile styles for clients section */

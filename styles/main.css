@@ -192,11 +192,11 @@ body::before {
   appearance: none;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  color: var(--muted);
+  color: var(--text);
   padding: 0.45rem 0.6rem;
   border-radius: 0.6rem;
   cursor: pointer;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-light);
   text-transform: uppercase;
 }
 

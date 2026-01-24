@@ -58,10 +58,10 @@
 
 .service-card__description p {
   font-size: var(--font-size-s);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-light);
   line-height: 1.65;
   margin: 0 0 1rem;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .service-card__description p:last-child {
@@ -72,7 +72,8 @@
 @media (min-width: 768px) {
   .service-card:hover {
     background: var(--bg);
-    color: var(--muted);
+    color: var(--text);
+    font-weight: var(--font-weight-light);
   }
 
   .service-card:hover .service-card__title {

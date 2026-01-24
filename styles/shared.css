@@ -61,17 +61,20 @@
 /* Content container (used across multiple sections) */
 .content {
   max-width: min(1240px, 80vw);
-  color: var(--muted);
+  color: var(--text);
+  font-weight: var(--font-weight-light);
   padding: 0rem 4rem;
 }
 
 .two-col-wrap {
-  color: var(--muted);
+  color: var(--text);
+  font-weight: var(--font-weight-light);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0rem 4rem;
 }
+
 .two-col-item {
   max-width: 46%;
 }
@@ -93,6 +96,7 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .link__accent__light {
   color: var(--bg);
   font-weight: var(--font-weight-bold);
@@ -102,6 +106,7 @@
 
 /* Desktop hover effects */
 @media (min-width: 768px) {
+
   .column__left:hover p,
   .column__right:hover p {
     display: block;
@@ -110,7 +115,8 @@
   .column__left:hover,
   .column__right:hover {
     background: var(--bg);
-    color: var(--muted);
+    color: var(--text);
+    font-weight: var(--font-weight-light);
   }
 
   .column:hover .subhead {
