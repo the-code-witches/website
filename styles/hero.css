@@ -2,27 +2,27 @@
 
 .section__hero {
   max-width: 75vw;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .hero__header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 0rem 4rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
 .hero__logo {
   height: calc(4 * var(--font-size-xl));
-  position: relative;
-  left: -4rem;
   margin-bottom: 1rem;
+  margin-top: 15rem;
 }
 
 .hero__title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-normal);
   color: var(--text);
-  text-align: left;
   margin: 0;
 }
 
@@ -31,7 +31,9 @@
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-m);
   margin: 0;
-  text-align: left;
+}
+.section__hero .content {
+  margin: 0 auto;
 }
 
 @media (max-width: 767px) {

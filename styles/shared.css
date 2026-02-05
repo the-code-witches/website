@@ -60,7 +60,7 @@
 
 /* Content container (used across multiple sections) */
 .content {
-  max-width: min(1240px, 80vw);
+  max-width: min(1240px, 75%);
   color: var(--text);
   font-weight: var(--font-weight-light);
   padding: 0rem 4rem;
@@ -106,7 +106,6 @@
 
 /* Desktop hover effects */
 @media (min-width: 768px) {
-
   .column__left:hover p,
   .column__right:hover p {
     display: block;
