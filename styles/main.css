@@ -211,7 +211,6 @@ body::before {
 
 /* Base Section Styles */
 .section {
-  min-height: 100vh;
   padding: 6rem 0rem 0rem;
   display: flex;
   flex-direction: column;
