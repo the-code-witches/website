@@ -46,7 +46,7 @@
 @media (max-width: 767px) {
   .about__image {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: auto;
     left: auto;
     bottom: auto;
