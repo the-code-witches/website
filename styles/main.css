@@ -75,20 +75,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-position-y: -100vh;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40vw;
-  height: 80vw;
-  background: var(--brand);
-  clip-path: polygon(100% 0, 0 0, 100% 100%);
-  z-index: 0;
-  pointer-events: none;
+  background-position-y: -140vh;
 }
 
 /* ul li::marker {
