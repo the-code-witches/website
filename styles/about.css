@@ -9,14 +9,11 @@
 .section__about .about__stack {
   margin-top: 2rem;
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
 }
-
 
 /* Desktop hover effects for image movement */
 @media (min-width: 768px) {
-
   .section__about .about__stack {
     height: 40vh;
   }
@@ -41,10 +38,8 @@
   }
 }
 
-
 /* Mobile styles for about section */
 @media (max-width: 767px) {
-
   .about__image {
     position: relative;
     width: 100vw;
