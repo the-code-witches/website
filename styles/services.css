@@ -14,9 +14,8 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  width: calc(100vw - var(--header-height));
-  margin: calc(0.5 * var(--header-height));
-  gap: calc(0.5 * var(--header-height));
+  width: 100vw;
+  margin-top: 2rem;
 }
 
 .service-card {
@@ -34,6 +33,7 @@
   transition:
     background 0.3s ease-in-out,
     color 0.3s ease-in-out;
+  margin: 0 1rem 1rem 1rem;
 }
 
 .service-card__title {
@@ -96,9 +96,6 @@
   .service-cards {
     flex-direction: column;
     height: auto;
-    width: calc(100vw - var(--header-height));
-    margin: calc(0.5 * var(--header-height));
-    gap: calc(0.5 * var(--header-height));
   }
 
   .service-card {

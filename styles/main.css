@@ -207,8 +207,8 @@ body::before {
 
 /* Base Section Styles */
 .section {
-  min-height: calc(100vh - var(--header-height));
-  padding: var(--header-height) 0 var(--header-height);
+  min-height: 100vh;
+  padding: 6rem 0rem 0rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -225,14 +225,6 @@ body::before {
 .section.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.section>*:first-child {
-  margin-top: 0;
-}
-
-.section>*:last-child {
-  margin-bottom: 0;
 }
 
 /* Footer */
@@ -281,8 +273,7 @@ body::before {
   }
 
   .section {
-    padding-top: var(--header-height);
-    padding-bottom: var(--header-height);
+    padding-top: 6.5rem;
   }
 
   .site-footer {

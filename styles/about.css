@@ -7,11 +7,10 @@
 }
 
 .section__about .about__stack {
-  margin-top: 1rem;
+  margin-top: 2rem;
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  margin-bottom: 1rem;
 }
 
 
@@ -20,12 +19,6 @@
 
   .section__about .about__stack {
     height: 40vh;
-  }
-
-  .section__about .columns {
-    width: calc(100vw - var(--header-height));
-    left: calc(0.5 * var(--header-height));
-    gap: calc(0.5 * var(--header-height));
   }
 
   .about__image {
@@ -54,12 +47,12 @@
 
   .about__image {
     position: relative;
-    width: calc(100vw - var(--header-height));
+    width: 100vw;
     height: auto;
     left: auto;
     bottom: auto;
     transform: none;
-    margin: 0 calc(0.5 * var(--header-height));
+    margin: 0 auto;
   }
 
   .section__about .about__stack {
@@ -74,14 +67,6 @@
   .section__about .columns {
     margin-top: -1rem;
     /* close the gap btw img and cols */
-    width: calc(100vw - var(--header-height));
-    margin-left: calc(0.5 * var(--header-height));
-    margin-right: calc(0.5 * var(--header-height));
-    gap: calc(0.5 * var(--header-height));
-  }
-
-  .section__about .column {
-    margin: calc(0.5 * var(--header-height)) 0;
   }
 
   .section__about .column p {
