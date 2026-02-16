@@ -163,16 +163,18 @@ body {
   text-decoration: none;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: 0.2px;
-  padding: 0.25rem 0.75rem;
-  backdrop-filter: saturate(140%) blur(8px);
-  background: var(--bg);
+  /*letter-spacing: 0.2px;*/
+  padding: 0;
+  /*backdrop-filter: saturate(140%) blur(8px);
+  /*background: var(--bg);*/
+  background: inherit;
   border-radius: 4px;
   margin: 0 1rem;
 }
 
 .cta:hover {
   color: var(--brand);
+  background: inherit;
 }
 
 .calendar-btn {
@@ -221,11 +223,11 @@ body {
   transform: translateY(0);
 }
 
-.section > *:first-child {
+.section>*:first-child {
   margin-top: 0;
 }
 
-.section > *:last-child {
+.section>*:last-child {
   margin-bottom: 0;
 }
 
