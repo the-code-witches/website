@@ -1,9 +1,10 @@
 /* Services Section Styles */
 
 .section__services {
-  min-height: auto;
+  min-height: calc(100vh - var(--header-height));
   height: auto;
   justify-content: flex-start;
+  overflow: hidden;
 }
 
 .service-cards {
@@ -11,7 +12,6 @@
   flex-direction: row;
   align-items: stretch;
   width: 100%;
-  margin-top: 2rem;
 }
 
 .service-card {
@@ -22,7 +22,7 @@
   justify-content: center;
   background: var(--brand);
   color: var(--bg);
-  padding: 2rem;
+  padding: 4rem;
   cursor: default;
   position: relative;
   overflow: hidden;
@@ -50,11 +50,26 @@
     visibility 0.3s ease-in-out;
 }
 
+.section__services>img {
+  width: 120vw;
+  min-height: 200px;
+  max-height: 300px;
+  object-fit: fill;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .service-card__description p {
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-light);
   line-height: 1.65;
   color: var(--text);
+}
+
+.service-card__description p:first-child {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .service-card__description p:last-child {

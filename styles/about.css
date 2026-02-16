@@ -3,11 +3,9 @@
 .section__about {
   position: relative;
   justify-content: flex-start;
-  padding-top: 4rem;
 }
 
 .section__about .about__stack {
-  margin-top: 2rem;
   position: relative;
   width: 100%;
 }
