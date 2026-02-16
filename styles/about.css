@@ -6,10 +6,6 @@
   padding-top: 4rem;
 }
 
-.section__how {
-  background: var(--primary);
-}
-
 .section__about .about__stack {
   margin-top: 2rem;
   position: relative;

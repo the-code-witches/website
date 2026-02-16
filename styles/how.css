@@ -1,0 +1,25 @@
+/* How Section Styles */
+
+.section__how {
+    background: var(--brand);
+    color: var(--bg);
+    overflow: hidden;
+}
+
+.section__how .section__title {
+    color: var(--bg);
+}
+
+.section__how .content {
+    color: var(--bg);
+}
+
+.section__how img {
+    width: 120vw;
+    min-height: 200px;
+    max-height: 300px;
+    object-fit: fill;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
