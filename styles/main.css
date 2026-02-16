@@ -254,6 +254,15 @@ body {
   white-space: nowrap;
 }
 
+.site-footer .footer__legal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+  flex-basis: 100%;
+  justify-content: center;
+}
+
 /* Small screens */
 @media (max-width: 992px) {
   .nav {

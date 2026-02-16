@@ -133,6 +133,7 @@
     flex: 0 0 auto;
     width: 100%;
     height: auto;
+    min-height: auto;
     padding: calc(0.5 * var(--header-height));
     text-align: left;
     flex-direction: column;
