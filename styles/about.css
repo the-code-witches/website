@@ -17,7 +17,7 @@
 }
 
 /* Desktop hover effects for image movement */
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .section__about .about__stack {
     height: 40vh;
   }
@@ -43,7 +43,7 @@
 }
 
 /* Mobile styles for about section */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .about__image {
     position: relative;
     width: 100%;

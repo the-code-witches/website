@@ -73,7 +73,8 @@
 }
 
 /* Desktop hover effects */
-@media (min-width: 768px) {
+@media (min-width: 993px) {
+
   .client__block.block1:hover,
   .client__block.block2:hover {
     background-color: var(--bg);
@@ -89,7 +90,7 @@
 }
 
 /* Desktop reordering for proper 2x2 grid layout */
-@media (min-width: 769px) {
+@media (min-width: 993px) {
   .client__block:nth-child(1) {
     order: 1;
   }
@@ -113,7 +114,7 @@
 }
 
 /* Mobile styles for clients section */
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .section__clients {
     padding-bottom: 0;
   }

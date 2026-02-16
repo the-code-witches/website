@@ -255,7 +255,7 @@ body {
 }
 
 /* Small screens */
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .nav {
     padding: 0 1rem;
   }
