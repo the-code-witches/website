@@ -58,3 +58,11 @@
 .modal-link:hover {
   color: var(--primary);
 }
+
+/* Responsive modal text */
+@media (max-width: 992px) {
+  .modal-content {
+    font-size: var(--font-size-xs);
+    padding: 1rem 1.25rem;
+  }
+}

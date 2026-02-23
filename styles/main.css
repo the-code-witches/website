@@ -276,8 +276,6 @@ body::after {
   align-items: center;
   gap: 0.35rem;
   white-space: nowrap;
-  flex-basis: 100%;
-  justify-content: center;
 }
 
 /* Small screens */
@@ -321,5 +319,10 @@ body::after {
 
   .site-footer p {
     white-space: normal;
+  }
+
+  .site-footer .footer__legal {
+    flex-basis: 100%;
+    justify-content: center;
   }
 }

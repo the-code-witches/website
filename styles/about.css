@@ -2,7 +2,16 @@
 
 .section__about {
   position: relative;
-  justify-content: flex-start;
+  justify-content: center;
+}
+
+.section__about .section__title {
+  align-self: center;
+  text-align: center;
+}
+
+.section__about .content {
+  text-align: center;
 }
 
 .section__about .about__stack {
