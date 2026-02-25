@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>claude-agent.sh · the code witches</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0e0d11;
+      --surface:   #16141c;
+      --border:    #2e2a3a;
+      --accent:    #b57bee;
+      --accent2:   #7b8bee;
+      --text:      #e2dced;
+      --muted:     #6b6480;
+      --green:     #7beead;
+      --orange:    #eeaa7b;
+      --pink:      #ee7bb5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px 80px;
+    }
+
+    /* ── Header ─────────────────────────────────── */
+    header {
+      width: 100%;
+      max-width: 820px;
+      margin-bottom: 56px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .site-tag {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: lowercase;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      text-transform: lowercase;
+      line-height: 1.2;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+      margin-top: 2px;
+    }
+
+    /* ── Code card ───────────────────────────────── */
+    .card {
+      width: 100%;
+      max-width: 820px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.5);
+    }
+
+    .card-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 11px; height: 11px;
+      border-radius: 50%;
+      opacity: 0.85;
+    }
+    .dot.r { background: #ff6b78; }
+    .dot.y { background: #ffd166; }
+    .dot.g { background: var(--green); }
+
+    .card-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      flex: 1;
+      text-align: center;
+      margin-right: 60px;
+    }
+
+    .badge {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: lowercase;
+      background: rgba(181,123,238,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(181,123,238,0.25);
+      padding: 3px 9px;
+      border-radius: 99px;
+    }
+
+    pre {
+      background: var(--bg);
+      padding: 28px 28px 32px;
+      overflow-x: auto;
+      line-height: 1.75;
+    }
+
+    code {
+      font-family: 'Space Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    /* ── Syntax ──────────────────────────────────── */
+    .cmt  { color: var(--muted); font-style: italic; }
+    .kw   { color: var(--accent); }
+    .fn   { color: var(--accent2); }
+    .var  { color: var(--orange); }
+    .str  { color: var(--green); }
+    .num  { color: var(--pink); }
+    .op   { color: var(--muted); }
+
+    /* ── Footer ──────────────────────────────────── */
+    footer {
+      margin-top: 48px;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: lowercase;
+      letter-spacing: 0.08em;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="site-tag">✦ the code witches</span>
+    <h1>claude<span>-agent</span>.sh</h1>
+    <p class="subtitle">a bash script for running claude code in a restricted user environment</p>
+  </header>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="dots">
+        <div class="dot r"></div>
+        <div class="dot y"></div>
+        <div class="dot g"></div>
+      </div>
+      <span class="card-title">claude-agent.sh</span>
+      <span class="badge">bash</span>
+    </div>
+    <pre><code><span class="cmt">#!/bin/bash</span>
+<span class="cmt"># --- CONFIGURATION ---</span>
+<span class="var">AGENT_USER</span>=<span class="str">"claude-agent"</span>
+<span class="var">SHARE_GROUP</span>=<span class="str">"claude-share"</span>
+<span class="var">AGENT_HOME</span>=<span class="str">"/home/<span class="var">$AGENT_USER</span>"</span>
+<span class="var">CLAUDE_BIN</span>=<span class="str">"<span class="var">$AGENT_HOME</span>/.local/bin/claude"</span>
+
+<span class="cmt"># --- HELPER: CHECK SUDO ---</span>
+<span class="fn">check_sudo</span><span class="op">() {</span>
+    <span class="kw">if</span> <span class="op">[</span> <span class="str">"<span class="var">$EUID</span>"</span> -ne <span class="num">0</span> <span class="op">];</span> <span class="kw">then</span>
+        <span class="fn">echo</span> <span class="str">"Please run with sudo (e.g., sudo <span class="var">$0</span> <span class="var">$1</span>)"</span>
+        <span class="fn">exit</span> <span class="num">1</span>
+    <span class="kw">fi</span>
+<span class="op">}</span>
+
+<span class="kw">case</span> <span class="str">"<span class="var">$1</span>"</span> <span class="kw">in</span>
+    <span class="fn">setup</span><span class="op">)</span>
+        <span class="fn">echo</span> <span class="str">"[+] Creating restricted environment..."</span>
+        <span class="fn">check_sudo</span>
+        <span class="fn">groupadd</span> -f <span class="str">"<span class="var">$SHARE_GROUP</span>"</span>
+        <span class="fn">useradd</span> -m -s /bin/bash -g <span class="str">"<span class="var">$SHARE_GROUP</span>"</span> <span class="str">"<span class="var">$AGENT_USER</span>"</span>
+        <span class="fn">usermod</span> -aG <span class="str">"<span class="var">$SHARE_GROUP</span>"</span> <span class="str">"<span class="var">$SUDO_USER</span>"</span>
+        <span class="fn">chmod</span> <span class="num">700</span> <span class="str">"<span class="var">$AGENT_HOME</span>"</span>
+        <span class="fn">echo</span> <span class="str">"Done! Restart your terminal/session for group changes to take effect."</span>
+        <span class="op">;;</span>
+    <span class="fn">allow</span><span class="op">)</span>
+        <span class="var">TARGET_DIR</span>=<span class="str">"${2:-<span class="fn">$(pwd)</span>}"</span>
+        <span class="fn">echo</span> <span class="str">"[+] Granting <span class="var">$AGENT_USER</span> access to: <span class="var">$TARGET_DIR</span>"</span>
+        <span class="fn">check_sudo</span>
+        <span class="fn">chgrp</span> -R <span class="str">"<span class="var">$SHARE_GROUP</span>"</span> <span class="str">"<span class="var">$TARGET_DIR</span>"</span>
+        <span class="fn">chmod</span> -R g+rw <span class="str">"<span class="var">$TARGET_DIR</span>"</span>
+        <span class="fn">find</span> <span class="str">"<span class="var">$TARGET_DIR</span>"</span> -type d -exec <span class="fn">chmod</span> g+x <span class="op">{}</span> +
+        <span class="fn">chmod</span> g+s <span class="str">"<span class="var">$TARGET_DIR</span>"</span>
+        <span class="fn">echo</span> <span class="str">"Access granted."</span>
+        <span class="op">;;</span>
+    <span class="fn">run</span><span class="op">)</span>
+        <span class="cmt"># Check if we have an API key to pass along</span>
+        <span class="var">ENV_VARS</span>=<span class="str">""</span>
+        <span class="op">[[</span> ! -z <span class="str">"<span class="var">$ANTHROPIC_API_KEY</span>"</span> <span class="op">]]</span> &amp;&amp; <span class="var">ENV_VARS</span>=<span class="str">"ANTHROPIC_API_KEY=<span class="var">$ANTHROPIC_API_KEY</span>"</span>
+
+        <span class="fn">echo</span> <span class="str">"[+] Dropping into <span class="var">$AGENT_USER</span> shell at <span class="fn">$(pwd)</span>..."</span>
+        <span class="cmt"># We use -i (login shell) to ensure the agent's PATH includes its local bin</span>
+        <span class="fn">sudo</span> -u <span class="str">"<span class="var">$AGENT_USER</span>"</span> <span class="var">$ENV_VARS</span> bash -c <span class="str">"cd <span class="fn">$(pwd)</span> &amp;&amp; exec bash --login"</span>
+        <span class="op">;;</span>
+    <span class="op">*)</span>
+        <span class="fn">echo</span> <span class="str">"Usage: <span class="var">$0</span> {setup|install|allow|run}"</span>
+        <span class="fn">echo</span> <span class="str">"  setup   : Create the user and group (Run once as root)"</span>
+        <span class="fn">echo</span> <span class="str">"  install : Download and install Claude (Run as yourself)"</span>
+        <span class="fn">echo</span> <span class="str">"  allow   : Grant Claude access to current folder (Run as root)"</span>
+        <span class="fn">echo</span> <span class="str">"  run     : Start the restricted session (Run as yourself)"</span>
+        <span class="op">;;</span>
+<span class="kw">esac</span>
+</code></pre>
+  </div>
+
+  <footer>
+    ✦ <a href="https://thecodewitches.de" target="_blank">thecodewitches.de</a> · rebels by heart, coders by craft
+  </footer>
+
+</body>
+</html>
