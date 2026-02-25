@@ -21,6 +21,24 @@
 
 /* Desktop hover effects for image movement */
 @media (min-width: 1025px) {
+  .column__left .subhead {
+    left: var(--header-height);
+    transform: translateY(-50%);
+    text-align: left;
+  }
+
+  .column__right .subhead {
+    left: auto;
+    right: var(--header-height);
+    transform: translateY(-50%);
+    text-align: right;
+  }
+
+  .section__about .content {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+
   .section__about .about__stack {
     height: 40vh;
   }
@@ -42,6 +60,12 @@
 
   .about__image:hover {
     filter: brightness(1.1) saturate(1.2);
+  }
+}
+
+@media (max-width: 992px) {
+  .section__about .content {
+    padding: 0 1rem 2rem;
   }
 }
 
