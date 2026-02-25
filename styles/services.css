@@ -11,74 +11,119 @@
   text-align: justify;
 }
 
-/* Desktop triangle bullets - directional */
+/* Service Cards */
+.service-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  min-height: 40vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+  cursor: default;
+  position: relative;
+}
+
+.service-card:nth-child(1),
+.service-card:nth-child(3) {
+  background: var(--brand);
+}
+
+.service-card:nth-child(2) {
+  background: var(--secondary);
+}
+
+.service-card__title {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--bg);
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  white-space: pre-line;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+
+.service-card__description {
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-s);
+  line-height: 1.65;
+  max-width: 40ch;
+  margin: 0;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  color: var(--muted);
+}
+
+.service-card__description p {
+  margin: 0 0 0.75rem;
+}
+
+.service-card__description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Desktop hover effects */
 @media (min-width: 1025px) {
-
-  /* Left column triangles point right */
-  .section__services .column__left ul li::before {
-    content: "▶";
-    color: var(--muted);
-    margin-right: 0.5rem;
+  .service-card:hover {
+    background: var(--bg);
   }
 
-  /* Right column triangles point left */
-  .section__services .column__right ul li::before {
-    content: "◀";
-    color: var(--muted);
-    margin-left: 0.5rem;
-    margin-right: 0;
-    float: right;
-    position: absolute;
-    right: -1rem;
+  .service-card:hover .service-card__title {
+    opacity: 0;
   }
 
-  /* Adjust right column list items for left-pointing triangles */
-  .section__services .column__right ul li {
-    position: relative;
-    padding-right: 1.5rem;
+  .service-card:hover .service-card__description {
+    opacity: 1;
   }
 }
 
-/* Mobile styles for services section */
+/* Mobile styles */
 @media (max-width: 1024px) {
-
-  .section__services .content {
-    text-align: justify;
+  .service-cards {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
   }
 
-  .section__services .column .subhead br {
-    display: none;
+  .service-card {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    min-height: 30vh;
+    padding: calc(0.5 * var(--header-height));
   }
 
-  .section__services .column ul {
-    font-size: var(--font-size-xs);
-    position: static;
-    display: block;
-    color: var(--bg);
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    width: auto;
-    max-width: none;
-    transform: none;
-    top: auto;
-    left: auto;
-  }
-
-  .section__services .column ul li {
-    margin-bottom: 0.5rem;
-  }
-
-  /* Triangle bullets for mobile - all point right */
-  .section__services .column ul li::before {
-    content: "▶";
-    color: var(--bg);
-    margin-right: 0.5rem;
-  }
-
-  .section__services .column .subhead {
+  .service-card__title {
     font-size: var(--font-size-s);
     text-align: left;
+    color: var(--bg);
+    position: static;
+    transform: none;
+    opacity: 1;
+  }
+
+  .service-card__description {
+    font-size: var(--font-size-xs);
+    opacity: 1;
     color: var(--bg);
   }
 }
