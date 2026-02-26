@@ -139,14 +139,24 @@
       color: var(--text);
     }
 
-    /* ── Syntax ──────────────────────────────────── */
-    .cmt  { color: var(--muted); font-style: italic; }
-    .kw   { color: var(--accent); }
-    .fn   { color: var(--accent2); }
-    .var  { color: var(--orange); }
-    .str  { color: var(--green); }
-    .num  { color: var(--pink); }
-    .op   { color: var(--muted); }
+    /* ── highlight.js theme ──────────────────────── */
+    .hljs                  { background: transparent; color: var(--text); }
+    .hljs-comment,
+    .hljs-meta             { color: var(--muted); font-style: italic; }
+    .hljs-keyword,
+    .hljs-selector-tag     { color: var(--accent); }
+    .hljs-built_in,
+    .hljs-title.function_,
+    .hljs-title            { color: var(--accent2); }
+    .hljs-variable,
+    .hljs-attr             { color: var(--orange); }
+    .hljs-string           { color: var(--green); }
+    .hljs-number,
+    .hljs-literal          { color: var(--pink); }
+    .hljs-operator,
+    .hljs-punctuation      { color: var(--muted); }
+    .hljs-subst            { color: var(--text); }
+    .hljs-params           { color: var(--text); }
 
     /* ── Footer ──────────────────────────────────── */
     footer {
@@ -183,64 +193,103 @@
       <span class="card-title">claude-agent.sh</span>
       <span class="badge">bash</span>
     </div>
-    <pre><code><span class="cmt">#!/bin/bash</span>
-<span class="cmt"># --- CONFIGURATION ---</span>
-<span class="var">AGENT_USER</span>=<span class="str">"claude-agent"</span>
-<span class="var">SHARE_GROUP</span>=<span class="str">"claude-share"</span>
-<span class="var">AGENT_HOME</span>=<span class="str">"/home/<span class="var">$AGENT_USER</span>"</span>
-<span class="var">CLAUDE_BIN</span>=<span class="str">"<span class="var">$AGENT_HOME</span>/.local/bin/claude"</span>
-
-<span class="cmt"># --- HELPER: CHECK SUDO ---</span>
-<span class="fn">check_sudo</span><span class="op">() {</span>
-    <span class="kw">if</span> <span class="op">[</span> <span class="str">"<span class="var">$EUID</span>"</span> -ne <span class="num">0</span> <span class="op">];</span> <span class="kw">then</span>
-        <span class="fn">echo</span> <span class="str">"Please run with sudo (e.g., sudo <span class="var">$0</span> <span class="var">$1</span>)"</span>
-        <span class="fn">exit</span> <span class="num">1</span>
-    <span class="kw">fi</span>
-<span class="op">}</span>
-
-<span class="kw">case</span> <span class="str">"<span class="var">$1</span>"</span> <span class="kw">in</span>
-    <span class="fn">setup</span><span class="op">)</span>
-        <span class="fn">echo</span> <span class="str">"[+] Creating restricted environment..."</span>
-        <span class="fn">check_sudo</span>
-        <span class="fn">groupadd</span> -f <span class="str">"<span class="var">$SHARE_GROUP</span>"</span>
-        <span class="fn">useradd</span> -m -s /bin/bash -g <span class="str">"<span class="var">$SHARE_GROUP</span>"</span> <span class="str">"<span class="var">$AGENT_USER</span>"</span>
-        <span class="fn">usermod</span> -aG <span class="str">"<span class="var">$SHARE_GROUP</span>"</span> <span class="str">"<span class="var">$SUDO_USER</span>"</span>
-        <span class="fn">chmod</span> <span class="num">700</span> <span class="str">"<span class="var">$AGENT_HOME</span>"</span>
-        <span class="fn">echo</span> <span class="str">"Done! Restart your terminal/session for group changes to take effect."</span>
-        <span class="op">;;</span>
-    <span class="fn">allow</span><span class="op">)</span>
-        <span class="var">TARGET_DIR</span>=<span class="str">"${2:-<span class="fn">$(pwd)</span>}"</span>
-        <span class="fn">echo</span> <span class="str">"[+] Granting <span class="var">$AGENT_USER</span> access to: <span class="var">$TARGET_DIR</span>"</span>
-        <span class="fn">check_sudo</span>
-        <span class="fn">chgrp</span> -R <span class="str">"<span class="var">$SHARE_GROUP</span>"</span> <span class="str">"<span class="var">$TARGET_DIR</span>"</span>
-        <span class="fn">chmod</span> -R g+rw <span class="str">"<span class="var">$TARGET_DIR</span>"</span>
-        <span class="fn">find</span> <span class="str">"<span class="var">$TARGET_DIR</span>"</span> -type d -exec <span class="fn">chmod</span> g+x <span class="op">{}</span> +
-        <span class="fn">chmod</span> g+s <span class="str">"<span class="var">$TARGET_DIR</span>"</span>
-        <span class="fn">echo</span> <span class="str">"Access granted."</span>
-        <span class="op">;;</span>
-    <span class="fn">run</span><span class="op">)</span>
-        <span class="cmt"># Check if we have an API key to pass along</span>
-        <span class="var">ENV_VARS</span>=<span class="str">""</span>
-        <span class="op">[[</span> ! -z <span class="str">"<span class="var">$ANTHROPIC_API_KEY</span>"</span> <span class="op">]]</span> &amp;&amp; <span class="var">ENV_VARS</span>=<span class="str">"ANTHROPIC_API_KEY=<span class="var">$ANTHROPIC_API_KEY</span>"</span>
-
-        <span class="fn">echo</span> <span class="str">"[+] Dropping into <span class="var">$AGENT_USER</span> shell at <span class="fn">$(pwd)</span>..."</span>
-        <span class="cmt"># We use -i (login shell) to ensure the agent's PATH includes its local bin</span>
-        <span class="fn">sudo</span> -u <span class="str">"<span class="var">$AGENT_USER</span>"</span> <span class="var">$ENV_VARS</span> bash -c <span class="str">"cd <span class="fn">$(pwd)</span> &amp;&amp; exec bash --login"</span>
-        <span class="op">;;</span>
-    <span class="op">*)</span>
-        <span class="fn">echo</span> <span class="str">"Usage: <span class="var">$0</span> {setup|install|allow|run}"</span>
-        <span class="fn">echo</span> <span class="str">"  setup   : Create the user and group (Run once as root)"</span>
-        <span class="fn">echo</span> <span class="str">"  install : Download and install Claude (Run as yourself)"</span>
-        <span class="fn">echo</span> <span class="str">"  allow   : Grant Claude access to current folder (Run as root)"</span>
-        <span class="fn">echo</span> <span class="str">"  run     : Start the restricted session (Run as yourself)"</span>
-        <span class="op">;;</span>
-<span class="kw">esac</span>
-</code></pre>
+    <pre><code class="language-bash"></code></pre>
   </div>
 
   <footer>
     ✦ <a href="https://thecodewitches.de" target="_blank">thecodewitches.de</a> · rebels by heart, coders by craft
   </footer>
+
+  <!-- ─── Paste your bash script here ──────────────────────────────────────
+       Raw bash, no HTML escaping needed. The script below loads it into the
+       code block and runs highlight.js on it automatically.
+  ──────────────────────────────────────────────────────────────────────── -->
+  <script id="script-source" type="text/plain">
+#!/bin/bash
+
+# --- CONFIGURATION ---
+AGENT_USER="claude-agent"
+SHARE_GROUP="claude-share"
+AGENT_HOME="/home/$AGENT_USER"
+CLAUDE_BIN="$AGENT_HOME/.local/bin/claude"
+
+# --- HELPER: CHECK SUDO ---
+check_sudo() {
+    if [ "$EUID" -ne 0 ]; then
+        echo "Please run with sudo (e.g., sudo $0 $1)"
+        exit 1
+    fi
+}
+
+case "$1" in
+    setup)
+        echo "[+] Creating restricted environment..."
+        check_sudo
+        groupadd -f "$SHARE_GROUP"
+        useradd -m -s /bin/bash -g "$SHARE_GROUP" "$AGENT_USER"
+        usermod -aG "$SHARE_GROUP" "$SUDO_USER"
+        chmod 700 "$AGENT_HOME"
+        echo "Done! Restart your terminal/session for group changes to take effect."
+	;;
+
+    allow)
+	TARGET_DIR="${2:-$(pwd)}"
+        check_sudo
+        echo "[+] Setting up 'User-Owned' shared access for: $TARGET_DIR"
+
+        # 1. Give ownership to YOU (The User) so Firefox is happy
+        chown -R "$SUDO_USER:$SHARE_GROUP" "$TARGET_DIR"
+
+        # 2. Reset and apply ACLs
+        setfacl -bR "$TARGET_DIR"
+        # Give the agent full access to existing files
+        setfacl -R -m u:"$AGENT_USER":rwX "$TARGET_DIR"
+        # Set the DEFAULT so new files are R/W for both you and the agent
+        setfacl -R -d -m u:"$SUDO_USER":rwX,u:"$AGENT_USER":rwX "$TARGET_DIR"
+
+        echo "Done. You are the owner (Firefox is happy), and Claude has write access."
+        ;;
+
+    run)
+        # 1. Identity Pass-through
+        MY_NAME=$(git config user.name || echo "Claude User")
+        MY_EMAIL=$(git config user.email || echo "claude@example.com")
+
+        # 2. Trust this specific directory (Crucial for the 'dubious ownership' error)
+        sudo -u "$AGENT_USER" git config --global --add safe.directory "$(pwd)"
+
+        # 3. API Key Pass-through
+        ENV_VARS=""
+        [[ ! -z "$ANTHROPIC_API_KEY" ]] && ENV_VARS="ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY"
+
+        echo "[+] Entering Claude session as $AGENT_USER..."
+
+        # 4. Execute with all identity and permission guards active
+        sudo -u "$AGENT_USER" $ENV_VARS \
+          GIT_AUTHOR_NAME="$MY_NAME" \
+          GIT_AUTHOR_EMAIL="$MY_EMAIL" \
+          GIT_COMMITTER_NAME="$MY_NAME" \
+          GIT_COMMITTER_EMAIL="$MY_EMAIL" \
+          bash -c "umask 002 && cd '$(pwd)' && exec bash --login"
+        ;;
+
+    *)
+        echo "Usage: $0 {setup|install|allow|run}"
+        echo "  setup   : Create the user and group (Run once as root)"
+        echo "  install : Download and install Claude (Run as yourself)"
+        echo "  allow   : Grant Claude access to current folder (Run as root)"
+        echo "  run     : Start the restricted session (Run as yourself)"
+        ;;
+esac
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>
+    const src = document.getElementById('script-source').textContent.replace(/^\n/, '');
+    const codeEl = document.querySelector('pre code');
+    codeEl.textContent = src;
+    hljs.highlightElement(codeEl);
+  </script>
 
 </body>
 </html>
