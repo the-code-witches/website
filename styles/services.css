@@ -1,14 +1,8 @@
 /* Services Section Styles */
 
 .section__services {
-  min-height: calc(100vh - var(--header-height));
-  height: auto;
+  position: relative;
   justify-content: flex-start;
-  overflow: hidden;
-}
-
-.section__services .content {
-  text-align: justify;
 }
 
 /* Service Cards */
@@ -16,10 +10,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  min-height: 40vh;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 .service-card {
