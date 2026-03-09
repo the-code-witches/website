@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   padding-bottom: 4rem;
-  height: 100vh;
+  /*height: 100vh;*/
 }
 
 .hero__header {
@@ -21,7 +21,7 @@
 .hero__logo {
   height: calc(4 * var(--font-size-xl));
   margin-bottom: 1rem;
-  margin-top: 8rem;
+  margin-top: calc(var(--header-height) + 1rem);
 }
 
 .hero__title {

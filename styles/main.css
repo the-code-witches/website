@@ -95,6 +95,10 @@ body::after {
   clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
 
+main {
+  margin-top: var(--header-height);
+}
+
 /*ul li::marker {
   content: "▶ ";
 }*/
