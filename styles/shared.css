@@ -85,7 +85,7 @@
   font-weight: var(--font-weight-light);
   padding: 0 4rem 2rem 4rem;
   font-size: var(--font-size-s);
-  max-width: 75vw;
+  max-width: max(80ch, 75vw);
   line-height: 1.9;
 }
 
@@ -129,7 +129,6 @@
 
 /* Desktop hover effects */
 @media (min-width: 1025px) {
-
   .column__left:hover p,
   .column__right:hover p {
     display: block;
@@ -152,7 +151,6 @@
 }
 
 @media (min-width: 993px) {
-
   .link__accent:hover,
   .link__accent__light:hover {
     color: var(--primary);
@@ -181,7 +179,6 @@
 }
 
 @media (max-width: 1024px) {
-
   /*On mobile columns are below one another*/
   .columns {
     height: auto;

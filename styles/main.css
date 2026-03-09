@@ -95,9 +95,9 @@ body::after {
   clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
 
-ul li::marker {
+/*ul li::marker {
   content: "▶ ";
-}
+}*/
 
 /* Header / Nav */
 .site-header {

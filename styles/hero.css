@@ -21,7 +21,7 @@
 .hero__logo {
   height: calc(4 * var(--font-size-xl));
   margin-bottom: 1rem;
-  margin-top: 15rem;
+  margin-top: 8rem;
 }
 
 .hero__title {
@@ -42,7 +42,9 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  max-width: 75vw;
+  max-width: min(75ch, 60vw);
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 992px) {

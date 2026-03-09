@@ -23,20 +23,10 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 12rem;
+    height: 8rem;
     background: var(--brand);
     z-index: 0;
     pointer-events: none;
-  }
-
-  .section__about .section__title {
-    position: absolute;
-    top: 6rem;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 1;
-    color: var(--bg);
   }
 }
 
@@ -47,10 +37,6 @@
 .section__about .about__stack {
   position: relative;
   width: 100%;
-}
-
-.section__about .content .small {
-  margin-bottom: 2rem;
 }
 
 /* Desktop hover effects for image movement */
@@ -72,17 +58,6 @@
     margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .section__about .content .small {
-    max-width: min(65ch, 52vw);
-    margin: 0 auto;
-    margin-bottom: 2rem;
-  }
-
-  .section__about .content .large {
-    max-width: min(80ch, 75vw);
-    margin: 0 auto;
   }
 
   .section__about .about__stack {
