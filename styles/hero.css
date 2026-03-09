@@ -5,12 +5,13 @@
   max-width: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 4rem;
+  height: 100vh;
 }
 
 .hero__header {
   padding: 0rem 4rem;
-  margin: 0 auto;
-  margin-bottom: 4rem;
+  margin: 0 auto 4rem auto;
   text-align: center;
   position: relative;
   z-index: 1;

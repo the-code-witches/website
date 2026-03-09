@@ -3,6 +3,13 @@
 .section__services {
   position: relative;
   justify-content: flex-start;
+  .link__accent {
+    margin: 0 2rem;
+  }
+  .link__accent:hover {
+    color: var(--brand);
+    margin: 0 2rem;
+  }
 }
 
 /* Service Cards */
