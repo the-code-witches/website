@@ -224,6 +224,7 @@ main {
 
 /* Base Section Styles */
 .section {
+  scroll-margin-top: var(--header-height);
   padding: 4rem 0rem 0rem;
   display: flex;
   flex-direction: column;

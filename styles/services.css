@@ -60,7 +60,7 @@
   margin: 0;
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .service-card__description p {

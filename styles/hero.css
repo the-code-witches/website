@@ -5,17 +5,33 @@
   max-width: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 4rem;
-  /*height: 100vh;*/
 }
 
-.hero__header {
+.section__hero::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 8rem;
+  background: var(--brand);
+  margin-top: 4rem;
+}
+
+.hero__above-fold {
   padding: 0rem 4rem;
-  margin: 0 auto 4rem auto;
   text-align: center;
   position: relative;
   z-index: 1;
   max-width: 75vw;
+  margin: 0 auto;
+}
+
+.hero__below-fold {
+  padding: 0rem 4rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  max-width: 90vw;
+  margin: 2rem auto 0 auto;
 }
 
 .hero__logo {
@@ -38,13 +54,19 @@
   margin: 0;
 }
 
-.section__hero .content {
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  max-width: min(75ch, 60vw);
-  margin: 0 auto;
-  margin-bottom: 2rem;
+/* Large screens: above-fold fills the viewport, brand bar at bottom of hero */
+@media (min-width: 993px) {
+  .hero__above-fold {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__above-fold .hero__logo {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 992px) {
@@ -52,17 +74,20 @@
     width: 100%;
   }
 
-  .hero__header {
+  .hero__above-fold,
+  .hero__below-fold {
     padding: 0rem;
-    align-items: stretch;
     max-width: 75vw;
     margin: 0 auto;
     text-align: center;
   }
 
+  .hero__above-fold {
+    padding-top: 1rem;
+  }
+
   .hero__logo {
     height: calc(4 * var(--font-size-l));
-    left: 0;
   }
 
   .hero__title {
@@ -71,5 +96,9 @@
 
   .hero__subtitle {
     font-size: var(--font-size-s);
+  }
+
+  .hero__below-fold {
+    margin-top: 2rem;
   }
 }

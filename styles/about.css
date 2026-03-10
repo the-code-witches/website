@@ -11,22 +11,9 @@
   padding: 0;
 }
 
-/* Large screens: brand bar as background for about section header */
 @media (min-width: 993px) {
   .section__about {
-    padding-top: 12rem;
-  }
-
-  .section__about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8rem;
-    background: var(--brand);
-    z-index: 0;
-    pointer-events: none;
+    padding-top: 4rem;
   }
 }
 
