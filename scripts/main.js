@@ -80,18 +80,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const leftColumn = document.querySelector(".column__left")
   const rightColumn = document.querySelector(".column__right")
 
-  if (aboutImage && leftColumn && rightColumn && window.innerWidth >= 768) {
+  if (aboutImage && leftColumn && rightColumn && window.innerWidth >= 1025) {
     leftColumn.addEventListener("mouseenter", () => {
       aboutImage.style.transform = "translateX(0%)"
     })
     rightColumn.addEventListener("mouseenter", () => {
       aboutImage.style.transform = "translateX(-100%)"
     })
-      ;[leftColumn, rightColumn].forEach((column) => {
-        column.addEventListener("mouseleave", () => {
-          aboutImage.style.transform = "translateX(-50%)"
-        })
+    ;[leftColumn, rightColumn].forEach((column) => {
+      column.addEventListener("mouseleave", () => {
+        aboutImage.style.transform = "translateX(-50%)"
       })
+    })
   }
 })
 

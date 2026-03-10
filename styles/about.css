@@ -11,12 +11,6 @@
   padding: 0;
 }
 
-@media (min-width: 993px) {
-  .section__about {
-    padding-top: 4rem;
-  }
-}
-
 .section__about .content {
   text-align: left;
 }
