@@ -172,7 +172,7 @@ main {
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.2px;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0;
 }
 
 .nav__cta:hover {
@@ -285,7 +285,7 @@ main {
 /* Small screens */
 @media (max-width: 992px) {
   .nav {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
   .nav__left {
