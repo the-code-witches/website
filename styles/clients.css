@@ -50,16 +50,23 @@
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   color: var(--bg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
 }
 
 .client__block__details {
-  display: none;
   width: 90%;
   text-align: left;
   color: var(--text);
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-s);
   line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .client__block__description {
@@ -81,11 +88,11 @@
   }
 
   .client__block:hover .client__block__title {
-    display: none;
+    opacity: 0;
   }
 
   .client__block:hover .client__block__details {
-    display: block;
+    opacity: 1;
   }
 }
 
@@ -151,17 +158,19 @@
 
   .client__block__title {
     font-size: var(--font-size-s);
-    position: relative;
+    position: static;
+    transform: none;
     text-align: left;
     color: var(--bg);
     margin: 0 0 1rem 0;
+    opacity: 1;
   }
 
   .client__block__details {
-    display: block;
     font-size: var(--font-size-xs);
     color: var(--bg);
     width: 100%;
+    opacity: 1;
   }
 
   .client__block:last-child {

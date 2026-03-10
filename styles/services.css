@@ -10,19 +10,22 @@
 
 /* Service Cards */
 .service-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .service-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: justify;
   padding: 2rem;
   overflow: hidden;
+  color: var(--bg);
   cursor: default;
+  flex: 1 1 33%;
+  min-height: 40vh;
   position: relative;
 }
 
@@ -43,7 +46,6 @@
   margin: 0;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
-  white-space: pre-line;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,14 +55,14 @@
 }
 
 .service-card__description {
+  width: 90%;
+  text-align: left;
+  color: var(--text);
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-s);
-  line-height: 1.65;
-  max-width: 40ch;
-  margin: 0;
-  transition: opacity 0.3s ease-in-out;
+  line-height: 1.5;
   opacity: 0;
-  color: var(--text);
+  transition: opacity 0.3s ease-in-out;
 }
 
 .service-card__description p {
@@ -72,7 +74,7 @@
 }
 
 /* Desktop hover effects */
-@media (min-width: 1025px) {
+@media (min-width: 993px) {
   .service-card:hover {
     background: var(--bg);
   }
@@ -87,28 +89,30 @@
 }
 
 /* Mobile styles */
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .service-cards {
-    height: auto;
-    display: flex;
     flex-direction: column;
     width: 100%;
-    position: relative;
+    height: auto;
   }
 
   .service-card {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: calc(0.5 * var(--header-height));
     text-align: left;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: auto;
-    min-height: 30vh;
-    padding: calc(0.5 * var(--header-height));
   }
 
   .service-card__title {
     font-size: var(--font-size-s);
     text-align: left;
     color: var(--bg);
+    margin: 0 0 1rem 0;
     position: static;
     transform: none;
     opacity: 1;
@@ -118,5 +122,10 @@
     font-size: var(--font-size-xs);
     opacity: 1;
     color: var(--bg);
+    width: 100%;
+  }
+
+  .service-card:last-child {
+    margin-bottom: 0;
   }
 }

@@ -44,7 +44,8 @@
 
 .column__left p,
 .column__right p {
-  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .column ul {
@@ -131,7 +132,7 @@
 @media (min-width: 1025px) {
   .column__left:hover p,
   .column__right:hover p {
-    display: block;
+    opacity: 1;
   }
 
   .column__left:hover,
@@ -198,5 +199,10 @@
     height: auto;
     min-height: 30vh;
     padding: calc(0.5 * var(--header-height));
+  }
+
+  .column__left p,
+  .column__right p {
+    opacity: 1;
   }
 }

@@ -108,6 +108,11 @@
   }
 
   .section__about .column .subhead {
-    display: none;
+    position: static;
+    transform: none;
+    text-align: left;
+    font-size: var(--font-size-s);
+    margin: 0 0 1rem 0;
+    opacity: 1;
   }
 }
