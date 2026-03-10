@@ -190,7 +190,6 @@ main {
   /*background: var(--bg);*/
   background: inherit;
   border-radius: 4px;
-  margin: 0 1rem;
 }
 
 .cta:hover {
