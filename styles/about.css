@@ -98,6 +98,7 @@
 
   .section__about .column p {
     font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-light);
     display: block;
   }
 
