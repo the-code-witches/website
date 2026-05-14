@@ -18,7 +18,6 @@ const getHeaderHeight = () => {
   return header ? header.offsetHeight : 64
 }
 
-// Simplified and more robust way to find the current section
 const getCurrentSectionId = () => {
   const headerHeight = getHeaderHeight()
   const scrollOffset = headerHeight + 50
@@ -35,13 +34,10 @@ const getCurrentSectionId = () => {
 
 let scrollTimeout
 const onScroll = () => {
-  // NOTE: The 'navigationInProgress' flag has been removed to fix the bug.
-
   clearTimeout(scrollTimeout)
   scrollTimeout = setTimeout(() => {
     const currentId = getCurrentSectionId()
 
-    // This loop is now the single source of truth for the active class.
     links.forEach((link) => {
       link.classList.toggle("active", link.getAttribute("href") === "#" + currentId)
     })
@@ -49,7 +45,7 @@ const onScroll = () => {
 }
 
 window.addEventListener("scroll", onScroll, { passive: true })
-onScroll() // Initial call
+onScroll()
 
 // Handle smooth scrolling on nav link click
 links.forEach((link) => {
@@ -65,58 +61,11 @@ links.forEach((link) => {
     const headerHeight = getHeaderHeight()
     const targetPosition = targetSection.offsetTop - headerHeight + scrollBuffer
 
-    // NOTE: Manual class manipulation and flags have been removed from here.
-    // The onScroll handler will now manage the active state during the scroll.
     window.scrollTo({
       top: targetPosition,
       behavior: "smooth",
     })
   })
-})
-
-// About section image movement on column hover (desktop only)
-document.addEventListener("DOMContentLoaded", () => {
-  const aboutImage = document.querySelector(".about__image")
-  const leftColumn = document.querySelector(".column__left")
-  const rightColumn = document.querySelector(".column__right")
-
-  if (aboutImage && leftColumn && rightColumn && window.innerWidth >= 1025) {
-    leftColumn.addEventListener("mouseenter", () => {
-      aboutImage.style.transform = "translateX(0%)"
-    })
-    rightColumn.addEventListener("mouseenter", () => {
-      aboutImage.style.transform = "translateX(-100%)"
-    })
-    ;[leftColumn, rightColumn].forEach((column) => {
-      column.addEventListener("mouseleave", () => {
-        aboutImage.style.transform = "translateX(-50%)"
-      })
-    })
-  }
-})
-
-// Video autoplay handling for mobile devices
-document.addEventListener("DOMContentLoaded", () => {
-  const video = document.querySelector(".gif__box video")
-  if (video) {
-    const playVideo = () => {
-      video.play().catch((error) => {
-        console.log("Video autoplay failed:", error)
-      })
-    }
-    playVideo()
-    const videoObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            playVideo()
-          }
-        })
-      },
-      { threshold: 0.5 },
-    )
-    videoObserver.observe(video)
-  }
 })
 
 // Google Calendar popup scheduling
@@ -178,17 +127,13 @@ window.addEventListener("load", () => {
   }
 })
 
-// modal setup
-// Get modal and trigger elements
-// Get all modal links
-// Get all modal links
+// Modal setup
 const modalLinks = document.querySelectorAll(".modal-link")
 
-// Open modal
 modalLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault()
-    const targetId = link.getAttribute("href").slice(1) // remove #
+    const targetId = link.getAttribute("href").slice(1)
     const modal = document.getElementById(targetId)
     if (modal) {
       modal.style.display = "block"
@@ -196,16 +141,14 @@ modalLinks.forEach((link) => {
   })
 })
 
-// Close buttons inside modals
 const closeButtons = document.querySelectorAll(".modal .close")
 closeButtons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    e.preventDefault() // Prevent jumping to top
+    e.preventDefault()
     btn.closest(".modal").style.display = "none"
   })
 })
 
-// Optional: close modal if user clicks outside modal content
 window.addEventListener("click", (e) => {
   if (e.target.classList.contains("modal")) {
     e.target.style.display = "none"

@@ -1,205 +1,57 @@
-/* Shared Styles Used Across Multiple Sections */
+/* Shared components used across sections */
 
-/* Columns (used in About and Services sections) */
-.columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  min-height: 40vh;
-  margin-top: auto;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: justify;
-  padding: 2rem;
-  overflow: hidden;
-  cursor: default;
-  position: relative;
-}
-
-.column__left {
-  text-align: left;
-  align-items: center;
-  justify-content: center;
-  background: var(--brand);
-  padding: 2rem 2rem 2rem var(--header-height);
-  color: var(--bg);
-}
-
-.column__right {
-  text-align: right;
-  align-items: center;
-  justify-content: center;
-  background: var(--secondary);
-  padding: 2rem var(--header-height) 2rem 2rem;
-  color: var(--bg);
-}
-
-.column__left p,
-.column__right p {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.column ul {
-  font-weight: var(--font-weight-light);
-  font-size: var(--font-size-s);
-  line-height: 1.65;
-  max-width: 40ch;
-  margin: 0;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-  color: var(--muted);
-  list-style: none;
-  padding: 0;
-}
-
-.column ul li {
+/* Section label + number */
+.section__label {
   margin-bottom: 0.5rem;
 }
 
-.subhead {
-  font-size: var(--font-size-m);
-  font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
-  color: var(--bg);
-  margin: 0;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  white-space: pre-line;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.section__number {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  color: var(--brand);
+  letter-spacing: 0.05em;
 }
 
-/* Content container (used across multiple sections) */
-.content {
-  color: var(--text);
-  font-weight: var(--font-weight-light);
-  padding: 0 4rem 2rem 4rem;
-  font-size: var(--font-size-sm);
-  max-width: max(80ch, 75vw);
-  line-height: 1.9;
-}
-
-.two-col-wrap {
-  color: var(--text);
-  font-weight: var(--font-weight-light);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0rem 4rem;
-}
-
-.two-col-item {
-  max-width: 46%;
-}
-
-/* Section titles (used across all sections) */
+/* Section title */
 .section__title {
   font-size: var(--font-size-l);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-normal);
   text-transform: uppercase;
   color: var(--text);
-  margin: 0.25rem 0 0.25rem;
-  padding: 0rem 4rem;
+  margin: 0 0 2rem;
+  letter-spacing: 0.05em;
 }
 
-/* Link accent (used in multiple sections) */
+/* Link accent */
 .link__accent {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: var(--font-weight-normal);
+  border-bottom: 1px solid var(--brand);
+  transition: all 0.2s ease;
+}
+
+.link__accent:hover {
   color: var(--text);
-  font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
+  border-bottom-color: var(--text);
+}
+
+/* Modal links in footer */
+.modal-link {
   text-decoration: none;
+  color: var(--muted);
+  transition: color 0.2s ease;
 }
 
-.link__accent__light {
-  color: var(--bg);
-  font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
-  text-decoration: none;
+.modal-link:hover {
+  color: var(--brand);
 }
 
-/* Desktop hover effects */
-@media (min-width: 1025px) {
-  .column__left:hover p,
-  .column__right:hover p {
-    opacity: 1;
-  }
-
-  .column__left:hover,
-  .column__right:hover {
-    background: var(--bg);
-    color: var(--text);
-    font-weight: var(--font-weight-light);
-  }
-
-  .column:hover .subhead {
-    opacity: 0;
-  }
-
-  .column:hover ul {
-    opacity: 1;
-  }
-}
-
-@media (min-width: 993px) {
-  .link__accent:hover,
-  .link__accent__light:hover {
-    color: var(--primary);
-    text-decoration: none;
-  }
-}
-
-/* Mobile styles */
+/* Mobile */
 @media (max-width: 992px) {
   .section__title {
-    margin: 0.2rem 0 0.1rem;
-    padding: 0 2rem;
-  }
-
-  .section__clients .section__title,
-  .section__services .section__title {
-    margin-bottom: 0.1rem;
-  }
-
-  .content {
-    font-size: var(--font-size-xs);
-    margin: 0 auto;
-    padding: 0 2rem 1.5rem;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 1024px) {
-  /*On mobile columns are below one another*/
-  .columns {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-  }
-
-  .column,
-  .column__left,
-  .column__right {
-    text-align: left;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: auto;
-    min-height: 30vh;
-    padding: calc(0.5 * var(--header-height));
-  }
-
-  .column__left p,
-  .column__right p {
-    opacity: 1;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }

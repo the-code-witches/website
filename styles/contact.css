@@ -1,72 +1,83 @@
-/* Contact Section Styles */
+/* Contact Section */
 
 .section__contact {
-  /*padding: calc(7rem - var(--header-height)) 0 0;*/
+  max-width: none;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.contact__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--padding-x);
+}
+
+.contact__inner .section__title {
+  text-align: center;
+}
+
+.contact__inner .section__label {
+  text-align: center;
+}
+
+.contact__content {
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.contact__statement {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-light);
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+.contact__links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  background: var(--brand);
-  /*min-height: 100vh;*/
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
-.section__contact .content {
-  max-width: 75%;
-  margin: 0 auto;
-
-  /* width: 100%; */
-  color: var(--bg);
+.contact__email {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
 }
 
-.section__contact .section__title {
-  color: var(--bg);
+.contact__email:hover {
+  border-bottom-color: var(--brand);
 }
 
-.gif__box {
-  width: 20vw;
-  min-width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Blurred edge effect - smooth circular fade
-  mask: radial-gradient(circle at center, black 50%, transparent 80%);
-  -webkit-mask: radial-gradient(circle at center, black 50%, transparent 80%); */
+.contact__linkedin {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.gif__box video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  cursor: default;
-  pointer-events: none;
+.contact__linkedin:hover {
+  color: var(--brand);
 }
 
-.linkedin-link {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-}
+/* Mobile */
+@media (max-width: 992px) {
+  .section__contact {
+    padding-top: 3.5rem;
+  }
 
-.linkedin-bg {
-  position: absolute;
-  top: 0.2em;
-  left: 0.2em;
-  width: calc(1.5em - 0.4em);
-  height: calc(1.5em - 0.4em);
-  background-color: var(--brand);
-  transition: background-color 0.2s ease;
-  z-index: 1;
-}
+  .contact__inner {
+    padding: 0 1.5rem;
+  }
 
-.linkedin-link:hover .linkedin-bg {
-  background-color: var(--primary);
-}
-
-.linkedin-link img {
-  height: 1.5em;
-  width: auto;
-  display: block;
-  position: relative;
-  z-index: 2;
+  .contact__statement {
+    font-size: 1.1rem;
+  }
 }
