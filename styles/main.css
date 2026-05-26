@@ -210,6 +210,40 @@ main {
   width: 100vw;
 }
 
+.lang__toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+}
+
+.lang__toggle__option {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-light);
+  text-transform: uppercase;
+  padding: 0.1rem 0.4rem;
+}
+
+.lang__toggle__option.active {
+  color: var(--primary);
+}
+
+.lang__toggle__option:hover:not(.active) {
+  color: var(--text);
+}
+
+.lang__toggle__divider {
+  width: 1px;
+  height: 0.9rem;
+  background: var(--muted);
+  opacity: 0.4;
+}
 
 /* Base Section Styles */
 .section {
