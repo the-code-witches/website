@@ -146,6 +146,11 @@ main {
 .nav__logo img {
   height: 2rem;
   width: auto;
+  transition: transform 200ms ease;
+}
+
+.nav__logo img:hover {
+  transform: scale(1.2);
 }
 
 .nav__link {
