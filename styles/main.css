@@ -198,12 +198,11 @@ main {
   background: inherit;
 }
 
-.calendar-btn {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.neutral-box {
+  background: var(--bg) !important;
+  z-index: 9999;
+  padding: 0 4rem;
+  width: 100vw;
 }
 
 .lang__toggle {
