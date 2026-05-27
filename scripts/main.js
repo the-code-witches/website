@@ -120,6 +120,60 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
+// Breadth tags — auto-scrolling carousel + hover tooltip + mobile tap
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".breadth__track")
+  if (!track) return
+
+  // --- Duplicate track for seamless infinite loop ---
+  // i18n has already run by DOMContentLoaded, so translated text is in place
+  track.innerHTML += track.innerHTML
+
+  // --- Desktop: tooltip + pause animation on hover ---
+  if (window.innerWidth > 992) {
+    const tooltip = document.createElement("div")
+    tooltip.className = "breadth__tooltip"
+    document.body.appendChild(tooltip)
+
+    document.querySelectorAll(".breadth__tag").forEach((tag) => {
+      const outcomeEl = tag.querySelector(".breadth__tag__outcome")
+      if (!outcomeEl) return
+
+      tag.addEventListener("mouseenter", () => {
+        track.classList.add("paused")
+        tooltip.textContent = outcomeEl.textContent
+
+        // measure after paint so dimensions are correct
+        requestAnimationFrame(() => {
+          const rect = tag.getBoundingClientRect()
+          const tRect = tooltip.getBoundingClientRect()
+          let left = rect.left + rect.width / 2 - tRect.width / 2
+          left = Math.max(8, Math.min(left, window.innerWidth - tRect.width - 8))
+          tooltip.style.left = left + "px"
+          tooltip.style.top = (rect.top - tRect.height - 12) + "px"
+          tooltip.classList.add("visible")
+        })
+      })
+
+      tag.addEventListener("mouseleave", () => {
+        track.classList.remove("paused")
+        tooltip.classList.remove("visible")
+      })
+    })
+  }
+
+  // --- Mobile: tap to reveal outcome inline ---
+  if (window.innerWidth <= 992) {
+    document.querySelectorAll(".breadth__tag").forEach((tag) => {
+      tag.addEventListener("click", () => {
+        const isActive = tag.classList.contains("active")
+        document.querySelectorAll(".breadth__tag").forEach((t) => t.classList.remove("active"))
+        if (!isActive) tag.classList.add("active")
+      })
+    })
+  }
+})
+
 // modal setup
 // Get modal and trigger elements
 // Get all modal links

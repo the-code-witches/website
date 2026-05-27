@@ -305,7 +305,7 @@ Genau dafür sind wir da.
 
 ---
 
-### Option 7 — Combined: carrying the weight + ask here
+### ✅ Option 7 — Combined: carrying the weight + ask here ← GEWÄHLT
 _Anchored in: **#1 lone context-carrier** + **#8 AI anxiety** + **#12 the question you're not allowed to ask** + breadth_
 _Opens on the AI overwhelm, lands on the exhaustion of holding it alone, then offers both relief and permission in one answer._
 

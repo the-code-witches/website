@@ -1,0 +1,124 @@
+/* Range / Domain Breadth Section */
+
+.section__range {
+  background: var(--bg);
+}
+
+/* Outer container: clips the scrolling track and fades right edge */
+.breadth__tags {
+  overflow: hidden;
+  margin-left: 4rem;
+  padding: 1rem 0 3rem 0;
+  max-width: calc(max(80ch, 75vw) - 4rem);
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to right, black 0%, black 80%, transparent 100%);
+}
+
+/* Inner track: animates horizontally, width = all tags in a row × 2 (duplicated) */
+.breadth__track {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  animation: breadth-scroll 50s linear infinite;
+}
+
+.breadth__track.paused {
+  animation-play-state: paused;
+}
+
+@keyframes breadth-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.breadth__tag {
+  display: inline-flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+  padding: 0.45rem 1.1rem;
+  background: var(--brand);
+  color: var(--bg);
+  border-radius: 2px;
+  cursor: default;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  transition: background 0.2s ease, color 0.2s ease, outline 0.2s ease;
+}
+
+/* Hidden in DOM — text is read by JS tooltip */
+.breadth__tag__outcome {
+  display: none;
+}
+
+/* Desktop: colour flip on hover */
+@media (min-width: 993px) {
+  .breadth__tag:hover {
+    background: var(--bg);
+    color: var(--brand);
+    outline: 1.5px solid var(--brand);
+  }
+}
+
+/* Fixed tooltip — lives on body, bypasses overflow clipping */
+.breadth__tooltip {
+  position: fixed;
+  background: var(--text);
+  color: var(--bg);
+  padding: 0.6rem 0.9rem;
+  border-radius: 2px;
+  font-family: "Lexend", system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 200;
+  max-width: 260px;
+  white-space: normal;
+  pointer-events: none;
+  z-index: 1000;
+  line-height: 1.5;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  text-transform: lowercase;
+}
+
+.breadth__tooltip.visible {
+  opacity: 1;
+}
+
+.breadth__tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--text);
+}
+
+/* Mobile: tap reveals outcome inline inside the tag */
+@media (max-width: 992px) {
+  .breadth__tags {
+    margin-left: 2rem;
+    padding: 1rem 0 2rem 0;
+    max-width: calc(100% - 2rem);
+  }
+
+  .breadth__tag {
+    cursor: pointer;
+  }
+
+  .breadth__tag.active {
+    background: var(--bg);
+    color: var(--brand);
+    outline: 1.5px solid var(--brand);
+  }
+
+  .breadth__tag.active .breadth__tag__outcome {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-light);
+    color: var(--brand);
+    margin-top: 0.3rem;
+    line-height: 1.4;
+  }
+}
