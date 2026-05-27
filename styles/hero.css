@@ -47,11 +47,47 @@
   margin: 0;
 }
 
-.hero__subtitle {
+.hero__tagline {
   color: var(--text);
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-m);
+  margin: 0.5rem 0 0 0;
+}
+
+/* Poem block: centered as a unit, left-aligned inside */
+.hero__poem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.35rem;
+  margin-top: 2.5rem;
+}
+
+.hero__poem p {
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-s);
   margin: 0;
+  line-height: 1.6;
+}
+
+.hero__poem p::before {
+  content: "// ";
+}
+
+.hero__poem .hero__poem__punchline {
+  margin-top: 1.25rem;
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: var(--font-weight-light);
+  font-style: normal;
+}
+
+.hero__poem .hero__poem__punchline::before {
+  content: none;
 }
 
 /* Large screens: above-fold fills the viewport, brand bar at bottom of hero */
@@ -94,8 +130,15 @@
     font-size: var(--font-size-l);
   }
 
-  .hero__subtitle {
+  .hero__tagline {
     font-size: var(--font-size-s);
+  }
+
+  .hero__poem {
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
   }
 
   .hero__below-fold {
