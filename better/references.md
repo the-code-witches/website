@@ -1,0 +1,137 @@
+# About
+
+We're Sehera and Denise aka the code witches, a developer team with 20+ years of combined practice in developing software and data products. We offer fully integrated hands-on programming and tech consulting from a single source. We work as a tandem, giving you service depth and reliability like an agency with the flexibility and direct communication like a freelancer.
+
+---
+
+# Current and Past Projects
+
+## Custom ERP System
+
+Responsive Web App covering inventory, project management, KPI reporting and accounting as well as a custom project-inventory matching algorithm and map tools. Replaced manual and spreadsheet-based workflows across the entire operation and fulfilled all specific legal requirements.
+
+Full responsibility for collecting and prioritizing requirements, shaping user flows with operational staff, and adjusting the system continuously as processes changed.
+
+`React` `Mapbox` `Django REST` `Celery` `PostgreSQL` `NGINX` `NGINX-Unit` `custom server deploy` `single backend multiple frontends`
+
+---
+
+## Product Configuration & Lead Intake Tool
+
+Web-based product configurator connecting customer input directly to internal systems and CRM. Increased number and quality of incoming leads significantly.
+
+Included responsibility for defining the configuration logic, user flow, and handover into existing tools together with sales stakeholders.
+
+`React` `Webflow integration` `Pipedrive` `APIs` `Django REST`
+
+---
+
+## Drone Obstacle Avoidance Calculation Engine
+
+Rewritten obstacle-avoidance calculation for drone flight planning. Reduced runtime from several hours to minutes, making repeated calculation during planning feasible.
+
+Work included clarifying operational constraints with domain experts and translating them into a performant algorithm.
+
+`C++` `Google Colab`
+
+---
+
+## Course Booking & Administration System
+
+Migration and redesign of a course booking and administration system used for academic operations. Covered enrollment, course creation and scheduling, certificate and invoice management, and other administrative workflows.
+
+`Drupal` `PHP` `MySQL` `CSS` `JS`
+
+---
+
+## Job Platform & Content System
+
+Job platform with integrated blog and editorial backend. Supported job listings, content publishing, invoicing and administrative workflows. Complete responsibility of content structure and editorial flow definition together with non-technical stakeholders.
+
+`Drupal` `PHP` `MySQL`
+
+---
+
+## Real-Time Data Processing Pipeline
+
+Setup pipeline combining marketing, tracking, and internal business data into a single live stream. Enabled ongoing performance monitoring and custom attribution logic.
+
+Included responsibility for defining metrics with stakeholders, aligning data definitions across teams, enabling users to use the Metabase frontend, and adapting the system as reporting needs evolved.
+
+`Python` `Apache Spark` `Kafka` `Kubernetes on GCP` `PostgreSQL` `Metabase`
+
+---
+
+## Live Survey Weighting System
+
+System for processing survey responses in real time and correcting sampling bias during collection. Extended with forecasting models for elections and similar scenarios.
+
+Included responsibility for translating research goals and stakeholder questions into data models, algorithms, and reporting outputs.
+
+`Python` `R` `Kafka` `Java / Node.js` `PostgreSQL` `AWS`
+
+---
+
+## Spectral Rendering & Sampling Engine
+
+Developed a new renderer in a research-based team focused on spectral light transport and sampling. Used to implement and evaluate new sampling techniques for realistic color representation. Being responsible for the infrastructure to handle massive scene data, streamlining parallel workflows. Worked with a team to deploy the renderer being used in major films (Rise of the Planet of the Apes, TinTin, Hobbit, ...).
+
+`C++` `parallel programming` `CUDA`
+
+---
+
+## Interactive Escape Room Control Systems
+
+Offline control systems combining analog and digital sensors to drive interactive escape room mechanics. Included custom logic running on Arduino and Raspberry Pi devices to coordinate sensors, actuators, and game states — or using a small HTML page to control a monitor and sending signals to an external door opener.
+
+`Arduino` `Raspberry Pi` `embedded C/C++` `noSQL` `PHP` `HTML` `CSS`
+
+---
+
+## Recipe App for High-Pressure Bar Operations
+
+Offline-first recipe application designed for fast access in a high-stress bar environment. Enabled local storage and instant retrieval of recipes on tablets, with the possibility to manually download and update data whenever network connectivity was available.
+
+Included definition of usability constraints with bar staff.
+
+`MongoDB` `PHP` `HTML` `CSS`
+
+---
+
+## Shopify Customization & Integration
+
+Customization of Shopify storefronts and backend tooling to support bespoke business requirements. Covered theme development, frontend adjustments, and extensions to backend workflows to integrate Shopify with existing processes.
+
+`Shopify` `PHP` `Twig`
+
+---
+
+## Twitter Network Analysis & Visualization Tool
+
+Tool for analyzing and visualizing Twitter interaction networks, built to explore relationships and activity patterns within political communication data.
+
+`Python` `network analysis` `data visualization` `noSQL` `ThreeJS`
+
+---
+
+## Mobile Map Visualizations
+
+WebGL-based interactive map visualizations optimized for mobile devices, built for editorial use cases requiring custom geographic representations.
+
+`WebGL` `JavaScript`
+
+---
+
+## SketchUp Workflow Extensions
+
+Custom Ruby scripts extending SketchUp with additional domain-specific functionality, improving existing modeling workflows.
+
+`Ruby` `SketchUp API`
+
+---
+
+## iOS Music App Prototype
+
+Early prototype of an iOS application focused on music-related functionality. Explored basic application structure and interaction patterns.
+
+`Swift` `iOS`
