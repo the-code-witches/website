@@ -1,184 +1,231 @@
 const translations = {
   en: {
-    'nav.about': 'about',
-    'nav.services': 'services',
-    'nav.projects': 'projects',
-    'nav.contact': 'contact',
-    'nav.cta': 'book free session',
-    'hero.tagline': 'software engineering & technical partnership',
-    'hero.poem1': 'A pioneering vision with no clear path yet.',
-    'hero.poem2': 'Processes that are 80% workarounds.',
-    'hero.poem3': 'A legacy system nobody wants to touch.',
-    'hero.poem4': "We're here for all of it.",
-    'hero.audience': 'We partner with SMEs, technical teams, and founders, building software that serves people, not the other way around.',
-    'about.title': 'about',
-    'about.p1': 'We partner up with changemakers and teams who want to support their work with the right digital tools or want to build their own tech product. Our passion lies in understanding complex systems, writing clean code, and creating clear communication that builds bridges.',
-    'about.p2': 'We are two experienced developers with 20+ years of combined practice in building software and data products across industries, stacks, and scales.',
-    'about.p3': '<b>We work as a tandem:</b> a-well established powerhouse team of two giving you the service and reliability of an agency, with the flexibility and direct communication of working with individuals.',
-    'about.sehera': "Sehera has been coding since forever, whether it's building 3D renderers in C++ or spinning up systems in any language you can name. She's agility at work, breaking through perfectionism with quick cycles. With her warmth and can-do attitude, she keeps projects moving and people energized.",
-    'about.denise': "Denise grew from research into machine learning, data pipelines, and full-stack development. She brings calm structure and crystal-clear thinking to complex problems, cutting through noise with precision. Her humor and grounded presence make even the toughest challenges feel navigable.",
-    'services.title': 'services',
-    'services.p1': 'We offer fully integrated hands-on software engineering and technical consulting from a single source.',
-    'services.p2': 'We bring a holistic perspective to every project: from untangling legacy systems and designing custom algorithms to rethinking entire digital workflows from scratch.',
-    'services.li1': "You have an idea, maybe even vibecoded a bit, but now you want it to grow into something real, something you can feel accountable for.",
-    'services.li2': "You have a massive legacy system that needs to be changed or modernized and you have no idea where to start.",
-    'services.li3': "Your team handles complex processes, you hear of AI around you, it makes you kinda nervous and you are wondering how it can truly support you.",
-    'services.cta': 'If this speaks to you, feel free to inquire one of our introductory services below via <a class="link__accent" href="mailto:hi@thecodewitches.de">hi&#64;thecodewitches&#46;de</a> or simply book a <a class="cta" href="book.html">FREE SESSION</a>',
-    'services.p4': "<b>Together we'll get you moving forward!</b>",
-    'services.sparring.title': '1h sparring',
-    'services.sparring.p1': 'A minimal investment to find out if we vibe.',
-    'services.sparring.p2': "This session is for sharing where you're at, picking our brains and structure your biggest challenges together.",
-    'services.sparring.p3': "You'll get clear recommendations for steps ahead.",
-    'services.deepdive.title': 'deep dive',
-    'services.deepdive.p1': 'we prepare a tailored workshop for you and together we develop solutions for your most pressing pain point',
-    'services.deepdive.p2': 'This can be: architecture suggestions including discussion, roadmap planning, a technical input, ...',
-    'services.deepdive.p3': 'You walk away with an actionable plan.',
-    'services.devcycle.title': '1 dev cycle',
-    'services.devcycle.p1': 'We go through all phases of a dev cycle: plan, implement, test, deploy, review.',
-    'services.devcycle.p2': 'we add one feedback cycle after your review to harness the magic of working in cycles.',
-    'services.devcycle.p3': 'The best way to explore how working together really feels like while producing something you can build upon.',
-    'clients.title': 'projects',
-    'clients.p1': 'What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.',
-    'clients.p2': 'A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. Whatever the scale, we come with the depth to do it right.',
-    'clients.skyseed1.title': 'Process Digitization',
-    'clients.skyseed1.desc': 'For our partner <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> we built an end-to-end platform that manages the full lifecycle of reforestation projects. One efficient system that consolidates complex processes from seed purchasing and production to tour planning and drone flight management.',
-    'clients.booking.title': 'Booking System',
-    'clients.booking.desc': 'For the <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a>, we restructured and expanded their course booking platform, modernizing core functions and adding new features while ensuring a smooth transition within their established workflows.',
-    'clients.matching.title': 'Matching Algorithm',
-    'clients.matching.desc': 'Together with <a href="https://www.skyseed.eco" class="client__link">Skyseed</a>, we developed an intelligent matching engine that automatically assigns the right seeds to each forest area in compliance with German regulations and ecological factors, fully embedded in their existing infrastructure.',
-    'clients.configurator.title': 'Product Configurator',
-    'clients.configurator.desc': 'We created a product configurator for <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> that interactively guides users through their portfolio and generates tailored offers and qualified leads by integrating seamlessly with existing backend services and CRM system.',
-    'range.title': 'range',
-    'range.intro': 'whatever the domain — if it runs on a computer, we\'ve probably built something like it.',
-    'range.tag.film.label': 'film & vfx',
-    'range.tag.film.outcome': 'rendering engine deployed in hobbit, tintin, rise of the planet of the apes',
-    'range.tag.drone.label': 'drone tech',
-    'range.tag.drone.outcome': 'obstacle avoidance algorithm: runtime from hours to minutes',
-    'range.tag.election.label': 'election research',
-    'range.tag.election.outcome': 'live survey weighting and election forecasting system',
-    'range.tag.data.label': 'data pipelines',
-    'range.tag.data.outcome': 'real-time kafka pipeline combining marketing, tracking, and business data',
-    'range.tag.erp.label': 'enterprise erp',
-    'range.tag.erp.outcome': 'replaced full spreadsheet-based operations with one end-to-end system',
-    'range.tag.academic.label': 'academic platforms',
-    'range.tag.academic.outcome': 'course booking, enrollment, certificates, and administration',
-    'range.tag.ecommerce.label': 'e-commerce',
-    'range.tag.ecommerce.outcome': 'shopify customization and bespoke backend integrations',
-    'range.tag.embedded.label': 'embedded systems',
-    'range.tag.embedded.outcome': 'escape room control systems — sensors, actuators, game state',
-    'range.tag.hospitality.label': 'hospitality',
-    'range.tag.hospitality.outcome': 'offline recipe app for high-pressure bar service',
-    'range.tag.network.label': 'network analysis',
-    'range.tag.network.outcome': 'twitter interaction network and political data visualization',
-    'range.tag.geo.label': 'map & geospatial',
-    'range.tag.geo.outcome': 'webgl-based interactive map visualizations for editorial use',
-    'range.tag.jobs.label': 'job platforms',
-    'range.tag.jobs.outcome': 'job board with editorial backend and invoicing workflows',
-    'contact.title': 'contact',
-    'contact.text': "Let's discuss where you're at and where you want to go.",
-    'footer.rights': 'All rights reserved',
+    "nav.about": "about",
+    "nav.services": "services",
+    "nav.projects": "projects",
+    "nav.contact": "contact",
+    "nav.cta": "book free session",
+    "hero.tagline": "software engineering & technical partnership",
+    "hero.poem1": "A pioneering vision with no clear path yet.",
+    "hero.poem2": "Processes that are 80% workarounds.",
+    "hero.poem3": "A legacy system that everyone wants to rewrite with AI.",
+    "hero.poem4": "We hold the complexity, so you can lead.",
+    "hero.audience":
+      "We partner with SMEs, technical teams, and founders, building software that serves people, not the other way around.",
+    "about.title": "about",
+    "about.p1":
+      "We partner up with changemakers and teams who want to support their work with the right digital tools or want to build their own tech product. Our passion lies in understanding complex systems, writing clean code, and creating clear communication that builds bridges.",
+    "about.p2":
+      "We are two experienced developers with 20+ years of combined practice in building software and data products across industries, stacks, and scales.",
+    "about.p3":
+      "<b>We work as a tandem:</b> a-well established powerhouse team of two giving you the service and reliability of an agency, with the flexibility and direct communication of working with individuals.",
+    "about.sehera":
+      "Sehera has been coding since forever, whether it's building 3D renderers in C++ or spinning up systems in any language you can name. She's agility at work, breaking through perfectionism with quick cycles. With her warmth and can-do attitude, she keeps projects moving and people energized.",
+    "about.denise":
+      "Denise grew from research into machine learning, data pipelines, and full-stack development. She brings calm structure and crystal-clear thinking to complex problems, cutting through noise with precision. Her humor and grounded presence make even the toughest challenges feel navigable.",
+    "services.title": "services",
+    "services.p1":
+      "We offer fully integrated hands-on software engineering and technical consulting from a single source.",
+    "services.p2":
+      "We bring a holistic perspective to every project: from untangling legacy systems and designing custom algorithms to rethinking entire digital workflows from scratch.",
+    "services.li1":
+      "You have an idea, maybe even vibecoded a bit, but now you want it to grow into something real, something you can feel accountable for.",
+    "services.li2":
+      "You have a massive legacy system that needs to be changed or modernized and you have no idea where to start.",
+    "services.li3":
+      "Your team handles complex processes, you hear of AI around you, it makes you kinda nervous and you are wondering how it can truly support you.",
+    "services.cta":
+      'If this speaks to you, feel free to inquire one of our introductory services below via <a class="link__accent" href="mailto:hi@thecodewitches.de">hi&#64;thecodewitches&#46;de</a> or simply book a <a class="cta" href="book.html">FREE SESSION</a>',
+    "services.p4": "<b>Together we'll get you moving forward!</b>",
+    "services.sparring.title": "1h sparring",
+    "services.sparring.p1": "A minimal investment to find out if we vibe.",
+    "services.sparring.p2":
+      "This session is for sharing where you're at, picking our brains and structure your biggest challenges together.",
+    "services.sparring.p3": "You'll get clear recommendations for steps ahead.",
+    "services.deepdive.title": "deep dive",
+    "services.deepdive.p1":
+      "we prepare a tailored workshop for you and together we develop solutions for your most pressing pain point",
+    "services.deepdive.p2":
+      "This can be: architecture suggestions including discussion, roadmap planning, a technical input, ...",
+    "services.deepdive.p3": "You walk away with an actionable plan.",
+    "services.devcycle.title": "1 dev cycle",
+    "services.devcycle.p1": "We go through all phases of a dev cycle: plan, implement, test, deploy, review.",
+    "services.devcycle.p2": "we add one feedback cycle after your review to harness the magic of working in cycles.",
+    "services.devcycle.p3":
+      "The best way to explore how working together really feels like while producing something you can build upon.",
+    "clients.title": "projects",
+    "clients.p1":
+      "What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.",
+    "clients.p2":
+      "A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. Whatever the scale, we come with the depth to do it right.",
+    "clients.skyseed1.title": "Process Digitization",
+    "clients.skyseed1.desc":
+      'For our partner <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> we built an end-to-end platform that manages the full lifecycle of reforestation projects. One efficient system that consolidates complex processes from seed purchasing and production to tour planning and drone flight management.',
+    "clients.booking.title": "Booking System",
+    "clients.booking.desc":
+      'For the <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a>, we restructured and expanded their course booking platform, modernizing core functions and adding new features while ensuring a smooth transition within their established workflows.',
+    "clients.matching.title": "Matching Algorithm",
+    "clients.matching.desc":
+      'Together with <a href="https://www.skyseed.eco" class="client__link">Skyseed</a>, we developed an intelligent matching engine that automatically assigns the right seeds to each forest area in compliance with German regulations and ecological factors, fully embedded in their existing infrastructure.',
+    "clients.configurator.title": "Product Configurator",
+    "clients.configurator.desc":
+      'We created a product configurator for <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> that interactively guides users through their portfolio and generates tailored offers and qualified leads by integrating seamlessly with existing backend services and CRM system.',
+    "range.title": "range",
+    "range.intro": "whatever the domain — if it runs on a computer, we've probably built something like it.",
+    "range.tag.film.label": "film & vfx",
+    "range.tag.film.outcome": "rendering engine deployed in hobbit, tintin, rise of the planet of the apes",
+    "range.tag.drone.label": "drone tech",
+    "range.tag.drone.outcome": "obstacle avoidance algorithm: runtime from hours to minutes",
+    "range.tag.election.label": "election research",
+    "range.tag.election.outcome": "live survey weighting and election forecasting system",
+    "range.tag.data.label": "data pipelines",
+    "range.tag.data.outcome": "real-time kafka pipeline combining marketing, tracking, and business data",
+    "range.tag.erp.label": "enterprise erp",
+    "range.tag.erp.outcome": "replaced full spreadsheet-based operations with one end-to-end system",
+    "range.tag.academic.label": "academic platforms",
+    "range.tag.academic.outcome": "course booking, enrollment, certificates, and administration",
+    "range.tag.ecommerce.label": "e-commerce",
+    "range.tag.ecommerce.outcome": "shopify customization and bespoke backend integrations",
+    "range.tag.embedded.label": "embedded systems",
+    "range.tag.embedded.outcome": "escape room control systems — sensors, actuators, game state",
+    "range.tag.hospitality.label": "hospitality",
+    "range.tag.hospitality.outcome": "offline recipe app for high-pressure bar service",
+    "range.tag.network.label": "network analysis",
+    "range.tag.network.outcome": "twitter interaction network and political data visualization",
+    "range.tag.geo.label": "map & geospatial",
+    "range.tag.geo.outcome": "webgl-based interactive map visualizations for editorial use",
+    "range.tag.jobs.label": "job platforms",
+    "range.tag.jobs.outcome": "job board with editorial backend and invoicing workflows",
+    "contact.title": "contact",
+    "contact.text": "Let's discuss where you're at and where you want to go.",
+    "footer.rights": "All rights reserved",
   },
   de: {
-    'nav.about': 'über uns',
-    'nav.services': 'leistungen',
-    'nav.projects': 'projekte',
-    'nav.contact': 'kontakt',
-    'nav.cta': 'kostenloses gespräch',
-    'hero.tagline': 'Softwareentwicklung & technische Begleitung',
-    'hero.poem1': 'Eine Vision, für die der Weg noch fehlt.',
-    'hero.poem2': 'Prozesse, die zu 80% aus Workarounds bestehen.',
-    'hero.poem3': 'Ein Legacy-System, das niemand anfassen will.',
-    'hero.poem4': 'Wir sind für euch da.',
-    'hero.audience': 'Wir arbeiten mit KMU, technischen Teams und Gründer:innen. Wir bauen Software, die den Menschen dient, nicht umgekehrt.',
-    'about.title': 'über uns',
-    'about.p1': 'Wir arbeiten mit Changemakers und Teams, die ihre Arbeit mit den richtigen digitalen Werkzeugen unterstützen oder ihr eigenes Tech-Produkt aufbauen möchten. Unsere Leidenschaft liegt darin, komplexe Systeme zu verstehen, sauberen Code zu schreiben und klare Kommunikation zu schaffen, die Brücken baut.',
-    'about.p2': 'Wir sind zwei erfahrene Entwicklerinnen mit über 20 Jahren gemeinsamer Praxis im Aufbau von Software- und Datenprodukten – branchenübergreifend, stackübergreifend, skalierungsübergreifend.',
-    'about.p3': '<b>Wir arbeiten als Tandem:</b> ein eingespieltes Power-Team aus zwei, das euch die Verlässlichkeit einer Agentur bietet – mit der Flexibilität und direkten Kommunikation des Arbeitens mit Einzelpersonen.',
-    'about.sehera': 'Sehera programmiert seit jeher, egal ob sie 3D-Renderer in C++ baut oder Systeme in jeder erdenklichen Sprache zum Laufen bringt. Sie ist Agilität in Person – sie durchbricht Perfektionismus mit schnellen Zyklen. Mit ihrer Wärme und ihrer Can-do-Haltung hält sie Projekte am Laufen und Menschen motiviert.',
-    'about.denise': 'Denise kam aus der Forschung zu Machine Learning, Datenpipelines und Full-Stack-Entwicklung. Sie bringt ruhige Struktur und glasklares Denken in komplexe Probleme und schneidet präzise durch den Lärm. Ihr Humor und ihre geerdte Präsenz machen selbst die härtesten Herausforderungen navigierbar.',
-    'services.title': 'leistungen',
-    'services.p1': 'Wir bieten vollständig integriertes, praxisnahes Software-Engineering und technische Beratung aus einer Hand.',
-    'services.p2': 'Wir bringen eine ganzheitliche Perspektive in jedes Projekt: vom Entwirren von Legacy-Systemen und dem Design von Custom-Algorithmen bis hin zur kompletten Neugestaltung digitaler Workflows.',
-    'services.li1': 'Ihr habt eine Idee, habt vielleicht schon etwas vibecoded, möchtet nun aber, dass sie zu etwas Echtem heranwächst – etwas, für das ihr Verantwortung übernehmen könnt.',
-    'services.li2': 'Ihr habt ein massives Legacy-System, das geändert oder modernisiert werden muss, und wisst nicht, wo ihr anfangen sollt.',
-    'services.li3': 'Euer Team bearbeitet komplexe Prozesse, ihr hört überall von KI, es macht euch ein bisschen nervös, und ihr fragt euch, wie es euch wirklich unterstützen kann.',
-    'services.cta': 'Wenn euch das anspricht, fragt einfach nach einem unserer Einführungsservices via <a class="link__accent" href="mailto:hi@thecodewitches.de">hi&#64;thecodewitches&#46;de</a> oder bucht einfach ein <a class="cta" href="book.html">KOSTENLOSES GESPRÄCH</a>',
-    'services.p4': '<b>Gemeinsam bringen wir euch voran!</b>',
-    'services.sparring.title': '1h sparring',
-    'services.sparring.p1': 'Ein minimaler Einsatz, um herauszufinden, ob wir harmonieren.',
-    'services.sparring.p2': 'Diese Session dient dazu, euren aktuellen Stand zu teilen, unser Wissen zu nutzen und eure größten Herausforderungen gemeinsam zu strukturieren.',
-    'services.sparring.p3': 'Ihr bekommt klare Empfehlungen für die nächsten Schritte.',
-    'services.deepdive.title': 'deep dive',
-    'services.deepdive.p1': 'Wir bereiten einen maßgeschneiderten Workshop vor und entwickeln gemeinsam Lösungen für euren dringendsten Schmerzpunkt.',
-    'services.deepdive.p2': 'Das kann sein: Architekturvorschläge inkl. Diskussion, Roadmap-Planung, ein technischer Input, ...',
-    'services.deepdive.p3': 'Ihr geht mit einem umsetzbaren Plan heraus.',
-    'services.devcycle.title': '1 dev cycle',
-    'services.devcycle.p1': 'Wir durchlaufen alle Phasen eines Dev-Zyklus: planen, implementieren, testen, deployen, reviewen.',
-    'services.devcycle.p2': 'Nach eurem Review fügen wir einen Feedback-Zyklus hinzu, um die Magie des Arbeitens in Zyklen zu nutzen.',
-    'services.devcycle.p3': 'Der beste Weg, um herauszufinden, wie die Zusammenarbeit wirklich anfühlt – und dabei etwas zu produzieren, auf dem ihr aufbauen könnt.',
-    'clients.title': 'projekte',
-    'clients.p1': 'Was wir bauen, gehört denen, die damit arbeiten: dezentralisiert, offen, für die Langzeit gestaltet. Kein Lock-in, keine Black Boxes, so wenig Plattformabhängigkeiten wie möglich.',
-    'clients.p2': 'Ein maßgeschneidertes internes Tool, das fünf Tabellenkalkulationen ersetzt. Ein Algorithmus, der einen mühsamen manuellen Prozess automatisiert. Eine Datenpipeline, die eure Analytik in einer Live-Ansicht zusammenführt. Eine Plattform, die euren gesamten operativen Workflow von A bis Z abwickelt. Egal die Größe – wir kommen mit der Tiefe, um es richtig zu machen.',
-    'clients.skyseed1.title': 'Prozessdigitalisierung',
-    'clients.skyseed1.desc': 'Für unseren Partner <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> haben wir eine End-to-End-Plattform gebaut, die den vollständigen Lebenszyklus von Aufforstungsprojekten verwaltet. Ein effizientes System, das komplexe Prozesse von der Samenbeschaffung und -produktion bis zur Tourenplanung und Drohnenflugverwaltung konsolidiert.',
-    'clients.booking.title': 'Buchungssystem',
-    'clients.booking.desc': 'Für die <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> haben wir deren Kursbuchungsplattform umstrukturiert und erweitert, Kernfunktionen modernisiert und neue Features hinzugefügt – bei einem reibungslosen Übergang innerhalb ihrer etablierten Workflows.',
-    'clients.matching.title': 'Matching-Algorithmus',
-    'clients.matching.desc': 'Gemeinsam mit <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> haben wir eine intelligente Matching-Engine entwickelt, die automatisch die richtigen Samen jedem Waldgebiet zuordnet – in Übereinstimmung mit deutschen Vorschriften und ökologischen Faktoren, vollständig eingebettet in ihre bestehende Infrastruktur.',
-    'clients.configurator.title': 'Produktkonfigurator',
-    'clients.configurator.desc': 'Wir haben für <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> einen Produktkonfigurator erstellt, der Nutzer:innen interaktiv durch ihr Portfolio führt und maßgeschneiderte Angebote und qualifizierte Leads generiert, indem er nahtlos mit bestehenden Backend-Diensten und CRM-System integriert.',
-    'range.title': 'range',
-    'range.intro': 'egal welche domäne — wenn es auf einem computer läuft, haben wir wahrscheinlich schon etwas ähnliches gebaut.',
-    'range.tag.film.label': 'film & vfx',
-    'range.tag.film.outcome': 'rendering-engine in hobbit, tintin, rise of the planet of the apes eingesetzt',
-    'range.tag.drone.label': 'drohnen-tech',
-    'range.tag.drone.outcome': 'kollisionsvermeidung: laufzeit von stunden auf minuten reduziert',
-    'range.tag.election.label': 'wahlforschung',
-    'range.tag.election.outcome': 'echtzeit-umfragewichtung und wahlprognosesystem',
-    'range.tag.data.label': 'datenpipelines',
-    'range.tag.data.outcome': 'echtzeit-kafka-pipeline für marketing-, tracking- und business-daten',
-    'range.tag.erp.label': 'enterprise erp',
-    'range.tag.erp.outcome': 'spreadsheet-basierte prozesse durch ein end-to-end-system ersetzt',
-    'range.tag.academic.label': 'akademische plattformen',
-    'range.tag.academic.outcome': 'kursbuchung, einschreibung, zertifikate und verwaltung',
-    'range.tag.ecommerce.label': 'e-commerce',
-    'range.tag.ecommerce.outcome': 'shopify-anpassung und individuelle backend-integrationen',
-    'range.tag.embedded.label': 'embedded systems',
-    'range.tag.embedded.outcome': 'escape-room-steuerung — sensoren, aktoren, spielzustand',
-    'range.tag.hospitality.label': 'gastronomie',
-    'range.tag.hospitality.outcome': 'offline-rezept-app für stressige bar-umgebungen',
-    'range.tag.network.label': 'netzwerkanalyse',
-    'range.tag.network.outcome': 'twitter-interaktionsnetzwerk und politische datenvisualisierung',
-    'range.tag.geo.label': 'karten & geodaten',
-    'range.tag.geo.outcome': 'webgl-kartendarstellungen für redaktionelle anwendungen',
-    'range.tag.jobs.label': 'job-plattformen',
-    'range.tag.jobs.outcome': 'stellenbörse mit redaktionellem backend und abrechnungsworkflows',
-    'contact.title': 'kontakt',
-    'contact.text': 'Lass uns besprechen, wo ihr steht und wo ihr hinwollt.',
-    'footer.rights': 'Alle Rechte vorbehalten',
+    "nav.about": "über uns",
+    "nav.services": "leistungen",
+    "nav.projects": "projekte",
+    "nav.contact": "kontakt",
+    "nav.cta": "kostenloses gespräch",
+    "hero.tagline": "Softwareentwicklung & technische Begleitung",
+    "hero.poem1": "Eine Vision, für die der Weg noch fehlt.",
+    "hero.poem2": "Prozesse, die zu 80% aus Workarounds bestehen.",
+    "hero.poem3": "Ein Legacy-System, das alle mit KI neu schreiben wollen.",
+    "hero.poem4": "Wir tragen die Komplexität, damit ihr führen könnt.",
+    "hero.audience":
+      "Wir arbeiten mit KMU, technischen Teams und Gründer:innen. Wir bauen Software, die den Menschen dient, nicht umgekehrt.",
+    "about.title": "über uns",
+    "about.p1":
+      "Wir arbeiten mit Changemakers und Teams, die ihre Arbeit mit den richtigen digitalen Werkzeugen unterstützen oder ihr eigenes Tech-Produkt aufbauen möchten. Unsere Leidenschaft liegt darin, komplexe Systeme zu verstehen, sauberen Code zu schreiben und klare Kommunikation zu schaffen, die Brücken baut.",
+    "about.p2":
+      "Wir sind zwei erfahrene Entwicklerinnen mit über 20 Jahren gemeinsamer Praxis im Aufbau von Software- und Datenprodukten – branchenübergreifend, stackübergreifend, skalierungsübergreifend.",
+    "about.p3":
+      "<b>Wir arbeiten als Tandem:</b> ein eingespieltes Power-Team aus zwei, das euch die Verlässlichkeit einer Agentur bietet – mit der Flexibilität und direkten Kommunikation des Arbeitens mit Einzelpersonen.",
+    "about.sehera":
+      "Sehera programmiert seit jeher, egal ob sie 3D-Renderer in C++ baut oder Systeme in jeder erdenklichen Sprache zum Laufen bringt. Sie ist Agilität in Person – sie durchbricht Perfektionismus mit schnellen Zyklen. Mit ihrer Wärme und ihrer Can-do-Haltung hält sie Projekte am Laufen und Menschen motiviert.",
+    "about.denise":
+      "Denise kam aus der Forschung zu Machine Learning, Datenpipelines und Full-Stack-Entwicklung. Sie bringt ruhige Struktur und glasklares Denken in komplexe Probleme und schneidet präzise durch den Lärm. Ihr Humor und ihre geerdte Präsenz machen selbst die härtesten Herausforderungen navigierbar.",
+    "services.title": "leistungen",
+    "services.p1":
+      "Wir bieten vollständig integriertes, praxisnahes Software-Engineering und technische Beratung aus einer Hand.",
+    "services.p2":
+      "Wir bringen eine ganzheitliche Perspektive in jedes Projekt: vom Entwirren von Legacy-Systemen und dem Design von Custom-Algorithmen bis hin zur kompletten Neugestaltung digitaler Workflows.",
+    "services.li1":
+      "Ihr habt eine Idee, habt vielleicht schon etwas vibecoded, möchtet nun aber, dass sie zu etwas Echtem heranwächst – etwas, für das ihr Verantwortung übernehmen könnt.",
+    "services.li2":
+      "Ihr habt ein massives Legacy-System, das geändert oder modernisiert werden muss, und wisst nicht, wo ihr anfangen sollt.",
+    "services.li3":
+      "Euer Team bearbeitet komplexe Prozesse, ihr hört überall von KI, es macht euch ein bisschen nervös, und ihr fragt euch, wie es euch wirklich unterstützen kann.",
+    "services.cta":
+      'Wenn euch das anspricht, fragt einfach nach einem unserer Einführungsservices via <a class="link__accent" href="mailto:hi@thecodewitches.de">hi&#64;thecodewitches&#46;de</a> oder bucht einfach ein <a class="cta" href="book.html">KOSTENLOSES GESPRÄCH</a>',
+    "services.p4": "<b>Gemeinsam bringen wir euch voran!</b>",
+    "services.sparring.title": "1h sparring",
+    "services.sparring.p1": "Ein minimaler Einsatz, um herauszufinden, ob wir harmonieren.",
+    "services.sparring.p2":
+      "Diese Session dient dazu, euren aktuellen Stand zu teilen, unser Wissen zu nutzen und eure größten Herausforderungen gemeinsam zu strukturieren.",
+    "services.sparring.p3": "Ihr bekommt klare Empfehlungen für die nächsten Schritte.",
+    "services.deepdive.title": "deep dive",
+    "services.deepdive.p1":
+      "Wir bereiten einen maßgeschneiderten Workshop vor und entwickeln gemeinsam Lösungen für euren dringendsten Schmerzpunkt.",
+    "services.deepdive.p2":
+      "Das kann sein: Architekturvorschläge inkl. Diskussion, Roadmap-Planung, ein technischer Input, ...",
+    "services.deepdive.p3": "Ihr geht mit einem umsetzbaren Plan heraus.",
+    "services.devcycle.title": "1 dev cycle",
+    "services.devcycle.p1":
+      "Wir durchlaufen alle Phasen eines Dev-Zyklus: planen, implementieren, testen, deployen, reviewen.",
+    "services.devcycle.p2":
+      "Nach eurem Review fügen wir einen Feedback-Zyklus hinzu, um die Magie des Arbeitens in Zyklen zu nutzen.",
+    "services.devcycle.p3":
+      "Der beste Weg, um herauszufinden, wie die Zusammenarbeit wirklich anfühlt – und dabei etwas zu produzieren, auf dem ihr aufbauen könnt.",
+    "clients.title": "projekte",
+    "clients.p1":
+      "Was wir bauen, gehört denen, die damit arbeiten: dezentralisiert, offen, für die Langzeit gestaltet. Kein Lock-in, keine Black Boxes, so wenig Plattformabhängigkeiten wie möglich.",
+    "clients.p2":
+      "Ein maßgeschneidertes internes Tool, das fünf Tabellenkalkulationen ersetzt. Ein Algorithmus, der einen mühsamen manuellen Prozess automatisiert. Eine Datenpipeline, die eure Analytik in einer Live-Ansicht zusammenführt. Eine Plattform, die euren gesamten operativen Workflow von A bis Z abwickelt. Egal die Größe – wir kommen mit der Tiefe, um es richtig zu machen.",
+    "clients.skyseed1.title": "Prozessdigitalisierung",
+    "clients.skyseed1.desc":
+      'Für unseren Partner <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> haben wir eine End-to-End-Plattform gebaut, die den vollständigen Lebenszyklus von Aufforstungsprojekten verwaltet. Ein effizientes System, das komplexe Prozesse von der Samenbeschaffung und -produktion bis zur Tourenplanung und Drohnenflugverwaltung konsolidiert.',
+    "clients.booking.title": "Buchungssystem",
+    "clients.booking.desc":
+      'Für die <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> haben wir deren Kursbuchungsplattform umstrukturiert und erweitert, Kernfunktionen modernisiert und neue Features hinzugefügt – bei einem reibungslosen Übergang innerhalb ihrer etablierten Workflows.',
+    "clients.matching.title": "Matching-Algorithmus",
+    "clients.matching.desc":
+      'Gemeinsam mit <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> haben wir eine intelligente Matching-Engine entwickelt, die automatisch die richtigen Samen jedem Waldgebiet zuordnet – in Übereinstimmung mit deutschen Vorschriften und ökologischen Faktoren, vollständig eingebettet in ihre bestehende Infrastruktur.',
+    "clients.configurator.title": "Produktkonfigurator",
+    "clients.configurator.desc":
+      'Wir haben für <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> einen Produktkonfigurator erstellt, der Nutzer:innen interaktiv durch ihr Portfolio führt und maßgeschneiderte Angebote und qualifizierte Leads generiert, indem er nahtlos mit bestehenden Backend-Diensten und CRM-System integriert.',
+    "range.title": "range",
+    "range.intro":
+      "egal welche domäne — wenn es auf einem computer läuft, haben wir wahrscheinlich schon etwas ähnliches gebaut.",
+    "range.tag.film.label": "film & vfx",
+    "range.tag.film.outcome": "rendering-engine in hobbit, tintin, rise of the planet of the apes eingesetzt",
+    "range.tag.drone.label": "drohnen-tech",
+    "range.tag.drone.outcome": "kollisionsvermeidung: laufzeit von stunden auf minuten reduziert",
+    "range.tag.election.label": "wahlforschung",
+    "range.tag.election.outcome": "echtzeit-umfragewichtung und wahlprognosesystem",
+    "range.tag.data.label": "datenpipelines",
+    "range.tag.data.outcome": "echtzeit-kafka-pipeline für marketing-, tracking- und business-daten",
+    "range.tag.erp.label": "enterprise erp",
+    "range.tag.erp.outcome": "spreadsheet-basierte prozesse durch ein end-to-end-system ersetzt",
+    "range.tag.academic.label": "akademische plattformen",
+    "range.tag.academic.outcome": "kursbuchung, einschreibung, zertifikate und verwaltung",
+    "range.tag.ecommerce.label": "e-commerce",
+    "range.tag.ecommerce.outcome": "shopify-anpassung und individuelle backend-integrationen",
+    "range.tag.embedded.label": "embedded systems",
+    "range.tag.embedded.outcome": "escape-room-steuerung — sensoren, aktoren, spielzustand",
+    "range.tag.hospitality.label": "gastronomie",
+    "range.tag.hospitality.outcome": "offline-rezept-app für stressige bar-umgebungen",
+    "range.tag.network.label": "netzwerkanalyse",
+    "range.tag.network.outcome": "twitter-interaktionsnetzwerk und politische datenvisualisierung",
+    "range.tag.geo.label": "karten & geodaten",
+    "range.tag.geo.outcome": "webgl-kartendarstellungen für redaktionelle anwendungen",
+    "range.tag.jobs.label": "job-plattformen",
+    "range.tag.jobs.outcome": "stellenbörse mit redaktionellem backend und abrechnungsworkflows",
+    "contact.title": "kontakt",
+    "contact.text": "Lass uns besprechen, wo ihr steht und wo ihr hinwollt.",
+    "footer.rights": "Alle Rechte vorbehalten",
   },
 }
 
-let currentLang = localStorage.getItem('lang') || 'en'
+let currentLang = localStorage.getItem("lang") || "en"
 
 function applyTranslations(lang) {
   const t = translations[lang]
-  document.querySelectorAll('[data-i18n]').forEach((el) => {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n
     if (t[key] !== undefined) {
       el.innerHTML = t[key]
     }
   })
   document.documentElement.lang = lang
-  document.querySelectorAll('.lang__toggle__option').forEach((btn) => {
-    btn.classList.toggle('active', btn.dataset.lang === lang)
+  document.querySelectorAll(".lang__toggle__option").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.lang === lang)
   })
-  localStorage.setItem('lang', lang)
+  localStorage.setItem("lang", lang)
   currentLang = lang
 }
 
-document.querySelectorAll('.lang__toggle__option').forEach((btn) => {
-  btn.addEventListener('click', () => applyTranslations(btn.dataset.lang))
+document.querySelectorAll(".lang__toggle__option").forEach((btn) => {
+  btn.addEventListener("click", () => applyTranslations(btn.dataset.lang))
 })
 
 applyTranslations(currentLang)
