@@ -75,7 +75,9 @@
 
 .client__block__stack {
   display: block;
-  font-style: italic;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-size: 0.85em;
   margin-top: 1rem;
 }
 
