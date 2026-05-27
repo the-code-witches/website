@@ -69,7 +69,7 @@ Also rewrite the descriptor: `// software engineering & technical consulting` is
 
 ---
 
-### #2 — Add a domain breadth section
+### ~~#2 — Add a domain breadth section~~ ✅ done
 **Effort:** 1–2h | **Impact:** very high — this is the core differentiator and currently invisible
 
 **Problem:** The site shows 4 Skyseed/Freie Kunst Akademie projects. This makes the Code Witches look like a small Skyseed-adjacent shop. The actual range is extraordinary and goes completely unrepresented.
@@ -129,7 +129,7 @@ Anchor line: *"Whatever the domain — if it runs on a computer, we've probably 
 
 ## 📐 Structural — Page section order
 
-### #5 — Fix the section order
+### ~~#5 — Fix the section order~~ ✅ done
 **Effort:** ~1h | **Impact:** medium-high — structural, affects every visitor
 
 **Problem:** About before Services is a classic mistake. Visitors want to know if you can solve their problem before they want to know who you are.
