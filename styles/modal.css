@@ -33,7 +33,7 @@
 }
 
 .modal .close:hover {
-  color: var(--primary);
+  color: var(--brand);
 }
 
 /* Optional: style headings and paragraphs */
@@ -56,7 +56,7 @@
 }
 
 .modal-link:hover {
-  color: var(--primary);
+  color: var(--text-inv);
 }
 
 /* Responsive modal text */

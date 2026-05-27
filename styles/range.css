@@ -1,20 +1,35 @@
 /* Range / Domain Breadth Section */
 
 .section__range {
-  background: var(--bg);
+  background: var(--dark);
+  overflow: hidden;
+  isolation: isolate;
 }
 
-/* Outer container: clips the scrolling track and fades right edge */
+/* Brand polygon — bottom-left corner, logo angle (slope 2) */
+.section__range::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 22vw;
+  height: 22vw;
+  background: var(--brand);
+  clip-path: polygon(0% 0%, 0% 100%, 50% 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Scrolling tag container */
 .breadth__tags {
   overflow: hidden;
-  margin-left: 4rem;
-  padding: 1rem 0 3rem 0;
-  max-width: calc(max(80ch, 75vw) - 4rem);
-  -webkit-mask-image: linear-gradient(to right, black 0%, black 80%, transparent 100%);
-  mask-image: linear-gradient(to right, black 0%, black 80%, transparent 100%);
+  margin-left: var(--pad-x);
+  padding: 1rem 0 3.5rem 0;
+  max-width: calc(max(80ch, 75vw) - var(--pad-x));
+  position: relative;
+  z-index: 1;
 }
 
-/* Inner track: animates horizontally, width = all tags in a row × 2 (duplicated) */
 .breadth__track {
   display: flex;
   gap: 0.75rem;
@@ -38,15 +53,15 @@
   align-items: flex-start;
   padding: 0.45rem 1.1rem;
   background: var(--brand);
-  color: var(--bg);
+  color: var(--text-inv);
   border-radius: 2px;
   cursor: default;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-normal);
-  transition: background 0.2s ease, color 0.2s ease, outline 0.2s ease;
+  border: 1.5px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Hidden in DOM — text is read by JS tooltip */
 .breadth__tag__outcome {
   display: none;
 }
@@ -54,22 +69,22 @@
 /* Desktop: colour flip on hover */
 @media (min-width: 993px) {
   .breadth__tag:hover {
-    background: var(--bg);
+    background: transparent;
     color: var(--brand);
-    outline: 1.5px solid var(--brand);
+    border-color: var(--brand);
   }
 }
 
-/* Fixed tooltip — lives on body, bypasses overflow clipping */
+/* Tooltip */
 .breadth__tooltip {
   position: fixed;
-  background: var(--text);
-  color: var(--bg);
+  background: var(--bg);
+  color: var(--text);
   padding: 0.6rem 0.9rem;
   border-radius: 2px;
-  font-family: "Lexend", system-ui, sans-serif;
-  font-size: 0.95rem;
-  font-weight: 200;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-light);
   max-width: 260px;
   white-space: normal;
   pointer-events: none;
@@ -81,9 +96,7 @@
   text-transform: lowercase;
 }
 
-.breadth__tooltip.visible {
-  opacity: 1;
-}
+.breadth__tooltip.visible { opacity: 1; }
 
 .breadth__tooltip::after {
   content: '';
@@ -92,15 +105,15 @@
   left: 50%;
   transform: translateX(-50%);
   border: 5px solid transparent;
-  border-top-color: var(--text);
+  border-top-color: var(--bg);
 }
 
-/* Mobile: tap reveals outcome inline inside the tag */
+/* Mobile: tap reveals outcome inline */
 @media (max-width: 992px) {
   .breadth__tags {
-    margin-left: 2rem;
-    padding: 1rem 0 2rem 0;
-    max-width: calc(100% - 2rem);
+    margin-left: var(--pad-x);
+    padding: 1rem 0 2.5rem 0;
+    max-width: calc(100% - var(--pad-x));
   }
 
   .breadth__tag {
@@ -108,14 +121,14 @@
   }
 
   .breadth__tag.active {
-    background: var(--bg);
+    background: transparent;
     color: var(--brand);
-    outline: 1.5px solid var(--brand);
+    border-color: var(--brand);
   }
 
   .breadth__tag.active .breadth__tag__outcome {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: var(--font-weight-light);
     color: var(--brand);
     margin-top: 0.3rem;

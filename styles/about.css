@@ -1,113 +1,83 @@
-/* About Section Styles */
+/* About Section */
 
 .section__about {
+  background: var(--bg);
   position: relative;
-  justify-content: center;
 }
 
 .section__about .section__title {
-  align-self: center;
-  text-align: center;
-  padding: 0;
+  padding-bottom: 0.75rem;
 }
 
 .section__about .content {
   text-align: left;
+  max-width: max(78ch, 70vw);
 }
 
+/* ── ABOUT STACK ────────────────────────────────────── */
+
+/* Photo above, columns below */
 .section__about .about__stack {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  padding-top: 1.5rem;
 }
 
-/* Desktop hover effects for image movement */
+.about__image {
+  display: block;
+  max-height: 32vh;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto 2rem;
+  filter: brightness(1.02);
+  position: relative;
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.about__image:hover {
+  filter: brightness(1.06) saturate(1.1);
+}
+
+/* Columns sit full-width below the photo */
+.section__about .columns {
+  align-self: stretch;
+}
+
+/* Desktop */
 @media (min-width: 1025px) {
-  .column__left .subhead {
-    left: var(--header-height);
-    transform: translateY(-50%);
-    text-align: left;
-  }
-
-  .column__right .subhead {
-    left: auto;
-    right: var(--header-height);
-    transform: translateY(-50%);
-    text-align: right;
-  }
-
   .section__about .content {
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .section__about .about__stack {
-    height: 40vh;
-  }
-
-  .about__image {
-    position: absolute;
-    display: block;
     margin: 0;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    z-index: 10;
-    max-height: 40vh;
-    width: auto;
-    object-fit: contain;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-
-  .about__image:hover {
-    filter: brightness(1.1) saturate(1.2);
-  }
-}
-
-/* Mobile styles for about section */
-@media (max-width: 1024px) {
-  .about__image {
-    position: relative;
-    width: 100%;
-    height: auto;
-    left: auto;
-    bottom: auto;
-    transform: none;
-    margin: 0 auto;
-  }
-
-  .section__about .about__stack {
-    height: auto;
-  }
-
-  .section__about {
-    min-height: 120vh;
-    padding: 3rem 0 2rem 0;
-  }
-
-  .section__about .content {
-    padding: 0 2rem 2rem;
+    padding-left: var(--pad-x);
+    padding-right: var(--pad-x);
     max-width: 100%;
   }
 
-  .section__about .columns {
-    margin-top: -1rem;
-    /* close the gap btw img and cols */
+  .about__image {
+    max-height: 30vh;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+  .section__about {
+    padding: 0 0 2rem;
+  }
+
+  .section__about .content {
+    padding: 0 var(--pad-x) 1.5rem;
+    max-width: 100%;
+  }
+
+  .about__image {
+    max-height: 28vh;
+    margin-bottom: 1.5rem;
   }
 
   .section__about .column p {
     font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-light);
-    display: block;
-  }
-
-  .section__about .column .subhead {
-    position: static;
-    transform: none;
-    text-align: left;
-    font-size: var(--font-size-s);
-    margin: 0 0 1rem 0;
-    opacity: 1;
   }
 }

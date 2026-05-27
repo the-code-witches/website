@@ -1,23 +1,32 @@
-/* Hero Section Styles */
+/* Hero Section */
 
 .section__hero {
   width: 100%;
   max-width: none;
   margin: 0;
   padding: 0;
+  background: var(--bg);
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.section__hero::after {
+/* Brand polygon — full logo triangle centered on top-right edge,
+   right half clipped by overflow:hidden → looks like half-displayed triangle */
+.section__hero::before {
   content: "";
-  display: block;
-  width: 100%;
-  height: 8rem;
+  position: absolute;
+  top: 0;
+  right: -20vw;
+  width: 40vw;
+  height: 40vw;
   background: var(--brand);
-  margin-top: 4rem;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero__above-fold {
-  padding: 0rem 4rem;
+  padding: 0 var(--pad-x);
   text-align: center;
   position: relative;
   z-index: 1;
@@ -26,12 +35,12 @@
 }
 
 .hero__below-fold {
-  padding: 0rem 4rem;
+  padding: 0 var(--pad-x);
   text-align: center;
   position: relative;
   z-index: 1;
   max-width: 65ch;
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto 4rem;
 }
 
 .hero__logo {
@@ -45,13 +54,14 @@
   font-weight: var(--font-weight-normal);
   color: var(--text);
   margin: 0;
+  line-height: 1.1;
 }
 
 .hero__tagline {
-  color: var(--text);
+  color: var(--muted);
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-m);
-  margin: 0.5rem 0 0 0;
+  margin: 0.6rem 0 0 0;
 }
 
 /* Poem block: centered as a unit, left-aligned inside */
@@ -66,31 +76,36 @@
 
 .hero__poem p {
   color: var(--text);
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--mono);
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-s);
   margin: 0;
   line-height: 1.6;
+  opacity: 0.65;
 }
 
 .hero__poem p::before {
   content: "// ";
+  color: var(--brand);
+  opacity: 1;
 }
 
 .hero__poem .hero__poem__punchline {
   margin-top: 1.25rem;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--mono);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-normal);
   font-style: normal;
+  opacity: 1;
+  color: var(--text);
 }
 
 .hero__poem .hero__poem__punchline::before {
   content: none;
 }
 
-/* Large screens: above-fold fills the viewport, brand bar at bottom of hero */
+/* Large screens: above-fold fills viewport */
 @media (min-width: 993px) {
   .hero__above-fold {
     min-height: calc(100vh - var(--header-height));
@@ -106,14 +121,16 @@
 }
 
 @media (max-width: 992px) {
-  .section__hero {
-    width: 100%;
+  .section__hero::before {
+    width: 45vw;
+    height: 45vw;
+    opacity: 0.05;
   }
 
   .hero__above-fold,
   .hero__below-fold {
-    padding: 0rem;
-    max-width: 75vw;
+    padding: 0;
+    max-width: 80vw;
     margin: 0 auto;
     text-align: center;
   }
@@ -123,11 +140,11 @@
   }
 
   .hero__logo {
-    height: calc(4 * var(--font-size-l));
+    height: calc(3.5 * var(--font-size-l));
   }
 
   .hero__title {
-    font-size: var(--font-size-l);
+    font-size: clamp(2rem, 12vw, 3.5rem);
   }
 
   .hero__tagline {
@@ -143,5 +160,6 @@
 
   .hero__below-fold {
     margin-top: 2rem;
+    margin-bottom: 3rem;
   }
 }

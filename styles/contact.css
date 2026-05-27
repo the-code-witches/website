@@ -1,46 +1,44 @@
-/* Contact Section Styles */
+/* Contact Section */
 
 .section__contact {
-  /*padding: calc(7rem - var(--header-height)) 0 0;*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: center;
   background: var(--brand);
-  /*min-height: 100vh;*/
 }
 
 .section__contact .content {
-  max-width: 75%;
+  max-width: 70%;
   margin: 0 auto;
-
-  /* width: 100%; */
-  color: var(--bg);
+  color: var(--text-inv);
 }
 
-.section__contact .section__title {
-  color: var(--bg);
+.section__contact .content p {
+  margin-bottom: 0.85rem;
 }
+
+/* ── GIF / WITCH CAT ────────────────────────────────── */
 
 .gif__box {
   width: 20vw;
-  min-width: 200px;
+  min-width: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Blurred edge effect - smooth circular fade
-  mask: radial-gradient(circle at center, black 50%, transparent 80%);
-  -webkit-mask: radial-gradient(circle at center, black 50%, transparent 80%); */
+  margin: 1rem 0;
 }
 
 .gif__box video {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: default;
   pointer-events: none;
 }
+
+/* ── LINKEDIN ───────────────────────────────────────── */
 
 .linkedin-link {
   display: inline-block;
@@ -60,7 +58,7 @@
 }
 
 .linkedin-link:hover .linkedin-bg {
-  background-color: var(--primary);
+  background-color: rgba(90, 79, 207, 0.6);
 }
 
 .linkedin-link img {

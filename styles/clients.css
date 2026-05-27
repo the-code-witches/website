@@ -1,195 +1,137 @@
-/* Clients/Projects Section Styles */
+/* Projects / Clients Section */
 
 .section__clients {
-  justify-content: space-between;
-  background: var(--primary);
+  background: var(--bg);
+  overflow: hidden;
+  isolation: isolate;
 }
 
+/* Brand polygon — full logo triangle centered on top-right edge,
+   right half clipped → looks like half-displayed triangle */
+.section__clients::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -19vw;
+  width: 38vw;
+  height: 38vw;
+  background: var(--brand);
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── 2 × 2 GRID ─────────────────────────────────────── */
+
 .clients__grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
   width: 100%;
+  padding: 0 var(--pad-x) 3.5rem;
 }
 
 .client__block {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: justify;
-  padding: 2rem;
-  overflow: hidden;
-  color: var(--bg);
+  flex-direction: column;
+  padding: 2.25rem;
+  border: 1.5px solid rgba(21, 16, 19, 0.1);
+  background: transparent;
+  transition: border-color 260ms ease;
   cursor: default;
-  flex: 1 1 50%;
-  min-height: 40vh;
+}
+
+.client__block:hover {
+  border-color: var(--brand);
 }
 
 .client__block__content {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.client__block.block1 {
-  background-color: var(--brand);
-}
-
-.client__block.block2 {
-  background-color: var(--secondary);
+  gap: 0.75rem;
+  height: 100%;
 }
 
 .client__block__title {
-  font-size: var(--font-size-m);
+  font-family: var(--font);
   font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
+  font-size: var(--font-size-m);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--text);
   margin: 0;
+  position: static;
+  transform: none;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  color: var(--bg);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 80%;
+  text-align: left;
+  width: auto;
 }
 
 .client__block__details {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  opacity: 1;
   text-align: left;
   color: var(--text);
-  font-weight: var(--font-weight-light);
-  font-size: var(--font-size-s);
-  line-height: 1.5;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .client__block__description {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-light);
+  line-height: 1.75;
+  color: var(--muted);
   margin: 0;
 }
 
 .client__block__stack {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  text-transform: uppercase;
+  border-top: 1px solid rgba(21, 16, 19, 0.08);
+  padding-top: 0.85rem;
+  margin-top: auto;
   display: block;
-  font-family: 'JetBrains Mono', monospace;
-  font-style: normal;
-  font-size: 0.85em;
-  margin-top: 1rem;
 }
 
-/* Desktop hover effects */
-@media (min-width: 993px) {
-
-  .client__block.block1:hover,
-  .client__block.block2:hover {
-    background-color: var(--bg);
-  }
-
-  .client__block:hover .client__block__title {
-    opacity: 0;
-  }
-
-  .client__block:hover .client__block__details {
-    opacity: 1;
-  }
-}
-
-/* Desktop reordering for proper 2x2 grid layout */
-@media (min-width: 993px) {
-  .client__block:nth-child(1) {
-    order: 1;
-  }
-
-  /* Process Automation - top left */
-  .client__block:nth-child(2) {
-    order: 2;
-  }
-
-  /* Booking System - top right */
-  .client__block:nth-child(3) {
-    order: 4;
-  }
-
-  /* Matching Algorithm - bottom right */
-  .client__block:nth-child(4) {
-    order: 3;
-  }
-
-  /* Product Configurator - bottom left */
-}
-
-/* Mobile styles for clients section */
-@media (max-width: 992px) {
-  .section__clients {
-    padding-bottom: 0;
-  }
-
-  .section__clients .section__title {
-    margin-bottom: 1rem;
-  }
-
-  .clients__grid {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-
-  .client__block {
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-    min-height: auto;
-    padding: calc(0.5 * var(--header-height));
-    text-align: left;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  .client__block__content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .client__block__title {
-    font-size: var(--font-size-s);
-    position: static;
-    transform: none;
-    text-align: left;
-    color: var(--bg);
-    margin: 0 0 1rem 0;
-    opacity: 1;
-  }
-
-  .client__block__details {
-    font-size: var(--font-size-xs);
-    color: var(--bg);
-    width: 100%;
-    opacity: 1;
-  }
-
-  .client__block:last-child {
-    margin-bottom: 0;
-  }
-}
-
-/* Client link styles */
 .client__link {
   color: inherit;
   text-decoration: none;
   font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
-  transition: color 0.3s ease;
+  border-bottom: 1px solid rgba(21, 16, 19, 0.25);
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.client__link:hover {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
 }
 
-.client__link:hover {
-  color: var(--primary);
-  text-decoration: none;
+/* ── MOBILE ─────────────────────────────────────────── */
+
+@media (max-width: 992px) {
+  .clients__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 var(--pad-x) 2.5rem;
+  }
+
+  .client__block {
+    padding: 1.5rem;
+  }
+
+  .client__block__title {
+    font-size: var(--font-size-s);
+  }
+
+  .client__block__description {
+    font-size: var(--font-size-xs);
+  }
+
+  .client__block__stack {
+    font-size: 0.65rem;
+  }
 }
