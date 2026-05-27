@@ -74,27 +74,6 @@ links.forEach((link) => {
   })
 })
 
-// About section image movement on column hover (desktop only)
-document.addEventListener("DOMContentLoaded", () => {
-  const aboutImage = document.querySelector(".about__image")
-  const leftColumn = document.querySelector(".column__left")
-  const rightColumn = document.querySelector(".column__right")
-
-  if (aboutImage && leftColumn && rightColumn && window.innerWidth >= 1025) {
-    leftColumn.addEventListener("mouseenter", () => {
-      aboutImage.style.transform = "translateX(0%)"
-    })
-    rightColumn.addEventListener("mouseenter", () => {
-      aboutImage.style.transform = "translateX(-100%)"
-    })
-    ;[leftColumn, rightColumn].forEach((column) => {
-      column.addEventListener("mouseleave", () => {
-        aboutImage.style.transform = "translateX(-50%)"
-      })
-    })
-  }
-})
-
 // Video autoplay handling for mobile devices
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector(".gif__box video")

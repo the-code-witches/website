@@ -2,181 +2,129 @@
 
 .section__clients {
   justify-content: space-between;
-  background: var(--primary);
 }
 
+/* 4-column grid — all 4 projects in one row on desktop */
 .clients__grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 0 4rem 2rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
+/* Cards identical to .service-card */
 .client__block {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: justify;
-  padding: 2rem;
-  overflow: hidden;
-  color: var(--bg);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1.5px solid rgba(10, 26, 26, 0.1);
+  border-radius: 8px;
+  color: var(--text);
   cursor: default;
-  flex: 1 1 50%;
-  min-height: 40vh;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .client__block__content {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.client__block.block1 {
-  background-color: var(--brand);
-}
-
-.client__block.block2 {
-  background-color: var(--secondary);
+  width: 100%;
+  height: 100%;
 }
 
 .client__block__title {
-  font-size: var(--font-size-m);
-  font-weight: var(--font-weight-bold);
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
   text-transform: uppercase;
-  margin: 0;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  color: var(--bg);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 80%;
+  color: var(--brand);
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.client__block__title::before {
+  content: "// ";
+  font-weight: 200;
 }
 
 .client__block__details {
-  width: 90%;
-  text-align: left;
+  width: 100%;
   color: var(--text);
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-s);
-  line-height: 1.5;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .client__block__description {
   margin: 0;
+  flex: 1;
 }
 
+/* Stack: flex-wrap row of individual tags */
 .client__block__stack {
-  display: block;
-  font-family: 'JetBrains Mono', monospace;
-  font-style: normal;
-  font-size: 0.85em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
   margin-top: 1rem;
 }
 
-/* Desktop hover effects */
+/* Each tag — identical visual to .breadth__tag */
+.stack__tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78em;
+  font-weight: 200;
+  background: var(--brand);
+  color: var(--bg);
+  padding: 0.3rem 0.65rem;
+  border-radius: 2px;
+  cursor: default;
+  transition: background 0.2s ease, color 0.2s ease, outline 0.2s ease;
+}
+
 @media (min-width: 993px) {
-
-  .client__block.block1:hover,
-  .client__block.block2:hover {
-    background-color: var(--bg);
-  }
-
-  .client__block:hover .client__block__title {
-    opacity: 0;
-  }
-
-  .client__block:hover .client__block__details {
-    opacity: 1;
+  .stack__tag:hover {
+    background: var(--bg);
+    color: var(--brand);
+    outline: 1.5px solid var(--brand);
   }
 }
 
-/* Desktop reordering for proper 2x2 grid layout */
+/* Desktop hover */
 @media (min-width: 993px) {
-  .client__block:nth-child(1) {
-    order: 1;
+  .client__block:hover {
+    border-color: var(--primary);
+    box-shadow: 0 2px 16px rgba(255, 194, 85, 0.18);
+    transform: scale(1.02);
   }
-
-  /* Process Automation - top left */
-  .client__block:nth-child(2) {
-    order: 2;
-  }
-
-  /* Booking System - top right */
-  .client__block:nth-child(3) {
-    order: 4;
-  }
-
-  /* Matching Algorithm - bottom right */
-  .client__block:nth-child(4) {
-    order: 3;
-  }
-
-  /* Product Configurator - bottom left */
 }
 
-/* Mobile styles for clients section */
+/* Mobile: single column */
 @media (max-width: 992px) {
   .section__clients {
     padding-bottom: 0;
   }
 
-  .section__clients .section__title {
-    margin-bottom: 1rem;
-  }
-
   .clients__grid {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0 2rem 1.5rem;
   }
 
   .client__block {
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-    min-height: auto;
-    padding: calc(0.5 * var(--header-height));
-    text-align: left;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  .client__block__content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .client__block__title {
-    font-size: var(--font-size-s);
-    position: static;
-    transform: none;
-    text-align: left;
-    color: var(--bg);
-    margin: 0 0 1rem 0;
-    opacity: 1;
+    padding: 1.25rem;
   }
 
   .client__block__details {
     font-size: var(--font-size-xs);
-    color: var(--bg);
-    width: 100%;
-    opacity: 1;
-  }
-
-  .client__block:last-child {
-    margin-bottom: 0;
   }
 }
 
@@ -186,10 +134,9 @@
   text-decoration: none;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .client__link:hover {
   color: var(--primary);
-  text-decoration: none;
 }
