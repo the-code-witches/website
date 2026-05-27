@@ -2,22 +2,6 @@
 
 .section__services {
   background: var(--dark);
-  overflow: hidden;
-  isolation: isolate;
-}
-
-/* Brand polygon — bottom-left corner, logo angle (slope 2) */
-.section__services::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 24vw;
-  height: 24vw;
-  background: var(--brand);
-  clip-path: polygon(0% 0%, 0% 100%, 50% 100%);
-  pointer-events: none;
-  z-index: -1;
 }
 
 /* ── SERVICE CARDS ──────────────────────────────────── */
@@ -28,8 +12,6 @@
   gap: 1.5rem;
   width: 100%;
   padding: 0 var(--pad-x) 3.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 .service-card {

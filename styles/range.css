@@ -2,22 +2,6 @@
 
 .section__range {
   background: var(--dark);
-  overflow: hidden;
-  isolation: isolate;
-}
-
-/* Brand polygon — bottom-left corner, logo angle (slope 2) */
-.section__range::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 22vw;
-  height: 22vw;
-  background: var(--brand);
-  clip-path: polygon(0% 0%, 0% 100%, 50% 100%);
-  pointer-events: none;
-  z-index: -1;
 }
 
 /* Scrolling tag container */
@@ -26,8 +10,6 @@
   margin-left: var(--pad-x);
   padding: 1rem 0 3.5rem 0;
   max-width: calc(max(80ch, 75vw) - var(--pad-x));
-  position: relative;
-  z-index: 1;
 }
 
 .breadth__track {

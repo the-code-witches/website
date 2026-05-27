@@ -10,17 +10,30 @@
   isolation: isolate;
 }
 
-/* Brand polygon — full logo triangle centered on top-right edge,
-   right half clipped by overflow:hidden → looks like half-displayed triangle */
+/* Brand polygon — left corner */
 .section__hero::before {
   content: "";
   position: absolute;
   top: 0;
-  right: -20vw;
-  width: 40vw;
-  height: 40vw;
+  left: 0;
+  width: 35vw;
+  height: 70vw;
   background: var(--brand);
-  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Brand polygon — right corner */
+.section__hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35vw;
+  height: 70vw;
+  background: var(--brand);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
   pointer-events: none;
   z-index: -1;
 }
@@ -40,7 +53,7 @@
   position: relative;
   z-index: 1;
   max-width: 65ch;
-  margin: 2rem auto 4rem;
+  margin: 1.25rem auto 3rem;
 }
 
 .hero__logo {
@@ -71,7 +84,7 @@
   align-items: flex-start;
   text-align: left;
   gap: 0.35rem;
-  margin-top: 2.5rem;
+  margin-top: 1.25rem;
 }
 
 .hero__poem p {

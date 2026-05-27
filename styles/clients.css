@@ -2,23 +2,6 @@
 
 .section__clients {
   background: var(--bg);
-  overflow: hidden;
-  isolation: isolate;
-}
-
-/* Brand polygon — full logo triangle centered on top-right edge,
-   right half clipped → looks like half-displayed triangle */
-.section__clients::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -19vw;
-  width: 38vw;
-  height: 38vw;
-  background: var(--brand);
-  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-  pointer-events: none;
-  z-index: -1;
 }
 
 /* ── 2 × 2 GRID ─────────────────────────────────────── */
