@@ -70,6 +70,11 @@ const translations = {
     "clients.configurator.title": "Product Configurator",
     "clients.configurator.desc":
       'We created a product configurator for <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> that interactively guides users through their portfolio and generates tailored offers and qualified leads by integrating seamlessly with existing backend services and CRM system.',
+    "projects.title": "projects",
+    "projects.p1":
+      "What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.",
+    "projects.p2":
+      "A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. Whatever the scale, we come with the depth to do it right.",
     "projects.digitization.title": "Process Digitization",
     "projects.digitization.desc":
       '<a href="https://www.skyseed.eco" class="client__link">Skyseed</a> was growing fast — and a growing team means a process can\'t live in one person\'s head anymore. We built a system that could hold that institutional knowledge and scale with them: seed purchasing, production, tour planning, drone logistics, all in one place. That was the beginning. They\'re still running it, we\'re still building on it, and they\'re still growing.',
@@ -185,6 +190,11 @@ const translations = {
     "clients.configurator.title": "Produktkonfigurator",
     "clients.configurator.desc":
       'Wir haben für <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> einen Produktkonfigurator erstellt, der Nutzer:innen interaktiv durch ihr Portfolio führt und maßgeschneiderte Angebote und qualifizierte Leads generiert, indem er nahtlos mit bestehenden Backend-Diensten und CRM-System integriert.',
+    "projects.title": "projekte",
+    "projects.p1":
+      "Was wir bauen, gehört denen, die damit arbeiten: dezentralisiert, offen, für die Langzeit gestaltet. Kein Lock-in, keine Black Boxes, so wenig Plattformabhängigkeiten wie möglich.",
+    "projects.p2":
+      "Ein maßgeschneidertes internes Tool, das fünf Tabellenkalkulationen ersetzt. Ein Algorithmus, der einen mühsamen manuellen Prozess automatisiert. Eine Datenpipeline, die eure Analytik in einer Live-Ansicht zusammenführt. Eine Plattform, die euren gesamten operativen Workflow von A bis Z abwickelt. Egal die Größe – wir kommen mit der Tiefe, um es richtig zu machen.",
     "projects.digitization.title": "Prozessdigitalisierung",
     "projects.digitization.desc":
       '<a href="https://www.skyseed.eco" class="client__link">Skyseed</a> wuchs schnell — und ein wachsendes Team bedeutet, dass ein Prozess nicht mehr im Kopf einer einzigen Person leben kann. Wir haben ein System gebaut, das dieses institutionelle Wissen tragen und mit ihnen wachsen kann: Samenbeschaffung, Produktion, Tourenplanung, Drohnenlogistik — alles an einem Ort. Das war der Anfang. Sie nutzen es noch immer, wir bauen noch heute daran, und sie wachsen noch immer.',
