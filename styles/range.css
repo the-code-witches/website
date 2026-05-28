@@ -150,11 +150,11 @@
     position: static;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 1.1rem;
     align-items: flex-start;
     min-height: 0;
     height: auto !important;
-    padding: 0.5rem var(--pad-x) 2.5rem;
+    padding: 1rem var(--pad-x) 3.5rem;
     overflow: visible;
   }
 
@@ -178,5 +178,13 @@
     color: var(--brand);
     margin-top: 0.3rem;
     line-height: 1.4;
+  }
+}
+
+/* Medium screens: extra breathing room between tags */
+@media (min-width: 540px) and (max-width: 1100px) {
+  .breadth__tags {
+    gap: 1.4rem;
+    padding: 1.25rem var(--pad-x) 4rem;
   }
 }

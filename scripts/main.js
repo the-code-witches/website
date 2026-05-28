@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inner cloud area
     const W = container.offsetWidth - pl - pr
-    const H = Math.max(420, Math.round(W / 2.3))
+    const H = Math.max(460, Math.round(W / 2.2))
 
     // Measure tag natural dimensions (absolute, so no reflow needed)
     const dims = tags.map((tag) => ({ w: tag.offsetWidth, h: tag.offsetHeight }))
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }))
 
     // Push overlapping tags apart — proper AABB overlap on both axes
-    const MARGIN = 14
+    const MARGIN = 12
     for (let iter = 0; iter < 60; iter++) {
       let moved = false
       for (let i = 0; i < pos.length; i++) {
@@ -205,8 +205,9 @@ document.addEventListener("DOMContentLoaded", () => {
       tag.style.top  = pt + pos[i].y + "px"
     })
 
-    // Set container height to fit cloud + bottom padding
-    container.style.height = pt + H + pb + "px"
+    // Set container height to actual tag extent + bottom padding
+    const maxBottom = Math.max(...pos.map((p, i) => p.y + dims[i].h))
+    container.style.height = pt + maxBottom + pb + "px"
 
     // Sync canvas dimensions and redraw
     if (canvas) {
