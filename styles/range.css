@@ -84,7 +84,7 @@
 }
 
 /* Desktop: colour flip on hover */
-@media (min-width: 993px) {
+@media (min-width: 1101px) {
   .breadth__tag:hover {
     background: transparent;
     color: var(--brand);
@@ -130,7 +130,7 @@
 }
 
 /* Mobile: revert to static wrapping layout */
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
   .breadth__tags {
     position: static;
     display: flex;
@@ -146,11 +146,16 @@
   .breadth__tag {
     position: static;
     white-space: normal;
+    cursor: pointer;
   }
 
   .breadth__web { display: none; }
 
-  .breadth__tag:not(.breadth__tag--large) { cursor: pointer; }
+  /* hide all outcome text by default on small screens */
+  .breadth__tag--medium .breadth__tag__outcome,
+  .breadth__tag--large .breadth__tag__outcome {
+    display: none;
+  }
 
   .breadth__tag.active {
     background: transparent;
@@ -165,9 +170,5 @@
     color: var(--brand);
     margin-top: 0.3rem;
     line-height: 1.4;
-  }
-
-  .breadth__tag--large .breadth__tag__outcome {
-    color: rgba(240, 236, 216, 0.58);
   }
 }

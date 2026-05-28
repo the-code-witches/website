@@ -117,17 +117,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const tags = Array.from(container.querySelectorAll(".breadth__tag"))
 
-  // --- Mobile: static flex layout, tap to reveal ---
-  if (window.innerWidth <= 992) {
-    tags
-      .filter((tag) => !tag.classList.contains("breadth__tag--large"))
-      .forEach((tag) => {
-        tag.addEventListener("click", () => {
-          const isActive = tag.classList.contains("active")
-          tags.forEach((t) => t.classList.remove("active"))
-          if (!isActive) tag.classList.add("active")
-        })
+  // --- Mobile: static flex layout, tap any tag to reveal its outcome ---
+  if (window.innerWidth <= 1100) {
+    tags.forEach((tag) => {
+      tag.addEventListener("click", () => {
+        const isActive = tag.classList.contains("active")
+        tags.forEach((t) => t.classList.remove("active"))
+        if (!isActive) tag.classList.add("active")
       })
+    })
     return
   }
 
