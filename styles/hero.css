@@ -89,7 +89,7 @@
 }
 
 .hero__poem p {
-  font-family: var(--mono);
+  font-family: var(--font);
   color: var(--text);
   opacity: 0.8;
   font-weight: var(--font-weight-light);
@@ -97,10 +97,6 @@
   margin: 0;
   line-height: 1.65;
   white-space: nowrap;
-}
-
-.hero__poem p::before {
-  content: "// ";
 }
 
 .hero__punchline {
