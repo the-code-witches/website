@@ -15,19 +15,19 @@ The site leads with identity, but visitors arrive with a problem. They need to f
 
 ## ⚡ Quick Wins — Do today (minutes each)
 
-### Q1 — Fix `--font-weight-bold: 400 → 600`
+### ~~Q1 — Fix `--font-weight-bold: 400 → 600`~~ ✅ done
 **Effort:** 30 seconds | **Impact:** immediate — restores typographic hierarchy across the entire page. Likely a typo.
 
-### Q2 — Add monospace font for tech stacks
+### ~~Q2 — Add monospace font for tech stacks~~ ✅ done
 **Effort:** 10 min (one CSS rule) | **Impact:** immediate  
 JetBrains Mono or IBM Plex Mono only for stack labels. Signals "we write real code" without a single word.
 
-### Q3 — Rewrite meta description
+### ~~Q3 — Rewrite meta description~~ ✅ done
 **Effort:** 5 min | **Impact:** LinkedIn previews, Google snippets  
 Currently: *"Rebels by heart. Coders by craft."* — repels KMU decision-makers.  
 Replace with a positioning line that names what you do and for whom.
 
-### Q4 — Name your target audience explicitly
+### ~~Q4 — Name your target audience explicitly~~ ✅ done
 **Effort:** 10 min | **Impact:** medium — immediate clarity for the right visitor  
 Add one line somewhere early: *"We work with SMEs, technical teams, and founders"*  
 Lena (CTO, 80-person company) needs to know immediately: *this is for someone like me.*
@@ -36,7 +36,7 @@ Lena (CTO, 80-person company) needs to know immediately: *this is for someone li
 
 ## 🔥 Highest Impact
 
-### #1 — Rewrite the hero section
+### ~~#1 — Rewrite the hero section~~ ✅ done
 **Effort:** ~30 min | **Impact:** transformative — first thing every visitor sees
 
 **Problem:** The hero leads with values ("technology as a tool for redistributing power"). This is meaningful but doesn't hook a KMU decision-maker who arrived with a concrete problem.
@@ -93,7 +93,7 @@ Anchor line: *"Whatever the domain — if it runs on a computer, we've probably 
 
 ---
 
-### #3 — Rewrite project cards as outcome stories
+### ~~#3 — Rewrite project cards as outcome stories~~ ✅ done
 **Effort:** 1–2h | **Impact:** high — this is where B2B trust is built or lost
 
 **Problem:** Current cards describe what was built and the tech stack. They don't tell a story of what changed for the client. A KMU visitor can't picture themselves in the result.
@@ -164,7 +164,7 @@ Anchor line: *"Whatever the domain — if it runs on a computer, we've probably 
 
 ## 📝 Medium Impact — Copy improvements
 
-### #6 — Concretize the individual bios
+### ~~#6 — Concretize the individual bios~~ ✅ done
 **Effort:** ~15 min | **Impact:** medium — transforms "okay, developers" into "wait, that's serious depth"
 
 - **Sehera:** add *"...used in major film productions"* — currently invisible on the site
@@ -174,7 +174,7 @@ One specific line per person is the difference between "credible" and "memorable
 
 ---
 
-### #7 — Add honest AI positioning
+### ~~#7 — Add honest AI positioning~~ ✅ done
 **Effort:** ~30 min | **Impact:** medium-high — timely and differentiating
 
 Add one new service bullet + one or two sentences in the services intro. The core:
@@ -213,7 +213,7 @@ Add a brief outcome line to each service card: what you walk away with.
 
 ---
 
-### #10 — Strengthen the contact section with trust language
+### ~~#10 — Strengthen the contact section with trust language~~ ✅ done
 **Effort:** ~15 min | **Impact:** medium — this is where visitors decide to reach out or leave
 
 **Problem:** The contact section is minimal. It doesn't reduce the anxiety of reaching out, especially for someone who feels they "don't know enough" to start the conversation.
