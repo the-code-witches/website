@@ -70,7 +70,7 @@
 
 .client__block__stack {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.82rem;
   font-weight: var(--font-weight-normal);
   letter-spacing: 0.03em;
   color: var(--muted);
@@ -126,6 +126,6 @@
   }
 
   .client__block__stack {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
 }
