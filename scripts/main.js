@@ -128,15 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Mobile: static flex layout, tap compact tags to reveal outcome ---
   if (window.innerWidth <= 1100) {
-    tags
-      .filter((tag) => !tag.classList.contains("breadth__tag--featured"))
-      .forEach((tag) => {
-        tag.addEventListener("click", () => {
-          const isActive = tag.classList.contains("active")
-          tags.forEach((t) => t.classList.remove("active"))
-          if (!isActive) tag.classList.add("active")
-        })
+    tags.forEach((tag) => {
+      tag.addEventListener("click", () => {
+        const isActive = tag.classList.contains("active")
+        tags.forEach((t) => t.classList.remove("active"))
+        if (!isActive) tag.classList.add("active")
       })
+    })
     return
   }
 
