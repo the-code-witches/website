@@ -14,42 +14,51 @@ sections.forEach((s) => observer.observe(s))
 const links = document.querySelectorAll(".nav__link")
 const header = document.querySelector(".site-header")
 
-const getHeaderHeight = () => {
-  return header ? header.offsetHeight : 64
-}
+const getHeaderHeight = () => (header ? header.offsetHeight : 56)
 
-// Simplified and more robust way to find the current section
-const getCurrentSectionId = () => {
+// Track last known active section (sticky — never goes blank except hero)
+let activeSectionId = "hero"
+
+const updateActiveSection = () => {
   const headerHeight = getHeaderHeight()
-  const scrollOffset = headerHeight + 50
-  let currentSectionId = "hero"
+  const viewportBottom = window.innerHeight
+  const effectiveViewport = viewportBottom - headerHeight
+
+  let bestId = null
+  let bestCoverage = 0
 
   sections.forEach((section) => {
-    if (window.scrollY >= section.offsetTop - scrollOffset) {
-      currentSectionId = section.id
+    const rect = section.getBoundingClientRect()
+    const visibleTop = Math.max(headerHeight, rect.top)
+    const visibleBottom = Math.min(viewportBottom, rect.bottom)
+    const visibleHeight = Math.max(0, visibleBottom - visibleTop)
+
+    if (visibleHeight > bestCoverage) {
+      bestCoverage = visibleHeight
+      bestId = section.id
     }
   })
 
-  return currentSectionId
+  // Only hand off to a new section once it dominates more than 50% of the
+  // effective viewport; otherwise the current section stays active (sticky).
+  if (bestId && bestCoverage > effectiveViewport * 0.5) {
+    activeSectionId = bestId
+  }
+
+  // Hero has no nav link — nothing highlighted when hero is active.
+  links.forEach((link) => {
+    link.classList.toggle("active", link.getAttribute("href") === "#" + activeSectionId)
+  })
 }
 
 let scrollTimeout
 const onScroll = () => {
-  // NOTE: The 'navigationInProgress' flag has been removed to fix the bug.
-
   clearTimeout(scrollTimeout)
-  scrollTimeout = setTimeout(() => {
-    const currentId = getCurrentSectionId()
-
-    // This loop is now the single source of truth for the active class.
-    links.forEach((link) => {
-      link.classList.toggle("active", link.getAttribute("href") === "#" + currentId)
-    })
-  }, 50)
+  scrollTimeout = setTimeout(updateActiveSection, 50)
 }
 
 window.addEventListener("scroll", onScroll, { passive: true })
-onScroll() // Initial call
+updateActiveSection() // Initial call
 
 // Handle smooth scrolling on nav link click
 links.forEach((link) => {
