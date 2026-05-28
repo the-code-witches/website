@@ -20,14 +20,14 @@ const translations = {
     "about.p3":
       "<b>We work as a tandem:</b> a-well established powerhouse team of two giving you the service and reliability of an agency, with the flexibility and direct communication of working with individuals.",
     "about.sehera":
-      "Sehera has been coding since forever, whether it's building 3D renderers in C++ or spinning up systems in any language you can name. She's agility at work, breaking through perfectionism with quick cycles. With her warmth and can-do attitude, she keeps projects moving and people energized.",
+      "Sehera has been coding since forever, whether it's building spectral 3D renderers in C++ — used in major film productions — or spinning up systems in any language you can name. She's agility at work, breaking through perfectionism with quick cycles. With her warmth and can-do attitude, she keeps projects moving and people energized.",
     "about.denise":
-      "Denise grew from research into machine learning, data pipelines, and full-stack development. She brings calm structure and crystal-clear thinking to complex problems, cutting through noise with precision. Her humor and grounded presence make even the toughest challenges feel navigable.",
+      "Denise grew from research into machine learning, data pipelines, and full-stack development — including live election forecasting systems and real-time data infrastructure. She brings calm structure and crystal-clear thinking to complex problems, cutting through noise with precision. Her humor and grounded presence make even the toughest challenges feel navigable.",
     "services.title": "services",
     "services.p1":
       "We offer fully integrated hands-on software engineering and technical consulting from a single source.",
     "services.p2":
-      "We bring a holistic perspective to every project: from untangling legacy systems and designing custom algorithms to rethinking entire digital workflows from scratch.",
+      "We bring a holistic perspective to every project: from untangling legacy systems and designing custom algorithms to rethinking entire digital workflows from scratch. We work with AI where it genuinely helps — and we'll tell you when it doesn't.",
     "services.li1":
       "You have an idea, maybe even vibecoded a bit, but now you want it to grow into something real, something you can feel accountable for.",
     "services.li2":
@@ -115,6 +115,7 @@ const translations = {
     "range.tag.jobs.outcome": "job board with editorial backend and invoicing workflows",
     "contact.title": "contact",
     "contact.text": "Let's discuss where you're at and where you want to go.",
+    "contact.p2": "Nobody should feel judged for not knowing yet. Everything can be asked here.",
     "footer.rights": "All rights reserved",
   },
   de: {
@@ -138,14 +139,14 @@ const translations = {
     "about.p3":
       "<b>Wir arbeiten als Tandem:</b> ein eingespieltes Power-Team aus zwei, das euch die Verlässlichkeit einer Agentur bietet – mit der Flexibilität und direkten Kommunikation des Arbeitens mit Einzelpersonen.",
     "about.sehera":
-      "Sehera programmiert seit jeher, egal ob sie 3D-Renderer in C++ baut oder Systeme in jeder erdenklichen Sprache zum Laufen bringt. Sie ist Agilität in Person – sie durchbricht Perfektionismus mit schnellen Zyklen. Mit ihrer Wärme und ihrer Can-do-Haltung hält sie Projekte am Laufen und Menschen motiviert.",
+      "Sehera programmiert seit jeher, egal ob sie spektrale 3D-Renderer in C++ baut — die in großen Filmproduktionen zum Einsatz kamen — oder Systeme in jeder erdenklichen Sprache zum Laufen bringt. Sie ist Agilität in Person – sie durchbricht Perfektionismus mit schnellen Zyklen. Mit ihrer Wärme und ihrer Can-do-Haltung hält sie Projekte am Laufen und Menschen motiviert.",
     "about.denise":
-      "Denise kam aus der Forschung zu Machine Learning, Datenpipelines und Full-Stack-Entwicklung. Sie bringt ruhige Struktur und glasklares Denken in komplexe Probleme und schneidet präzise durch den Lärm. Ihr Humor und ihre geerdte Präsenz machen selbst die härtesten Herausforderungen navigierbar.",
+      "Denise kam aus der Forschung zu Machine Learning, Datenpipelines und Full-Stack-Entwicklung — darunter Live-Wahlprognose-Systeme und Echtzeit-Dateninfrastruktur. Sie bringt ruhige Struktur und glasklares Denken in komplexe Probleme und schneidet präzise durch den Lärm. Ihr Humor und ihre geerdte Präsenz machen selbst die härtesten Herausforderungen navigierbar.",
     "services.title": "leistungen",
     "services.p1":
       "Wir bieten vollständig integriertes, praxisnahes Software-Engineering und technische Beratung aus einer Hand.",
     "services.p2":
-      "Wir bringen eine ganzheitliche Perspektive in jedes Projekt: vom Entwirren von Legacy-Systemen und dem Design von Custom-Algorithmen bis hin zur kompletten Neugestaltung digitaler Workflows.",
+      "Wir bringen eine ganzheitliche Perspektive in jedes Projekt: vom Entwirren von Legacy-Systemen und dem Design von Custom-Algorithmen bis hin zur kompletten Neugestaltung digitaler Workflows. Wir arbeiten mit KI, wo sie wirklich hilft — und wir sagen euch, wann sie es nicht tut.",
     "services.li1":
       "Ihr habt eine Idee, habt vielleicht schon etwas vibecoded, möchtet nun aber, dass sie zu etwas Echtem heranwächst – etwas, für das ihr Verantwortung übernehmen könnt.",
     "services.li2":
@@ -236,6 +237,7 @@ const translations = {
     "range.tag.jobs.outcome": "stellenbörse mit redaktionellem backend und abrechnungsworkflows",
     "contact.title": "kontakt",
     "contact.text": "Lass uns besprechen, wo ihr steht und wo ihr hinwollt.",
+    "contact.p2": "Niemand sollte sich für sein Nichtwissen schämen müssen. Hier kann alles gefragt werden.",
     "footer.rights": "Alle Rechte vorbehalten",
   },
 }
