@@ -16,34 +16,32 @@
 
 /* ── ABOUT STACK ────────────────────────────────────── */
 
-/* Photo above, columns below */
+/* Sehera | Image | Denise — three-column row */
 .section__about .about__stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 1.5rem;
   width: 100%;
-  padding-top: 1.5rem;
+  padding: 1.5rem var(--pad-x) 3.5rem;
+}
+
+.section__about .about__stack .column {
+  align-self: stretch;
 }
 
 .about__image {
   display: block;
-  max-height: 32vh;
+  max-height: 50vh;
   width: auto;
   object-fit: contain;
-  margin: 0 auto 2rem;
   filter: brightness(1.02);
-  position: relative;
   transition: filter 0.3s ease;
   cursor: pointer;
 }
 
 .about__image:hover {
   filter: brightness(1.06) saturate(1.1);
-}
-
-/* Columns sit full-width below the photo */
-.section__about .columns {
-  align-self: stretch;
 }
 
 /* Desktop */
@@ -53,11 +51,6 @@
     padding-left: var(--pad-x);
     padding-right: var(--pad-x);
     max-width: 100%;
-  }
-
-  .about__image {
-    max-height: 30vh;
-    margin-bottom: 2rem;
   }
 }
 
@@ -72,9 +65,19 @@
     max-width: 100%;
   }
 
+  .section__about .about__stack {
+    grid-template-columns: 1fr;
+    padding: 0 var(--pad-x) 2rem;
+    gap: 1rem;
+  }
+
   .about__image {
-    max-height: 28vh;
-    margin-bottom: 1.5rem;
+    max-height: 40vh;
+    order: -1;
+  }
+
+  .section__about .about__stack .column {
+    align-self: auto;
   }
 
   .section__about .column p {
