@@ -135,18 +135,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // Large tags placed in separate quadrants; smalls fill the gaps between them.
   // Order matches the HTML: 3 large, 5 medium, 4 small.
   const seeds = [
-    [0.70, 0.60],  // film & vfx (large)        — lower-right quadrant
-    [0.15, 0.72],  // drone tech (large)         — lower-left quadrant
-    [0.65, 0.18],  // election research (large)  — upper-right quadrant
-    [0.22, 0.20],  // data pipelines (medium)    — upper-left
-    [0.06, 0.48],  // enterprise erp (medium)    — left edge
-    [0.39, 0.89],  // embedded systems (medium)  — lower-center
-    [0.90, 0.42],  // map & geospatial (medium)  — right
-    [0.46, 0.48],  // academic platforms (medium)— center
-    [0.08, 0.08],  // e-commerce (small)         — top-left corner
-    [0.44, 0.28],  // hospitality (small)        — upper-center
-    [0.58, 0.83],  // network analysis (small)   — lower-center-right
-    [0.88, 0.72],  // job platforms (small)      — lower-right
+    [0.70, 0.55],  // film & vfx (large)        — lower-right quadrant
+    [0.14, 0.84],  // drone tech (large)         — lower-left quadrant
+    [0.64, 0.14],  // election research (large)  — upper-right quadrant
+    [0.20, 0.10],  // data pipelines (medium)    — upper-left
+    [0.05, 0.44],  // enterprise erp (medium)    — left edge
+    [0.39, 0.75],  // embedded systems (medium)  — lower-center
+    [0.90, 0.38],  // map & geospatial (medium)  — right
+    [0.36, 0.46],  // academic platforms (medium)— center
+    [0.07, 0.04],  // e-commerce (small)         — top-left corner
+    [0.43, 0.25],  // hospitality (small)        — upper-center
+    [0.60, 0.88],  // network analysis (small)   — lower-center-right
+    [0.88, 0.76],  // job platforms (small)      — lower-right
   ]
 
   function layoutCloud() {
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inner cloud area
     const W = container.offsetWidth - pl - pr
-    const H = Math.max(360, Math.round(W / 2.6))
+    const H = Math.max(420, Math.round(W / 2.3))
 
     // Measure tag natural dimensions (absolute, so no reflow needed)
     const dims = tags.map((tag) => ({ w: tag.offsetWidth, h: tag.offsetHeight }))

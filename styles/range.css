@@ -35,15 +35,24 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0.4rem 1rem;
-  background: var(--brand);
+  background: transparent;
   color: var(--text-inv);
   border-radius: 2px;
   cursor: default;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-normal);
-  border: 1.5px solid transparent;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  border: 1.5px solid rgba(240, 236, 216, 0.1);
+  transition: border-color 260ms ease;
   white-space: nowrap;
+}
+
+.breadth__tag__label {
+  font-family: var(--mono);
+}
+
+.breadth__tag__label::before {
+  content: '// ';
+  opacity: 0.5;
 }
 
 .breadth__tag__outcome {
@@ -83,16 +92,10 @@
   max-width: 26ch;
 }
 
-/* Desktop: colour flip on hover */
+/* Desktop: border highlight on hover, matching service card style */
 @media (min-width: 1101px) {
   .breadth__tag:hover {
-    background: transparent;
-    color: var(--brand);
     border-color: var(--brand);
-  }
-  .breadth__tag--medium:hover .breadth__tag__outcome,
-  .breadth__tag--large:hover .breadth__tag__outcome {
-    color: rgba(90, 79, 207, 0.75);
   }
 }
 
@@ -158,8 +161,6 @@
   }
 
   .breadth__tag.active {
-    background: transparent;
-    color: var(--brand);
     border-color: var(--brand);
   }
 
