@@ -88,6 +88,13 @@
   width: 100%;
 }
 
+.hero__poem__lines {
+  text-align: left;
+  width: fit-content;
+  margin: 0 auto;
+  transform: translateX(1.5rem);
+}
+
 .hero__poem p {
   font-family: var(--font);
   color: var(--text);
