@@ -6,10 +6,40 @@
   margin: 0;
   padding: 0;
   background: var(--bg);
+  overflow: hidden;
+  isolation: isolate;
   min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Brand polygon — left corner */
+.section__hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35vw;
+  height: 70vw;
+  background: var(--brand);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Brand polygon — right corner */
+.section__hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35vw;
+  height: 70vw;
+  background: var(--brand);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero__content {
@@ -34,6 +64,13 @@
   color: var(--text);
   margin: 0;
   line-height: 1.05;
+}
+
+.hero__tagline {
+  color: var(--muted);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-m);
+  margin: 0;
 }
 
 /* Poem block */
@@ -64,6 +101,15 @@
   font-weight: var(--font-weight-light);
   line-height: 1.75;
   margin: 0;
+}
+
+/* Desktop: preserve 1:2 angle, bottom vertex at lower corners */
+@media (min-width: 993px) {
+  .section__hero::before,
+  .section__hero::after {
+    width: calc((100vh - var(--header-height)) / 2);
+    height: calc(100vh - var(--header-height));
+  }
 }
 
 /* Mobile */
