@@ -54,7 +54,7 @@
 }
 
 .hero__logo {
-  height: 5.5rem;
+  height: 7.5rem;
   width: auto;
 }
 
@@ -67,8 +67,8 @@
 }
 
 .hero__tagline {
-  color: var(--muted);
-  font-weight: var(--font-weight-light);
+  color: var(--text);
+  font-weight: var(--font-weight-normal);
   font-size: var(--font-size-m);
   margin: 0;
 }
@@ -82,25 +82,41 @@
 }
 
 .hero__poem p {
-  color: var(--muted);
+  font-family: var(--mono);
+  color: var(--text);
+  opacity: 0.8;
   font-weight: var(--font-weight-light);
-  font-size: var(--font-size-s);
+  font-size: 1rem;
   margin: 0;
   line-height: 1.65;
+  white-space: nowrap;
+}
+
+.hero__poem p::before {
+  content: "// ";
 }
 
 .hero__punchline {
+  font-family: var(--font) !important;
+  font-size: var(--font-size-m) !important;
   margin-top: 1rem !important;
   color: var(--text) !important;
   font-weight: var(--font-weight-normal) !important;
+  opacity: 1 !important;
+  white-space: normal !important;
+}
+
+.hero__punchline::before {
+  content: none !important;
 }
 
 .hero__audience {
-  color: var(--muted);
-  font-size: var(--font-size-s);
+  color: var(--text);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-light);
   line-height: 1.75;
   margin: 0;
+  white-space: nowrap;
 }
 
 /* Desktop: preserve 1:2 angle, bottom vertex at lower corners */
@@ -120,15 +136,26 @@
   }
 
   .hero__logo {
-    height: 4rem;
+    height: 5rem;
   }
 
   .hero__title {
     font-size: clamp(2.2rem, 12vw, 3.5rem);
   }
 
-  .hero__poem p,
-  .hero__audience {
+  .hero__tagline {
+    font-size: var(--font-size-s);
+  }
+
+  .hero__poem p {
     font-size: var(--font-size-xs);
+  }
+
+  .hero__punchline {
+    font-size: var(--font-size-s) !important;
+  }
+
+  .hero__audience {
+    font-size: var(--font-size-s);
   }
 }
