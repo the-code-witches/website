@@ -55,31 +55,20 @@
         }
       }
       .nav__cta--book {
+        background: transparent;
         color: var(--brand);
+        cursor: default;
       }
       .nav__cta--book:hover {
-        color: var(--text);
+        background: transparent;
+        color: var(--brand);
       }
     </style>
   </head>
 
   <body class="neutral-box">
-    <header class="site-header">
-      <nav class="nav">
-        <div class="nav__left">
-          <a class="nav__logo" href="index.html">
-            <img src="assets/logo.svg" alt="Home" />
-          </a>
-          <a class="nav__link" href="index.html#about">about</a>
-          <a class="nav__link" href="index.html#services">services</a>
-          <a class="nav__link" href="index.html#clients">projects</a>
-          <a class="nav__link" href="index.html#contact">contact</a>
-        </div>
-        <div class="nav__right">
-          <a class="nav__cta nav__cta--book" href="index.html">book free session</a>
-        </div>
-      </nav>
-    </header>
+    <header class="site-header"></header>
+    <script src="scripts/nav.js"></script>
     <div class="book__container">
       <iframe
         class="book__frame"
@@ -88,5 +77,6 @@
         allowfullscreen
       ></iframe>
     </div>
+  <script defer src="scripts/i18n.js"></script>
   </body>
 </html>

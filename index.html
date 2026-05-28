@@ -44,42 +44,10 @@
   </head>
 
   <body>
-    <header class="site-header">
-      <nav class="nav">
-        <div class="nav__left">
-          <a class="nav__logo" href="#hero">
-            <img src="assets/logo.svg" alt="Home" />
-          </a>
-          <a class="nav__link" href="#services" data-i18n="nav.services"
-            >services</a
-          >
-          <a class="nav__link" href="#clients" data-i18n="nav.projects"
-            >projects</a
-          >
-          <a class="nav__link" href="#about" data-i18n="nav.about">about</a>
-          <a class="nav__link" href="#contact" data-i18n="nav.contact"
-            >contact</a
-          >
-        </div>
-        <div class="nav__right">
-          <a class="nav__cta" href="book.html" data-i18n="nav.cta"
-            >BOOK FREE SESSION</a
-          >
-          <div
-            class="lang__toggle"
-            id="lang-toggle"
-            aria-label="Language selector"
-          >
-            <button class="lang__toggle__option" data-lang="de">DE</button>
-            <div class="lang__toggle__divider"></div>
-            <button class="lang__toggle__option" data-lang="en">EN</button>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <header class="site-header"></header>
+    <script src="scripts/nav.js"></script>
 
     <main>
-
       <!-- Hero -->
       <section id="hero" class="section section__hero">
         <div class="hero__content">
@@ -213,44 +181,135 @@
       <section id="clients" class="section section__clients">
         <h2 class="section__title" data-i18n="projects.title">projects</h2>
         <div class="content">
-          <p data-i18n="projects.p1">What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.</p>
+          <p data-i18n="projects.p1">
+            What we build belongs to those who work with it: decentralized,
+            open, designed for the long term. No lock-in, no black boxes, as
+            little platform dependencies as possible.
+          </p>
           <!-- da häng ich nicht an der formulierung, aber es ist sonst zu wenig text visuell -->
-          <p data-i18n="projects.p2">A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. Whatever the scale, we come with the depth to do it right.</p>
+          <p data-i18n="projects.p2">
+            A custom internal tool that replaces five spreadsheets. An algorithm
+            that automates a painful manual process. A data pipeline that brings
+            your analytics into one live view. A platform that handles your full
+            operational workflow end to end. Whatever the scale, we come with
+            the depth to do it right.
+          </p>
         </div>
         <div class="clients__grid">
           <div class="client__block block1">
             <div class="client__block__content">
-              <h3 class="client__block__title" data-i18n="projects.digitization.title">Process Digitization</h3>
+              <h3
+                class="client__block__title"
+                data-i18n="projects.digitization.title"
+              >
+                Process Digitization
+              </h3>
               <div class="client__block__details">
-                <p class="client__block__description" data-i18n="projects.digitization.desc"><a href="https://www.skyseed.eco" class="client__link">Skyseed</a> was growing fast — and a growing team means a process can't live in one person's head anymore. We built a system that could hold that institutional knowledge and scale with them: seed purchasing, production, tour planning, drone logistics, all in one place. That was the beginning. They're still running it, we're still building on it, and they're still growing.</p>
-                <span class="client__block__stack">ReactJS, Python, Django REST, Celery, PostgreSQL, NGINX</span>
+                <p
+                  class="client__block__description"
+                  data-i18n="projects.digitization.desc"
+                >
+                  <a href="https://www.skyseed.eco" class="client__link"
+                    >Skyseed</a
+                  >
+                  was growing fast — and a growing team means a process can't
+                  live in one person's head anymore. We built a system that
+                  could hold that institutional knowledge and scale with them:
+                  seed purchasing, production, tour planning, drone logistics,
+                  all in one place. That was the beginning. They're still
+                  running it, we're still building on it, and they're still
+                  growing.
+                </p>
+                <span class="client__block__stack"
+                  >ReactJS, Python, Django REST, Celery, PostgreSQL, NGINX</span
+                >
               </div>
             </div>
           </div>
           <div class="client__block block2">
             <div class="client__block__content">
-              <h3 class="client__block__title" data-i18n="projects.booking.title">Booking System</h3>
+              <h3
+                class="client__block__title"
+                data-i18n="projects.booking.title"
+              >
+                Booking System
+              </h3>
               <div class="client__block__details">
-                <p class="client__block__description" data-i18n="projects.booking.desc">The <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> had an established booking platform — and a team of real people with years of workflows built around it. They needed new features and a redesign, but not at the cost of what already worked. We added what was missing and smoothed out the rough edges without pulling the rug out from under anyone.</p>
-                <span class="client__block__stack">Drupal, PHP, Javascript, MySQL, SCSS</span>
+                <p
+                  class="client__block__description"
+                  data-i18n="projects.booking.desc"
+                >
+                  The
+                  <a
+                    href="https://freie-kunst-akademie-augsburg.de/"
+                    class="client__link"
+                    >Freie Kunst Akademie Augsburg</a
+                  >
+                  had an established booking platform — and a team of real
+                  people with years of workflows built around it. They needed
+                  new features and a redesign, but not at the cost of what
+                  already worked. We added what was missing and smoothed out the
+                  rough edges without pulling the rug out from under anyone.
+                </p>
+                <span class="client__block__stack"
+                  >Drupal, PHP, Javascript, MySQL, SCSS</span
+                >
               </div>
             </div>
           </div>
           <div class="client__block block1">
             <div class="client__block__content">
-              <h3 class="client__block__title" data-i18n="projects.matching.title">Matching Algorithm</h3>
+              <h3
+                class="client__block__title"
+                data-i18n="projects.matching.title"
+              >
+                Matching Algorithm
+              </h3>
               <div class="client__block__details">
-                <p class="client__block__description" data-i18n="projects.matching.desc">Assigning the right tree seeds to the right forest areas involves German legal requirements, ecological variables, and dozens of edge cases. <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> was handling it manually. We automated the whole thing with an algorithm embedded directly in their existing infrastructure — what used to require human effort now just runs.</p>
-                <span class="client__block__stack">Python, Django REST, Celery, PostgreSQL</span>
+                <p
+                  class="client__block__description"
+                  data-i18n="projects.matching.desc"
+                >
+                  Assigning the right tree seeds to the right forest areas
+                  involves German legal requirements, ecological variables, and
+                  dozens of edge cases.
+                  <a href="https://www.skyseed.eco" class="client__link"
+                    >Skyseed</a
+                  >
+                  was handling it manually. We automated the whole thing with an
+                  algorithm embedded directly in their existing infrastructure —
+                  what used to require human effort now just runs.
+                </p>
+                <span class="client__block__stack"
+                  >Python, Django REST, Celery, PostgreSQL</span
+                >
               </div>
             </div>
           </div>
           <div class="client__block block2">
             <div class="client__block__content">
-              <h3 class="client__block__title" data-i18n="projects.configurator.title">Product Configurator</h3>
+              <h3
+                class="client__block__title"
+                data-i18n="projects.configurator.title"
+              >
+                Product Configurator
+              </h3>
               <div class="client__block__details">
-                <p class="client__block__description" data-i18n="projects.configurator.desc"><a href="https://www.skyseed.eco" class="client__link">Skyseed</a>'s product portfolio is complex, and turning a conversation into a qualified lead took too many steps. We built a configurator that walks users through the portfolio interactively and delivers a tailored offer straight into their CRM. Leads now arrive already qualified.</p>
-                <span class="client__block__stack">ReactJS, Webflow, Pipedrive API</span>
+                <p
+                  class="client__block__description"
+                  data-i18n="projects.configurator.desc"
+                >
+                  <a href="https://www.skyseed.eco" class="client__link"
+                    >Skyseed</a
+                  >'s product portfolio is complex, and turning a conversation
+                  into a qualified lead took too many steps. We built a
+                  configurator that walks users through the portfolio
+                  interactively and delivers a tailored offer straight into
+                  their CRM. Leads now arrive already qualified.
+                </p>
+                <span class="client__block__stack"
+                  >ReactJS, Webflow, Pipedrive API</span
+                >
               </div>
             </div>
           </div>
@@ -262,7 +321,7 @@
         <h2 class="section__title" data-i18n="range.title">range</h2>
         <div class="content">
           <p data-i18n="range.intro">
-            whatever the domain — if it runs on a computer, we've probably built
+            whatever the domain - if it runs on a computer, chances are we built
             something like it.
           </p>
         </div>
@@ -574,28 +633,48 @@
         <div>
           <h2 class="section__title" data-i18n="contact.title">contact</h2>
           <div class="content">
-            <p data-i18n="contact.p1">Let's discuss where you're at and where you want to go.</p>
-            <p data-i18n="contact.p2">Nobody should feel judged for not knowing yet. Everything can be asked here.</p>
-            <p><a class="link__accent__light" href="mailto:hi@thecodewitches.de">hi&#64;thecodewitches&#46;de</a></p>
-            <a href="https://linkedin.com/company/the-code-witches" target="_blank" rel="noopener noreferrer"
-              class="linkedin-link">
+            <p data-i18n="contact.p1">
+              Let's discuss where you're at and where you want to go.
+            </p>
+            <p data-i18n="contact.p2">
+              Nobody should feel judged for not knowing yet. Everything can be
+              asked here.
+            </p>
+            <p>
+              <a class="link__accent__light" href="mailto:hi@thecodewitches.de"
+                >hi&#64;thecodewitches&#46;de</a
+              >
+            </p>
+            <a
+              href="https://linkedin.com/company/the-code-witches"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="linkedin-link"
+            >
               <div class="linkedin-bg"></div>
               <img src="assets/linkedin-white.png" alt="LinkedIn" />
             </a>
           </div>
         </div>
         <div class="gif__box">
-          <video autoplay muted loop playsinline preload="auto" webkit-playsinline>
-            <source src="assets/witch-cat.mp4" type="video/mp4">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            webkit-playsinline
+          >
+            <source src="assets/witch-cat.mp4" type="video/mp4" />
             <!-- Fallback text for browsers that don't support video -->
             Witch Cat Riding Broomstick
           </video>
         </div>
         <footer class="site-footer">
-          <p>© code witches | Sengül & Nawaz GbR </p>
-          <p class="footer__separator"> &middot; </p>
-          <p> All rights reserved</p>
-          <p class="footer__separator"> &middot; </p>
+          <p>© code witches | Sengül & Nawaz GbR</p>
+          <p class="footer__separator">&middot;</p>
+          <p>All rights reserved</p>
+          <p class="footer__separator">&middot;</p>
           <p class="footer__legal">
             <a href="#agb-modal" class="modal-link">AGB</a>
             <span class="footer__legal__separator"> &middot; </span>
@@ -616,45 +695,78 @@
           <h2>Unsere Spielregeln – The Code Witches</h2>
 
           <h3>1. Was wir machen</h3>
-          <p>Wir bauen Software, beraten Teams und Gründer:innen und helfen euch, eure Ideen in funktionierende Systeme zu
-            verwandeln. Wir liefern Code, Konzepte und unsere Erfahrung – keine Rechts- oder Finanzberatung.</p>
+          <p>
+            Wir bauen Software, beraten Teams und Gründer:innen und helfen euch,
+            eure Ideen in funktionierende Systeme zu verwandeln. Wir liefern
+            Code, Konzepte und unsere Erfahrung – keine Rechts- oder
+            Finanzberatung.
+          </p>
 
           <h3>2. Wie ein Projekt zustande kommt</h3>
-          <p>Ein Projekt startet, wenn wir uns auf ein Angebot geeinigt haben. Angebote gelten in der Regel 30 Tage.
-            Änderungen besprechen wir gemeinsam.</p>
+          <p>
+            Ein Projekt startet, wenn wir uns auf ein Angebot geeinigt haben.
+            Angebote gelten in der Regel 30 Tage. Änderungen besprechen wir
+            gemeinsam.
+          </p>
 
           <h3>3. Was wir von euch brauchen</h3>
-          <p>Damit alles flutscht, brauchen wir eure Infos, Zugänge und Feedback rechtzeitig. So können wir konzentriert
-            arbeiten und echte Ergebnisse liefern.</p>
+          <p>
+            Damit alles flutscht, brauchen wir eure Infos, Zugänge und Feedback
+            rechtzeitig. So können wir konzentriert arbeiten und echte
+            Ergebnisse liefern.
+          </p>
 
           <h3>4. Zeit und Ablauf</h3>
-          <p>Wir geben euch grobe Zeitpläne und Meilensteine. Manchmal ändern sich Dinge – wir halten euch auf dem
-            Laufenden und passen Pläne an.</p>
+          <p>
+            Wir geben euch grobe Zeitpläne und Meilensteine. Manchmal ändern
+            sich Dinge – wir halten euch auf dem Laufenden und passen Pläne an.
+          </p>
 
           <h3>5. Geld &amp; Bezahlung</h3>
-          <p>Wir arbeiten nach Stunden- oder Projektbasis, je nach Vereinbarung. Zahlungen bitte nach Plan. Wenn es mal
-            hakt, behalten wir uns Mahngebühren vor.</p>
+          <p>
+            Wir arbeiten nach Stunden- oder Projektbasis, je nach Vereinbarung.
+            Zahlungen bitte nach Plan. Wenn es mal hakt, behalten wir uns
+            Mahngebühren vor.
+          </p>
 
           <h3>6. Änderungen während des Projekts</h3>
-          <p>Neue Ideen oder Änderungen am Projektumfang besprechen wir gemeinsam. Sie können Zeit oder Kosten
-            beeinflussen – wir halten euch immer im Loop.</p>
+          <p>
+            Neue Ideen oder Änderungen am Projektumfang besprechen wir
+            gemeinsam. Sie können Zeit oder Kosten beeinflussen – wir halten
+            euch immer im Loop.
+          </p>
 
           <h3>7. Wer was besitzt</h3>
-          <p>Ihr bekommt die Rechte an der Software, die wir für euch erstellen. Wir behalten Rechte an eigenen Tools oder
-            Bibliotheken, die wir einsetzen.</p>
+          <p>
+            Ihr bekommt die Rechte an der Software, die wir für euch erstellen.
+            Wir behalten Rechte an eigenen Tools oder Bibliotheken, die wir
+            einsetzen.
+          </p>
 
           <h3>8. Vertraulichkeit</h3>
-          <p>Alles, was wir voneinander erfahren, behandeln wir vertraulich. Punkt.</p>
+          <p>
+            Alles, was wir voneinander erfahren, behandeln wir vertraulich.
+            Punkt.
+          </p>
 
           <h3>9. Haftung</h3>
-          <p>Wir haften nur, wenn wir etwas wirklich grob falsch machen. Für indirekte Schäden, entgangene Gewinne oder
-            Datenverlust übernehmen wir keine Verantwortung.</p>
+          <p>
+            Wir haften nur, wenn wir etwas wirklich grob falsch machen. Für
+            indirekte Schäden, entgangene Gewinne oder Datenverlust übernehmen
+            wir keine Verantwortung.
+          </p>
 
           <h3>10. Beenden eines Projekts</h3>
-          <p>Beide Seiten können ein Projekt kündigen, wenn nötig. Schon erbrachte Leistungen werden fair abgerechnet.</p>
+          <p>
+            Beide Seiten können ein Projekt kündigen, wenn nötig. Schon
+            erbrachte Leistungen werden fair abgerechnet.
+          </p>
 
           <h3>11. Datenschutz</h3>
-          <p>Wir behandeln persönliche Daten nach DSGVO. Details stehen in unserer Datenschutzerklärung.</p>
+          <p>
+            Wir behandeln persönliche Daten nach DSGVO. Details stehen in
+            unserer Datenschutzerklärung.
+          </p>
 
           <h3>12. Kleines Kleingedrucktes</h3>
           <ul>

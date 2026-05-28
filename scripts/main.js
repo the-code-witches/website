@@ -60,6 +60,15 @@ const onScroll = () => {
 window.addEventListener("scroll", onScroll, { passive: true })
 updateActiveSection() // Initial call
 
+// Smooth scroll for logo → hero
+const logoLink = document.querySelector(".nav__logo")
+if (logoLink) {
+  logoLink.addEventListener("click", (e) => {
+    e.preventDefault()
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  })
+}
+
 // Handle smooth scrolling on nav link click
 links.forEach((link) => {
   link.addEventListener("click", (e) => {

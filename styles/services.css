@@ -4,6 +4,28 @@
   background: var(--dark);
 }
 
+/* ── SERVICES LIST ──────────────────────────────────── */
+
+.section__services .content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section__services .content li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.section__services .content li::before {
+  content: '//';
+  font-family: var(--mono);
+  font-size: 0.75em;
+  color: var(--text-inv);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
 /* ── SERVICE CARDS ──────────────────────────────────── */
 
 .service-cards {
