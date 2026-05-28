@@ -70,6 +70,18 @@ const translations = {
     "clients.configurator.title": "Product Configurator",
     "clients.configurator.desc":
       'We created a product configurator for <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> that interactively guides users through their portfolio and generates tailored offers and qualified leads by integrating seamlessly with existing backend services and CRM system.',
+    "projects.digitization.title": "Process Digitization",
+    "projects.digitization.desc":
+      '<a href="https://www.skyseed.eco" class="client__link">Skyseed</a> was growing fast — and a growing team means a process can\'t live in one person\'s head anymore. We built a system that could hold that institutional knowledge and scale with them: seed purchasing, production, tour planning, drone logistics, all in one place. That was the beginning. They\'re still running it, we\'re still building on it, and they\'re still growing.',
+    "projects.booking.title": "Booking System",
+    "projects.booking.desc":
+      'The <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> had an established booking platform — and a team of real people with years of workflows built around it. They needed new features and a redesign, but not at the cost of what already worked. We added what was missing and smoothed out the rough edges without pulling the rug out from under anyone.',
+    "projects.matching.title": "Matching Algorithm",
+    "projects.matching.desc":
+      'Assigning the right tree seeds to the right forest areas involves German legal requirements, ecological variables, and dozens of edge cases. <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> was handling it manually. We automated the whole thing with an algorithm embedded directly in their existing infrastructure — what used to require human effort now just runs.',
+    "projects.configurator.title": "Product Configurator",
+    "projects.configurator.desc":
+      '<a href="https://www.skyseed.eco" class="client__link">Skyseed</a>\'s product portfolio is complex, and turning a conversation into a qualified lead took too many steps. We built a configurator that walks users through the portfolio interactively and delivers a tailored offer straight into their CRM. Leads now arrive already qualified.',
     "range.title": "range",
     "range.intro": "whatever the domain — if it runs on a computer, we've probably built something like it.",
     "range.tag.film.label": "film & vfx",
@@ -173,6 +185,18 @@ const translations = {
     "clients.configurator.title": "Produktkonfigurator",
     "clients.configurator.desc":
       'Wir haben für <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> einen Produktkonfigurator erstellt, der Nutzer:innen interaktiv durch ihr Portfolio führt und maßgeschneiderte Angebote und qualifizierte Leads generiert, indem er nahtlos mit bestehenden Backend-Diensten und CRM-System integriert.',
+    "projects.digitization.title": "Prozessdigitalisierung",
+    "projects.digitization.desc":
+      '<a href="https://www.skyseed.eco" class="client__link">Skyseed</a> wuchs schnell — und ein wachsendes Team bedeutet, dass ein Prozess nicht mehr im Kopf einer einzigen Person leben kann. Wir haben ein System gebaut, das dieses institutionelle Wissen tragen und mit ihnen wachsen kann: Samenbeschaffung, Produktion, Tourenplanung, Drohnenlogistik — alles an einem Ort. Das war der Anfang. Sie nutzen es noch immer, wir bauen noch heute daran, und sie wachsen noch immer.',
+    "projects.booking.title": "Buchungssystem",
+    "projects.booking.desc":
+      'Die <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> hatte eine etablierte Buchungsplattform — und ein Team mit jahrelangen Workflows, die darauf aufbauten. Sie brauchten neue Features und ein Redesign, aber nicht auf Kosten von dem, was bereits funktionierte. Wir haben ergänzt, was fehlte, und die Kanten geglättet, ohne jemandem den Boden unter den Füßen wegzuziehen.',
+    "projects.matching.title": "Matching-Algorithmus",
+    "projects.matching.desc":
+      'Die richtigen Baum-Samen den richtigen Waldgebieten zuzuordnen erfordert deutsche Rechtsvorschriften, ökologische Variablen und Dutzende von Sonderfällen. <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> hat das bisher manuell gehandhabt. Wir haben den gesamten Prozess automatisiert — mit einem Algorithmus, der direkt in ihre bestehende Infrastruktur eingebettet ist. Was früher menschliche Arbeit erforderte, läuft jetzt einfach.',
+    "projects.configurator.title": "Produktkonfigurator",
+    "projects.configurator.desc":
+      '<a href="https://www.skyseed.eco" class="client__link">Skyseed</a> hat ein komplexes Produktportfolio — und aus einem Gespräch einen qualifizierten Lead zu machen, dauerte zu lange. Wir haben einen Konfigurator gebaut, der Nutzer:innen interaktiv durch das Portfolio führt und ein maßgeschneidertes Angebot direkt ins CRM überträgt. Leads kommen jetzt bereits qualifiziert an.',
     "range.title": "range",
     "range.intro":
       "egal welche domäne — wenn es auf einem computer läuft, haben wir wahrscheinlich schon etwas ähnliches gebaut.",

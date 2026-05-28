@@ -109,6 +109,20 @@ Anchor line: *"Whatever the domain — if it runs on a computer, we've probably 
 - One sentence naming the concrete outcome or change
 - Optional: a short quote from the client
 
+**Suggested rewrites for all four current cards:**
+
+**Process Digitization (Skyseed)**
+> Skyseed was growing fast — and a growing team means a process can't live in one person's head anymore. We built a system that could hold that institutional knowledge and scale with them: seed purchasing, production, tour planning, drone logistics, all in one place. That was the beginning. They're still running it, we're still building on it, and they're still growing.
+
+**Booking System (Freie Kunst Akademie)**
+> The Freie Kunst Akademie Augsburg had an established booking platform — and a team of real people with years of workflows built around it. They needed new features and a redesign, but not at the cost of what already worked. We added what was missing and smoothed out the rough edges without pulling the rug out from under anyone.
+
+**Matching Algorithm (Skyseed)**
+> Assigning the right tree seeds to the right forest areas involves German legal requirements, ecological variables, and dozens of edge cases. Skyseed was handling it manually. We automated the whole thing with an algorithm embedded directly in their existing infrastructure — what used to require human effort now just runs.
+
+**Product Configurator (Skyseed)**
+> Skyseed's product portfolio is complex, and turning a conversation into a qualified lead took too many steps. We built a configurator that walks users through the portfolio interactively and delivers a tailored offer straight into their CRM. Leads now arrive already qualified.
+
 ---
 
 ### #4 — Get and add testimonials
