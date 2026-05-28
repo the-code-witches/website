@@ -44,7 +44,9 @@
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  transition: transform 220ms ease;
 }
+.linkedin-link:hover { transform: scale(1.12); }
 
 .linkedin-bg {
   position: absolute;
@@ -57,9 +59,6 @@
   z-index: 1;
 }
 
-.linkedin-link:hover .linkedin-bg {
-  background-color: rgba(90, 79, 207, 0.6);
-}
 
 .linkedin-link img {
   height: 1.5em;

@@ -92,9 +92,9 @@ main { margin-top: var(--header-height); }
 .nav__logo img {
   height: 1.6rem;
   width: auto;
-  transition: opacity 220ms ease;
+  transition: transform 220ms ease;
 }
-.nav__logo img:hover { opacity: 0.5; }
+.nav__logo img:hover { transform: scale(1.12); }
 
 .nav__link {
   font-family: var(--mono);
@@ -116,7 +116,7 @@ main { margin-top: var(--header-height); }
   left: 0.7rem;
   right: 0.7rem;
   height: 1.5px;
-  background: var(--brand);
+  background: currentColor;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -164,10 +164,26 @@ main { margin-top: var(--header-height); }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.15rem 0.4rem;
+  position: relative;
   transition: color 180ms ease;
 }
-.lang__toggle__option.active { color: var(--brand); }
+.lang__toggle__option.active,
 .lang__toggle__option:hover:not(.active) { color: var(--text); }
+
+.lang__toggle__option::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0.4rem;
+  right: 0.4rem;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lang__toggle__option.active::after,
+.lang__toggle__option:hover:not(.active)::after { transform: scaleX(1); }
 
 .lang__toggle__divider {
   width: 1px;
@@ -209,11 +225,24 @@ main { margin-top: var(--header-height); }
 
 .site-footer a {
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 160ms ease;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
 }
-.site-footer a:hover { color: var(--text-inv); }
+
+.site-footer a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--text-inv);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.site-footer a:hover::after { transform: scaleX(1); }
 
 .site-footer .footer__legal {
   display: inline-flex;
