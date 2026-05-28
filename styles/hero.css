@@ -154,7 +154,7 @@
   }
 
   .hero__title {
-    font-size: clamp(2.2rem, 12vw, 4rem);
+    font-size: clamp(1.6rem, 8vw, 4rem);
   }
 
   .hero__tagline {
@@ -163,6 +163,7 @@
 
   .hero__poem p {
     font-size: var(--font-size-xs);
+    white-space: normal;
   }
 
   .hero__punchline {
@@ -171,5 +172,6 @@
 
   .hero__audience {
     font-size: var(--font-size-s);
+    white-space: normal;
   }
 }
