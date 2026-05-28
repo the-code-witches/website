@@ -10,7 +10,6 @@
   overflow: hidden;
   padding: 0 var(--pad-x) 3.5rem;
   min-height: 260px;
-  max-width: max(78ch, 70vw);
 }
 
 /* Canvas web overlay */
@@ -44,6 +43,7 @@
   border: 1.5px solid rgba(240, 236, 216, 0.1);
   transition: border-color 260ms ease;
   white-space: nowrap;
+  max-width: 220px;
 }
 
 .breadth__tag__label {
@@ -59,20 +59,14 @@
   display: none;
 }
 
-/* Size modifiers — padding only, font size unchanged */
-.breadth__tag--medium {
-  padding: 0.6rem 1.35rem;
+/* Featured boxes: description always visible, consistent width */
+.breadth__tag--featured {
+  padding: 0.9rem 1.25rem;
   white-space: normal;
+  width: 220px;
 }
 
-.breadth__tag--large {
-  padding: 1rem 1.75rem;
-  white-space: normal;
-}
-
-/* Medium + large: outcome always visible */
-.breadth__tag--medium .breadth__tag__outcome,
-.breadth__tag--large .breadth__tag__outcome {
+.breadth__tag--featured .breadth__tag__outcome {
   display: block;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-light);
@@ -81,29 +75,13 @@
   line-height: 1.45;
 }
 
-.breadth__tag--medium .breadth__tag__outcome {
-  max-width: 26ch;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.breadth__tag--large .breadth__tag__outcome {
-  max-width: 26ch;
-}
-
-/* Meta tags (domain + tech stack) */
+/* Meta tags (domain + tech stack) — visible on all boxes */
 .breadth__tag__meta {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
   margin-top: 0.5rem;
   align-items: center;
-}
-
-.breadth__tag--medium .breadth__tag__meta,
-.breadth__tag--large .breadth__tag__meta {
-  display: flex;
 }
 
 .breadth__tag__domain-tag,
@@ -188,32 +166,17 @@
 
   .breadth__web { display: none; }
 
-  /* hide all outcome text by default on small screens */
-  .breadth__tag--medium .breadth__tag__outcome,
-  .breadth__tag--large .breadth__tag__outcome {
-    display: none;
-  }
-
-  .breadth__tag--medium .breadth__tag__meta,
-  .breadth__tag--large .breadth__tag__meta {
-    display: none;
-  }
-
-  .breadth__tag.active {
+  /* compact boxes: tap to reveal outcome */
+  .breadth__tag:not(.breadth__tag--featured).active {
     border-color: var(--brand);
   }
 
-  .breadth__tag.active .breadth__tag__outcome {
+  .breadth__tag:not(.breadth__tag--featured).active .breadth__tag__outcome {
     display: block;
     font-size: 0.78rem;
     font-weight: var(--font-weight-light);
     color: var(--brand);
     margin-top: 0.3rem;
     line-height: 1.4;
-  }
-
-  .breadth__tag.active .breadth__tag__meta {
-    display: flex;
-    margin-top: 0.35rem;
   }
 }

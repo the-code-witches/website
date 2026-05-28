@@ -117,36 +117,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const tags = Array.from(container.querySelectorAll(".breadth__tag"))
 
-  // --- Mobile: static flex layout, tap any tag to reveal its outcome ---
+  // --- Mobile: static flex layout, tap compact tags to reveal outcome ---
   if (window.innerWidth <= 1100) {
-    tags.forEach((tag) => {
-      tag.addEventListener("click", () => {
-        const isActive = tag.classList.contains("active")
-        tags.forEach((t) => t.classList.remove("active"))
-        if (!isActive) tag.classList.add("active")
+    tags
+      .filter((tag) => !tag.classList.contains("breadth__tag--featured"))
+      .forEach((tag) => {
+        tag.addEventListener("click", () => {
+          const isActive = tag.classList.contains("active")
+          tags.forEach((t) => t.classList.remove("active"))
+          if (!isActive) tag.classList.add("active")
+        })
       })
-    })
     return
   }
 
   // ── Desktop cloud layout ─────────────────────────────
 
   // Seed positions [cx_frac, cy_frac] — center of each tag as fraction of cloud area.
-  // Large tags placed in separate quadrants; smalls fill the gaps between them.
-  // Order matches the HTML: 3 large, 5 medium, 4 small.
+  // Three clusters left→right: algorithmic | data | web.
+  // Order matches HTML order.
   const seeds = [
-    [0.70, 0.55],  // film & vfx (large)        — lower-right quadrant
-    [0.14, 0.84],  // drone tech (large)         — lower-left quadrant
-    [0.64, 0.14],  // election research (large)  — upper-right quadrant
-    [0.20, 0.10],  // data pipelines (medium)    — upper-left
-    [0.05, 0.44],  // enterprise erp (medium)    — left edge
-    [0.39, 0.75],  // embedded systems (medium)  — lower-center
-    [0.90, 0.38],  // map & geospatial (medium)  — right
-    [0.36, 0.46],  // academic platforms (medium)— center
-    [0.07, 0.04],  // e-commerce (small)         — top-left corner
-    [0.43, 0.25],  // hospitality (small)        — upper-center
-    [0.60, 0.88],  // network analysis (small)   — lower-center-right
-    [0.88, 0.76],  // job platforms (small)      — lower-right
+    [0.04, 0.20],  // 3D rendering (featured)     — algorithmic, upper-left
+    [0.15, 0.46],  // drone algorithm (featured)   — algorithmic, below-right of 3D
+    [0.04, 0.80],  // embedded systems (med)      — algorithmic, far lower-left, separate
+    [0.35, 0.20],  // survey algorithm (featured)  — algo→data bridge, same vertical center as 3D
+    [0.51, 0.50],  // data pipelines (featured)   — data, top ~= bottom of survey box
+    [0.39, 0.55],  // map & geospatial (med)      — data, lower-left (closer to algo side)
+    [0.47, 0.72],  // network analysis (small)    — data, lower-right
+    [0.57, 0.20],  // BI & analytics (med)        — data, upper-right
+    [0.78, 0.25],  // ecommerce (small)           — web cluster
+    [0.89, 0.25],  // offline apps (small)        — right of ecommerce, same row
+    [0.87, 0.42],  // web platforms (small)       — web cluster
+    [0.93, 0.08],  // booking platforms (med)     — upper-right corner
+    [0.95, 0.71],  // enterprise erp (featured)   — right, lower edge aligned with embedded systems
   ]
 
   function layoutCloud() {
@@ -266,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(tooltip)
 
   tags
-    .filter((tag) => !tag.classList.contains("breadth__tag--large"))
+    .filter((tag) => !tag.classList.contains("breadth__tag--featured"))
     .forEach((tag) => {
       const outcomeEl = tag.querySelector(".breadth__tag__outcome")
       if (!outcomeEl) return
