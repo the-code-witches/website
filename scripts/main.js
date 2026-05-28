@@ -234,23 +234,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
 
-    const THRESHOLD = 380
-    for (let i = 0; i < centers.length; i++) {
-      for (let j = i + 1; j < centers.length; j++) {
-        const dx   = centers[i].x - centers[j].x
-        const dy   = centers[i].y - centers[j].y
-        const dist = Math.sqrt(dx * dx + dy * dy)
-        if (dist < THRESHOLD) {
-          const alpha = (1 - dist / THRESHOLD) * 0.55
-          ctx.strokeStyle = `rgba(90, 79, 207, ${alpha})`
-          ctx.lineWidth = 1
-          ctx.beginPath()
-          ctx.moveTo(centers[i].x, centers[i].y)
-          ctx.lineTo(centers[j].x, centers[j].y)
-          ctx.stroke()
-        }
-      }
-    }
+    // Explicit edges by tag index (matches HTML/seeds order):
+    // 0=3D rendering, 1=drone, 2=embedded, 3=survey
+    // 4=data pipelines, 5=geo, 6=network analysis, 7=BI
+    // 8=ecommerce, 9=offline apps, 10=web platforms, 11=booking
+    // 12=enterprise erp
+    const edges = [
+      // algorithmic cluster (fully connected)
+      [0, 1], [0, 3], [1, 3],
+      // embedded → drone only
+      [1, 2],
+      // data cluster (fully connected)
+      [4, 5], [4, 6], [4, 7], [5, 6], [5, 7], [6, 7],
+      // web cluster (fully connected)
+      [8, 9], [8, 10], [8, 11], [9, 10], [9, 11], [10, 11],
+      // survey → data bridges
+      [3, 4], [3, 7],
+      // erp cross-connections
+      [12, 1], [12, 7], [12, 10],
+    ]
+
+    ctx.lineWidth = 1
+    edges.forEach(([i, j]) => {
+      ctx.strokeStyle = `rgba(90, 79, 207, 0.35)`
+      ctx.beginPath()
+      ctx.moveTo(centers[i].x, centers[i].y)
+      ctx.lineTo(centers[j].x, centers[j].y)
+      ctx.stroke()
+    })
   }
 
   // --- Initial layout (run now and again after fonts load) ---
