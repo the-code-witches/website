@@ -1,7 +1,7 @@
 :root {
   /* ── Palette ── */
   --bg:        #fff7e5;                   /* warm cream — light sections */
-  --dark:      #231e32;                   /* near-black — dark sections */
+  --dark:      #211d2b;                   /* near-black — dark sections */
   --brand:     #5a4fcf;                   /* purple — accent, CTAs, polygons */
   --text:      #151013;                   /* ink — on cream */
   --text-inv:  #f0ecd8;                   /* warm off-white — on dark/brand */
