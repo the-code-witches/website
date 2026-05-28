@@ -3,7 +3,7 @@
   --bg:        #fff7e5;                   /* warm cream — light sections */
   --dark:      #211d2b;                   /* near-black — dark sections */
   --brand:     #5a4fcf;                   /* purple — accent, CTAs, polygons */
-  --text:      #151013;                   /* ink — on cream */
+  --text:      #211d2b;                   /* ink — on cream */
   --text-inv:  #f0ecd8;                   /* warm off-white — on dark/brand */
   --muted:     #6b6480;                   /* purple-gray — secondary on cream */
   --muted-inv: rgba(240, 236, 216, 0.78); /* secondary on dark/brand */
