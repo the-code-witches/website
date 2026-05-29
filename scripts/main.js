@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-// Breadth tag cloud — scattered absolute layout + floating web animation + tooltip
+// Breadth tag cloud — scattered absolute layout + floating web animation
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".breadth__tags")
   if (!container) return
@@ -145,18 +145,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // Order matches HTML order.
   const seeds = [
     [0.04, 0.20],  // 3D rendering (featured)     — algorithmic, upper-left
-    [0.15, 0.46],  // drone algorithm (featured)   — algorithmic, below-right of 3D
-    [0.04, 0.80],  // embedded systems (med)      — algorithmic, far lower-left, separate
-    [0.35, 0.20],  // survey algorithm (featured)  — algo→data bridge, same vertical center as 3D
-    [0.51, 0.50],  // data pipelines (featured)   — data, top ~= bottom of survey box
-    [0.39, 0.55],  // map & geospatial (med)      — data, lower-left (closer to algo side)
-    [0.47, 0.72],  // network analysis (small)    — data, lower-right
+    [0.15, 0.62],  // drone algorithm (featured)   — algorithmic, below-right of 3D
+    [0.04, 0.88],  // embedded systems (med)      — algorithmic, far lower-left, separate
+    [0.28, 0.12],  // survey algorithm (featured)  — algo→data bridge, same vertical center as 3D
+    [0.56, 0.50],  // data pipelines (featured)   — data, top ~= bottom of survey box
+    [0.38, 0.55],  // map & geospatial (med)      — data, lower-left (closer to algo side)
+    [0.47, 0.78],  // network analysis (small)    — data, lower-right
     [0.57, 0.20],  // BI & analytics (med)        — data, upper-right
     [0.78, 0.25],  // ecommerce (small)           — web cluster
-    [0.89, 0.25],  // offline apps (small)        — right of ecommerce, same row
+    [0.97, 0.25],  // offline apps (small)        — right of ecommerce, same row
     [0.87, 0.42],  // web platforms (small)       — web cluster
     [0.93, 0.08],  // booking platforms (med)     — upper-right corner
-    [0.95, 0.71],  // enterprise erp (featured)   — right, lower edge aligned with embedded systems
+    [0.79, 0.78],  // enterprise erp (featured)   — right, lower edge aligned with embedded systems
   ]
 
   function layoutCloud() {
@@ -174,13 +174,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const dims = tags.map((tag) => ({ w: tag.offsetWidth, h: tag.offsetHeight }))
 
     // Convert seed fractions → top-left pixel positions within inner area
-    const pos = seeds.map(([cx, cy], i) => ({
-      x: Math.max(0, Math.min(cx * W - dims[i].w / 2, W - dims[i].w)),
-      y: Math.max(0, Math.min(cy * H - dims[i].h / 2, H - dims[i].h)),
-    }))
+    // Scale seeds toward center to tighten the cluster
+    const SCALE = 0.72
+    const pos = seeds.map(([cx, cy], i) => {
+      const scx = 0.4 + (cx - 0.5) * SCALE
+      const scy = 0.38 + (cy - 0.5) * SCALE
+      return {
+        x: Math.max(0, Math.min(scx * W - dims[i].w / 2, W - dims[i].w)),
+        y: Math.max(0, Math.min(scy * H - dims[i].h / 2, H - dims[i].h)),
+      }
+    })
 
     // Push overlapping tags apart — proper AABB overlap on both axes
-    const MARGIN = 12
+    const MARGIN = 5
     for (let iter = 0; iter < 60; iter++) {
       let moved = false
       for (let i = 0; i < pos.length; i++) {
@@ -282,34 +288,6 @@ document.addEventListener("DOMContentLoaded", () => {
     resizeTimer = setTimeout(layoutCloud, 150)
   })
 
-  // --- Tooltip on hover for non-large tags ---
-  const tooltip = document.createElement("div")
-  tooltip.className = "breadth__tooltip"
-  document.body.appendChild(tooltip)
-
-  tags
-    .filter((tag) => !tag.classList.contains("breadth__tag--featured"))
-    .forEach((tag) => {
-      const outcomeEl = tag.querySelector(".breadth__tag__outcome")
-      if (!outcomeEl) return
-
-      tag.addEventListener("mouseenter", () => {
-        tooltip.textContent = outcomeEl.textContent
-        requestAnimationFrame(() => {
-          const rect  = tag.getBoundingClientRect()
-          const tRect = tooltip.getBoundingClientRect()
-          let left = rect.left + rect.width / 2 - tRect.width / 2
-          left = Math.max(8, Math.min(left, window.innerWidth - tRect.width - 8))
-          tooltip.style.left = left + "px"
-          tooltip.style.top  = rect.top - tRect.height - 12 + "px"
-          tooltip.classList.add("visible")
-        })
-      })
-
-      tag.addEventListener("mouseleave", () => {
-        tooltip.classList.remove("visible")
-      })
-    })
 })
 
 // modal setup

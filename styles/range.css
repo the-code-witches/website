@@ -2,12 +2,13 @@
 
 .section__range {
   background: var(--dark);
+  overflow: visible;
 }
 
 /* Cloud container — height set by JS */
 .breadth__tags {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   padding: 0 var(--pad-x) 3.5rem;
   min-height: 260px;
 }
@@ -75,9 +76,9 @@
   line-height: 1.45;
 }
 
-/* Meta tags (domain + tech stack) — visible on all boxes */
+/* Meta tags (domain + tech stack) — hidden until hover/tap */
 .breadth__tag__meta {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 0.25rem;
   margin-top: 0.5rem;
@@ -104,45 +105,35 @@
   border: 1px solid rgba(240, 236, 216, 0.15);
 }
 
-/* Desktop: border highlight on hover, matching service card style */
+/* Desktop: on hover all tags expand to featured style */
 @media (min-width: 1101px) {
   .breadth__tag:hover {
     border-color: var(--brand);
+    outline: 1.5px solid var(--brand);
+    background: var(--dark);
+    z-index: 100;
+  }
+
+  .breadth__tag:not(.breadth__tag--featured):hover {
+    white-space: normal;
+    width: 220px;
+    padding: 0.4rem 1rem 0.9rem;
+  }
+
+  .breadth__tag:hover .breadth__tag__outcome {
+    display: block;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-light);
+    color: rgba(240, 236, 216, 0.52);
+    margin-top: 0.35rem;
+    line-height: 1.45;
+  }
+
+  .breadth__tag:hover .breadth__tag__meta {
+    display: flex;
   }
 }
 
-/* Tooltip */
-.breadth__tooltip {
-  position: fixed;
-  background: var(--bg);
-  color: var(--text);
-  padding: 0.6rem 0.9rem;
-  border-radius: 2px;
-  font-family: var(--font);
-  font-size: 0.9rem;
-  font-weight: var(--font-weight-light);
-  max-width: 260px;
-  white-space: normal;
-  pointer-events: none;
-  z-index: 1000;
-  line-height: 1.5;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-  text-transform: lowercase;
-}
-
-.breadth__tooltip.visible { opacity: 1; }
-
-.breadth__tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top-color: var(--bg);
-}
 
 /* Mobile: revert to static wrapping layout */
 @media (max-width: 1100px) {
@@ -178,7 +169,7 @@
 
   /* tap to reveal outcome on all boxes */
   .breadth__tag.active {
-    border-color: var(--brand);
+    outline: 1.5px solid var(--brand);
   }
 
   .breadth__tag.active .breadth__tag__outcome {
@@ -188,6 +179,10 @@
     color: var(--muted-inv);
     margin-top: 0.3rem;
     line-height: 1.4;
+  }
+
+  .breadth__tag.active .breadth__tag__meta {
+    display: flex;
   }
 }
 
