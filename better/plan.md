@@ -199,7 +199,7 @@ This does more than three paragraphs of AI hype. It builds immediate trust with 
 
 ---
 
-### #9 — Rewrite the services section to speak to multiple stakeholders
+### ~~#9 — Rewrite the services section to speak to multiple stakeholders~~ ✅ done
 **Effort:** ~30 min | **Impact:** medium
 
 **Problem:** The three scenario bullets are good but narrow. A CTO with a legacy problem, a CFO evaluating cost vs. risk, and a non-technical Geschäftsführer all read differently.

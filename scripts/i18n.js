@@ -5,13 +5,13 @@ const translations = {
     "nav.projects": "projects",
     "nav.contact": "contact",
     "nav.cta": "book free session",
-    "hero.tagline": "software engineering & technical partnership",
+    "hero.tagline": "we hold the complexity, so you can lead.",
     "hero.poem1": "A pioneering vision with no clear path yet.",
     "hero.poem2": "Processes that are 80% workarounds.",
-    "hero.poem3": "A legacy system that everyone wants to rewrite with AI.",
+    "hero.poem3": "a legacy system nobody wants to touch.",
     "hero.poem4": "We hold the complexity, so you can lead.",
     "hero.audience":
-      "We partner with SMEs, technical teams, and founders, building technical products and digital processes that actually serve you.",
+      "we partner with smes, technical teams, and founders — building software that serves people, not the other way around.",
     "about.title": "about",
     "about.p1":
       "We partner up with changemakers and teams who want to support their work with the right digital tools or want to build their own tech product. Our passion lies in understanding complex systems, writing clean code, and creating clear communication that builds bridges.",
@@ -27,34 +27,46 @@ const translations = {
     "services.p1":
       "We offer fully integrated hands-on software engineering and technical consulting from a single source.",
     "services.p2":
-      "We bring a holistic perspective to every project: from untangling legacy systems and designing custom algorithms to rethinking entire digital workflows from scratch. We work with AI where it genuinely helps — and we'll tell you when it doesn't.",
+      "AI is a large part of what we build. We know it well enough to also tell you when it's not the answer.",
+    "services.p3":
+      "We hold the complexity so you can stay in a position to act. Nobody should feel judged for not knowing yet. With us, every question is welcome, and we bring the expertise to actually answer it.",
     "services.li1":
       "You have an idea, maybe even vibecoded a bit, but now you want it to grow into something real, something you can feel accountable for.",
     "services.li2":
       "You have a massive legacy system that needs to be changed or modernized and you have no idea where to start.",
     "services.li3":
       "Your team handles complex processes, you hear of AI around you, it makes you kinda nervous and you are wondering how it can truly support you.",
+    "services.li4":
+      "You have something that works and your business depends on it — and you need a technical partner who's still reachable in two years, not a handoff.",
+    "services.offer.product.title": "product development",
+    "services.offer.product.pain":
+      "You have an idea or a vibecoded prototype that needs to become a real product you can ship and stand behind.",
+    "services.offer.product.desc":
+      "We take it through the full cycle: architecture, implementation, testing, deployment. You get something you own completely — no lock-in, no black boxes.",
+    "services.offer.maintainer.title": "maintainer contract",
+    "services.offer.maintainer.pain":
+      "You have a massive legacy system that needs to be changed, modernized or maintained, but you have no one that understands what to do with it.",
+    "services.offer.maintainer.desc":
+      "We stay in your system, stay reachable, and move fast when things break. You get a committed, long-term technical partner who knows you and your software.",
+    "services.offer.process.title": "process digitization",
+    "services.offer.process.pain":
+      "Your operations run on spreadsheets, manual handoffs, and tools that don't talk to each other.",
+    "services.offer.process.desc":
+      "We map the full process, identify where software or ai actually help, and build something that fits how your team works (not the other way around).",
+    "services.onramp":
+      'not sure where to start? explore our introductory packages or just <a class="cta" href="book.html">book a free session</a> ',
     "services.cta":
       'If this speaks to you, feel free to inquire one of our introductory services below via <a class="link__accent" href="mailto:hi@thecodewitches.de">hi&#64;thecodewitches&#46;de</a> or simply book a <a class="cta" href="book.html">FREE SESSION</a>',
     "services.p4": "<b>Together we'll get you moving forward!</b>",
     "services.sparring.title": "1h sparring",
-    "services.sparring.p1": "A minimal investment to find out if we vibe.",
-    "services.sparring.p2":
-      "This session is for sharing where you're at, picking our brains and structure your biggest challenges together.",
-    "services.sparring.p3": "You'll get clear recommendations for steps ahead.",
+    "services.sparring.desc":
+      "find out if we vibe. share your situation, pick our brains, and get clear recommendations for next steps.",
     "services.deepdive.title": "deep dive",
-    "services.deepdive.p1":
-      "we prepare a tailored workshop for you and together we develop solutions for your most pressing pain point",
-    "services.deepdive.p2":
-      "This can be: architecture suggestions including discussion, roadmap planning, a technical input, ...",
-    "services.deepdive.p3": "You walk away with an actionable plan.",
+    "services.deepdive.desc":
+      "tailored workshop for your most pressing pain point. we develop solutions together — architecture, roadmap, technical direction. you walk away with an actionable plan.",
     "services.devcycle.title": "1 dev cycle",
-    "services.devcycle.p1":
-      "We go through all phases of a dev cycle: plan, implement, test, deploy, review.",
-    "services.devcycle.p2":
-      "we add one feedback cycle after your review to harness the magic of working in cycles.",
-    "services.devcycle.p3":
-      "The best way to explore how working together really feels like while producing something you can build upon.",
+    "services.devcycle.desc":
+      "a full cycle together: plan, implement, test, deploy, review — plus one feedback loop after your review. something real to build on, and a clear sense of how working together feels.",
     "clients.title": "projects",
     "clients.p1":
       "What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.",
@@ -165,36 +177,46 @@ const translations = {
     "services.p1":
       "Wir bieten Software Entwicklung und technische Beratung aus einer Hand.",
     "services.p2":
-      "Wir bringen eine ganzheitliche Perspektive in jedes Projekt: vom Entwirren von Legacy-Systemen und dem Design von maßgeschneiderten Algorithmen bis hin zur kompletten Neugestaltung digitaler Workflows. Wir arbeiten zentral mit KI, dort wo sie wirklich hilft (und wir sagen euch, wann sie es nicht tut).",
+      "KI ist ein großer Teil dessen, was und wie wir entwickeln. Wir kennen die Tools gut genug, um euch auch zu sagen, wann sie nicht die Antwort sind.",
+    "services.p3":
+      "Wir tragen die Komplexität, damit ihr handlungsfähig bleibt. Niemand sollte sich dafür schämen, etwas noch nicht zu wissen. Bei uns ist jede Frage willkommen, und wir bringen das Fachwissen, um sie zu beantworten.",
     "services.li1":
       "Ihr habt eine Idee, habt vielleicht schon ein bisschen vibegecoded, die zu einem echten, stabilen Produkt werden soll",
     "services.li2":
       "Ihr habt ein massives Legacy-System, das geändert oder modernisiert werden muss, und wisst einfach nicht wo anfangen",
     "services.li3":
       "Euer intern Prozesse sind komplex, alle reden von KI, und ihr fragt euch, ob und wie es euch wirklich unterstützen kann.",
+    "services.li4":
+      "Ihr habt etwas, das funktioniert und auf das euer Betrieb angewiesen ist — und ihr braucht einen technischen Partner, der auch in zwei Jahren noch erreichbar ist.",
+    "services.offer.product.title": "produktentwicklung",
+    "services.offer.product.pain":
+      "Ihr habt eine Idee oder einen gebastelten Prototypen, der ein echtes, stabiles Produkt werden soll, hinter dem ihr stehen könnt.",
+    "services.offer.product.desc":
+      "Wir gehen mit euch durch den kompletten Zyklus: Architektur, Implementierung, Testing, Deployment. Ihr bekommt etwas, das ganz euch gehört: kein Lock-in, keine Black Boxes.",
+    "services.offer.maintainer.title": "maintainer contract",
+    "services.offer.maintainer.pain":
+      "Eure Organisation hängt an einem Legacy System, das repariert, modernisiert oder einfach gewartet werden muss ",
+    "services.offer.maintainer.desc":
+      "Wir sind für erreichbar und handeln schnell, wenn etwas nicht funktioniert. Wir sind eure verlässlichen technischen Partnerinnen, die euch und eure Systeme kennen.",
+    "services.offer.process.title": "prozessdigitalisierung",
+    "services.offer.process.pain":
+      "Eure Abläufe hängen an Spreadsheets, manuellen Übergaben und Tools, die irgendwie nicht ineinander greifen.",
+    "services.offer.process.desc":
+      "Wir durchleuchten eure Prozesse, identifizieren wo Software oder KI wirklich helfen kann, und bauen etwas, das zu eurer Arbeitsweise passt (und nicht umgekehrt).",
+    "services.onramp":
+      'nicht sicher wo anfangen? schaut euch unsere Einstiegspakete an oder bucht direkt ein <a class="cta" href="book.html">kostenloses gespräch</a>',
     "services.cta":
       'Wenn euch das anspricht, schreibt uns <a class="link__accent" href="mailto:hi@thecodewitches.de">hi&#64;thecodewitches&#46;de</a> oder bucht euch direkt ein <a class="cta" href="book.html">KOSTENLOSES GESPRÄCH</a>',
     "services.p4": "<b>Gemeinsam bringen wir euch voran!</b>",
     "services.sparring.title": "1h sparring",
-    "services.sparring.p1":
-      "Minimale Investition, um herauszufinden, ob wir zusammenpassen.",
-    "services.sparring.p2":
-      "Diese Session dient dazu, euren aktuellen Stand zu teilen, unser Wissen zu nutzen und eure größten Herausforderungen gemeinsam zu strukturieren.",
-    "services.sparring.p3":
-      "Ihr bekommt klare Empfehlungen für die nächsten Schritte.",
+    "services.sparring.desc":
+      "herausfinden, ob wir zusammenpassen. ihr teilt euren stand, wir geben klare empfehlungen für die nächsten schritte.",
     "services.deepdive.title": "deep dive",
-    "services.deepdive.p1":
-      "Wir bereiten einen maßgeschneiderten Workshop vor und entwickeln gemeinsam Lösungen für eure dringendsten pain points.",
-    "services.deepdive.p2":
-      "Das kann sein: Architekturvorschläge inkl. Diskussion, Roadmap-Planung, ein KI Input, ...",
-    "services.deepdive.p3": "Ihr geht mit einem konkreten Plan heraus.",
+    "services.deepdive.desc":
+      "maßgeschneiderter workshop für euren drängendsten pain point. wir entwickeln gemeinsam lösungen — architektur, roadmap, technische ausrichtung. ihr geht mit einem konkreten plan raus.",
     "services.devcycle.title": "1 dev cycle",
-    "services.devcycle.p1":
-      "Wir durchlaufen alle Phasen eines Enwicklungs Zyklus: planen, implementieren, testen, deployen, reviewen.",
-    "services.devcycle.p2":
-      "Nach eurem Review fügen wir einen Feedback-Zyklus hinzu, um die Magie des Arbeitens in Zyklen zu spüren.",
-    "services.devcycle.p3":
-      "Der beste Weg, um herauszufinden, wie sich die Zusammenarbeit wirklich anfühlt, und dabei etwas zu produzieren, auf das ihr auf jeden Fall aufbauen könnt.",
+    "services.devcycle.desc":
+      "ein vollständiger gemeinsamer zyklus: plan, implement, test, deploy, review sowie ein feedback loop nach eurem review. etwas auf das ihr aufbauen könnt, und ein klares gefühl dafür, wie unsere zusammenarbeit läuft.",
     "clients.title": "projekte",
     "clients.p1":
       "Was wir bauen, gehört denen, die damit arbeiten: dezentral, offen, für die lange Frist gestaltet. Kein Lock-in, keine Black Boxes, so wenig Plattformabhängigkeiten wie möglich.",
