@@ -5,7 +5,7 @@ const translations = {
     "nav.projects": "projects",
     "nav.contact": "contact",
     "nav.cta": "book free session",
-    "hero.tagline": "we hold the complexity, so you can lead.",
+    "hero.tagline": "Software engineering & technical partnership",
     "hero.poem1": "A pioneering vision with no clear path yet.",
     "hero.poem2": "Processes that are 80% workarounds.",
     "hero.poem3": "a legacy system nobody wants to touch.",
