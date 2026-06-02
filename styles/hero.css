@@ -111,7 +111,6 @@
 }
 
 .hero__punchline {
-  font-family: var(--font) !important;
   font-size: var(--font-size-m) !important;
   margin-top: 1rem !important;
   color: var(--text) !important;
