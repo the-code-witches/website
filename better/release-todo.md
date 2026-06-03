@@ -13,12 +13,7 @@ Synthesized from call notes (P1–P9) + existing buyer feedback.
 
 ---
 
-## C2 — Product development box: bridge to hero vision line
-**Source:** P7
-Poem1 stays: `"A pioneering vision with no clear path yet"`
-The product development service box needs to explicitly pick up that thread — make the connection obvious for founders reading it.
-Direction: we excel in unknown waters / undefined requirements. We come from startup and research-heavy projects. We know how to get ambitious visions off the ground.
-Update `services.offer.product.pain` and/or `services.offer.product.desc` in i18n.js + HTML fallback.
+## ~~C2 — Product development box: bridge to hero vision line~~ ✅ done
 
 ---
 

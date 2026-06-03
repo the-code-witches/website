@@ -40,9 +40,9 @@ const translations = {
       "You have something that works and your business depends on it — and you need a technical partner who's still reachable in two years, not a handoff.",
     "services.offer.product.title": "product development",
     "services.offer.product.pain":
-      "You have an idea or a vibecoded prototype that needs to become a real product you can ship and stand behind.",
+      "You have an ambitious vision, maybe a vibecoded start and you need someone to turn it into stable tech while iterating fast.",
     "services.offer.product.desc":
-      "We take it through the full cycle: architecture, implementation, testing, deployment. You get something you own completely — no lock-in, no black boxes.",
+      "We're at home in unknown waters and will go with you through the full cycle, all the way to stable software without lock-in or black boxes.",
     "services.offer.maintainer.title": "maintainer contract",
     "services.offer.maintainer.pain":
       "You have a massive legacy system that needs to be changed, modernized or maintained, but you have no one that understands what to do with it.",
@@ -191,9 +191,9 @@ const translations = {
       "Ihr habt etwas, das funktioniert und auf das euer Betrieb angewiesen ist — und ihr braucht einen technischen Partner, der auch in zwei Jahren noch erreichbar ist.",
     "services.offer.product.title": "produktentwicklung",
     "services.offer.product.pain":
-      "Ihr habt eine Idee oder einen gebastelten Prototypen, der ein echtes, stabiles Produkt werden soll, hinter dem ihr stehen könnt.",
+      "Ihr habt eine ambitionierte Vision, vielleicht einen vibegecodeten Start, und braucht jemanden, der daraus etwas Stabiles macht und schnell mit euch iteriert.",
     "services.offer.product.desc":
-      "Wir gehen mit euch durch den kompletten Zyklus: Architektur, Implementierung, Testing, Deployment. Ihr bekommt etwas, das ganz euch gehört: kein Lock-in, keine Black Boxes.",
+      "Wir sind zuhause in unbekanntem Territorium. Gemeinsam gehen wir durch den kompletten Zyklus bis zu stabiler Software, die ganz euch gehört. Kein Lock-in, keine Black Boxes.",
     "services.offer.maintainer.title": "maintainer contract",
     "services.offer.maintainer.pain":
       "Eure Organisation hängt an einem Legacy System, das repariert, modernisiert oder einfach gewartet werden muss ",
