@@ -67,28 +67,11 @@ const translations = {
     "services.devcycle.title": "1 dev cycle",
     "services.devcycle.desc":
       "a full cycle together: plan, implement, test, deploy, review — plus one feedback loop after your review. something real to build on, and a clear sense of how working together feels.",
-    "clients.title": "projects",
-    "clients.p1":
-      "What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.",
-    "clients.p2":
-      "A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. Whatever the scale, we come with the depth to do it right.",
-    "clients.skyseed1.title": "Custom ERP: Build & Maintainance",
-    "clients.skyseed1.desc":
-      'For our partner <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> we built an end-to-end platform that manages the full lifecycle of reforestation projects. One efficient system that consolidates complex processes from seed purchasing and production to tour planning and drone flight management.',
-    "clients.booking.title": "Booking System",
-    "clients.booking.desc":
-      'For the <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a>, we restructured and expanded their course booking platform, modernizing core functions and adding new features while ensuring a smooth transition within their established workflows.',
-    "clients.matching.title": "Matching Algorithm",
-    "clients.matching.desc":
-      'Together with <a href="https://www.skyseed.eco" class="client__link">Skyseed</a>, we developed an intelligent matching engine that automatically assigns the right seeds to each forest area in compliance with German regulations and ecological factors, fully embedded in their existing infrastructure.',
-    "clients.configurator.title": "Product Configurator",
-    "clients.configurator.desc":
-      'We created a product configurator for <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> that interactively guides users through their portfolio and generates tailored offers and qualified leads by integrating seamlessly with existing backend services and CRM system.',
     "projects.title": "current projects",
     "projects.p1":
       "What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.",
     "projects.p2":
-      "A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. Whatever the scale, we come with the depth to do it right.",
+      "A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. We've built entire products from scratch for startups and maintained complex systems in production. Whatever the scale, we come with the depth to do it right.",
     "projects.digitization.title": "Custom ERP",
     "projects.digitization.subtitle": "build & maintain",
     "projects.digitization.desc":
@@ -228,28 +211,11 @@ const translations = {
     "services.devcycle.title": "1 dev cycle",
     "services.devcycle.desc":
       "ein vollständiger gemeinsamer zyklus: plan, implement, test, deploy, review sowie ein feedback loop nach eurem review. etwas auf das ihr aufbauen könnt, und ein klares gefühl dafür, wie unsere zusammenarbeit läuft.",
-    "clients.title": "projekte",
-    "clients.p1":
-      "Was wir bauen, gehört denen, die damit arbeiten: dezentral, offen, für die lange Frist gestaltet. Kein Lock-in, keine Black Boxes, so wenig Plattformabhängigkeiten wie möglich.",
-    "clients.p2":
-      "Ein maßgeschneidertes internes Tool, das fünf Tabellenkalkulationen ersetzt. Ein Algorithmus, der einen mühsamen manuellen Prozess automatisiert. Eine Datenpipeline, die eure Analytik in einer Live-Ansicht zusammenführt. Eine Plattform, die euren gesamten operativen Workflow von A bis Z abwickelt. Was auch immer es ist, wir kommen mit der Tiefe, um es richtig zu machen.",
-    "clients.skyseed1.title": "Prozessdigitalisierung",
-    "clients.skyseed1.desc":
-      'Für unseren Partner <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> haben wir eine End-to-End-Plattform gebaut, die den vollständigen Lebenszyklus von Aufforstungsprojekten verwaltet. Ein effizientes System, das komplexe Prozesse von der Samenbeschaffung und -produktion bis zur Tourenplanung und Drohnenflugverwaltung konsolidiert.',
-    "clients.booking.title": "Buchungssystem",
-    "clients.booking.desc":
-      'Für die <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> haben wir deren Kursbuchungsplattform umstrukturiert und erweitert, Kernfunktionen modernisiert und neue Features hinzugefügt – bei einem reibungslosen Übergang innerhalb ihrer etablierten Workflows.',
-    "clients.matching.title": "Matching-Algorithmus",
-    "clients.matching.desc":
-      'Gemeinsam mit <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> haben wir eine intelligente Matching-Engine entwickelt, die automatisch die richtigen Samen jedem Waldgebiet zuordnet – in Übereinstimmung mit deutschen Vorschriften und ökologischen Faktoren, vollständig eingebettet in ihre bestehende Infrastruktur.',
-    "clients.configurator.title": "Produktkonfigurator",
-    "clients.configurator.desc":
-      'Wir haben für <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> einen Produktkonfigurator erstellt, der Nutzer:innen interaktiv durch ihr Portfolio führt und maßgeschneiderte Angebote und qualifizierte Leads generiert, indem er nahtlos mit bestehenden Backend-Diensten und CRM-System integriert.',
     "projects.title": "Aktuelle Projekte",
     "projects.p1":
-      "Was wir bauen, gehört denen, die damit arbeiten: dezentralisiert, offen, für die Langzeit gestaltet. Kein Lock-in, keine Black Boxes, so wenig Plattformabhängigkeiten wie möglich.",
+      "Was wir bauen, gehört denen, die damit arbeiten: dezentralisiert, offen, für Langlebigkeit gestaltet. Kein Lock-in, keine Black Boxes, so wenig Plattformabhängigkeiten wie möglich.",
     "projects.p2":
-      "Ein maßgeschneidertes internes Tool, das fünf Tabellenkalkulationen ersetzt. Ein Algorithmus, der einen mühsamen manuellen Prozess automatisiert. Eine Datenpipeline, die eure Analytik in einer Live-Ansicht zusammenführt. Eine Plattform, die euren gesamten operativen Workflow von A bis Z abwickelt. Egal die Größe – wir kommen mit der Tiefe, um es richtig zu machen.",
+      "Ein maßgeschneidertes internes Tool, das fünf Tabellenkalkulationen ersetzt. Ein Algorithmus, der einen mühsamen manuellen Prozess automatisiert. Eine Datenpipeline, die eure Analytik in einer Live-Ansicht zusammenführt. Eine Plattform, die euren gesamten operativen Workflow von A bis Z abwickelt. Wir haben ganze Produkte von Grund auf für Startups gebaut und komplexe Systeme in Produktion gewartet. Egal welcher Umfang, wir kommen mit der Tiefe, um es richtig zu machen.",
     "projects.digitization.title": "Custom ERP",
     "projects.digitization.subtitle": "entwickeln & warten",
     "projects.digitization.desc":
