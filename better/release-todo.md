@@ -38,6 +38,7 @@ Add at least one concrete metric per current project card or just get more preci
 - "replaced 4 separate tools with one system"
 - "what took 3 days of manual work now runs overnight"
 - "handles full operational workflow for a team of 25"
+- from hours to minutes gets specific - from 6h to 2m
 Specificity is the goal.
 
 ---
@@ -56,12 +57,14 @@ Current: `"find out if we vibe. share your situation, pick our brains, and get c
 Replace with:
 > "Bring your situation, your stuck point, your half-formed idea. You leave with clear thinking and concrete next steps — and a real sense of whether we're the right fit."
 
+reframe the right fit part. is not needed, is implied.
+
 ---
 
 ## C7 — Tone shift in services copy
 **Source:** P5
 Current: *"Nobody should feel judged for not knowing yet."* — comes across as reassurance-heavy / patronizing.
-Reframe toward: open, welcoming, curious energy. We're here to understand YOUR problem and break it down. Fun, enthusiasm. Non-baggy.
+Reframe toward: open, welcoming, curious energy. We're here to understand YOUR problem and break it down. Fun, enthusiasm. Non-braggy.
 Affects: `services.p3`, possibly `contact.p2`.
 Direction: *don't* tell people they won't be judged — just make the space feel obviously warm and curious.
 
