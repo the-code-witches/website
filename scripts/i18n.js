@@ -89,12 +89,14 @@ const translations = {
       "What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.",
     "projects.p2":
       "A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. Whatever the scale, we come with the depth to do it right.",
-    "projects.digitization.title": "Custom ERP: Development & Maintainance",
+    "projects.digitization.title": "Custom ERP",
+    "projects.digitization.subtitle": "build & maintain",
     "projects.digitization.desc":
-      "<a href=\"https://www.skyseed.eco\" class=\"client__link\">Skyseed</a> is growing constantly, in headcount, scope and scale. this means a process can't live in one person's head. We built a system that could hold that institutional knowledge and scale with them: seed purchasing, production, tour planning, drone logistics, all in one place. That was the beginning. They're still running it, we're still building on it, and they're still growing.",
-    "projects.booking.title": "Legacy Booking System: Redesign & Maintenance",
+      '<a href="https://www.skyseed.eco" class="client__link">Skyseed</a>\'s processes are too specialized and too niche for any boilerplate solution. We built their internal system from scratch: a single source of truth that replaced five Excel sheets per project, covering seed purchasing and inventory, a matching algorithm, production, tour planning, and drone logistics. Over the years the system grew to include a lead generator and more. Four years in and we\'re still their technical partners, jumping in fast when things are urgent, and keeping systems healthy as they continue to grow.',
+    "projects.booking.title": "Legacy Booking System",
+    "projects.booking.subtitle": "redesign & maintain",
     "projects.booking.desc":
-      'The <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> had an established booking platform — and a team of real people with years of workflows built around it. They needed new features and a redesign, but not at the cost of what already worked. We added what was missing and smoothed out the rough edges without pulling the rug out from under anyone.',
+      'The <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a>\'s booking platform had been running for well over ten years, handling around 100 courses, 150 teachers, and 7,000 students a year. After a change in leadership, they wanted a fresh look and feel, without disrupting a team whose workflows had grown around the existing system. We redesigned and extended what was there, and have stayed as their reliable, committed technical partner ever since: updates, small features, and jumping in fast when something breaks.',
     "projects.matching.title": "Matching Algorithm",
     "projects.matching.desc":
       'Assigning the right tree seeds to the right forest areas involves German legal requirements, ecological variables, and dozens of edge cases. <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> was handling it manually. We automated the whole thing with an algorithm embedded directly in their existing infrastructure — what used to require human effort now just runs in the background.',
@@ -144,8 +146,7 @@ const translations = {
     "range.tag.jobs.outcome":
       "job board with editorial backend and invoicing workflows",
     "range.tag.simplewebsite.label": "simple website",
-    "range.tag.simplewebsite.outcome":
-      "from a one pager to simple navigation",
+    "range.tag.simplewebsite.outcome": "from a one pager to simple navigation",
     "range.tag.matching.label": "matching algorithm",
     "range.tag.matching.outcome":
       "automated tree seed-to-forest matching — replacing manual allocation with an algorithm across legal, ecological, and operational constraints",
@@ -247,12 +248,14 @@ const translations = {
       "Was wir bauen, gehört denen, die damit arbeiten: dezentralisiert, offen, für die Langzeit gestaltet. Kein Lock-in, keine Black Boxes, so wenig Plattformabhängigkeiten wie möglich.",
     "projects.p2":
       "Ein maßgeschneidertes internes Tool, das fünf Tabellenkalkulationen ersetzt. Ein Algorithmus, der einen mühsamen manuellen Prozess automatisiert. Eine Datenpipeline, die eure Analytik in einer Live-Ansicht zusammenführt. Eine Plattform, die euren gesamten operativen Workflow von A bis Z abwickelt. Egal die Größe – wir kommen mit der Tiefe, um es richtig zu machen.",
-    "projects.digitization.title": "Prozessdigitalisierung",
+    "projects.digitization.title": "Custom ERP",
+    "projects.digitization.subtitle": "entwickeln & warten",
     "projects.digitization.desc":
-      '<a href="https://www.skyseed.eco" class="client__link">Skyseed</a> wächst konstant — in Mitarbeiterzahl, Scope und Maßstab. Das bedeutet: ein Prozess kann nicht mehr im Kopf einer einzigen Person leben. Wir haben ein System gebaut, das dieses institutionelle Wissen tragen und mit ihnen wachsen kann: Samenbeschaffung, Produktion, Tourenplanung, Drohnenlogistik — alles an einem Ort. Das war der Anfang. Sie nutzen es noch immer, wir bauen noch heute daran, und sie wachsen noch immer.',
-    "projects.booking.title": "Buchungssystem",
+      '<a href="https://www.skyseed.eco" class="client__link">Skyseed</a>\'s Prozesse sind zu spezialisiert und zu nischig für eine Standardlösung. Wir haben die Prozess Software von Grund auf gebaut: eine Single Source of Truth, die fünf Excel-Sheets pro Projekt ersetzt hat, die Saatgutbeschaffung und Inventar, automatisiertes Matching, Produktion, Tourenplanung und Drohnenlogistik vereint. Mit der Zeit wuchs das System um einen Lead Generator und mehr. 4 Jahre später begleiten wir sie noch immer technisch und prozessual, sind schnell zur Stelle wenn es brennt, und halten softwareseitig alles am Laufen.',
+    "projects.booking.title": "Legacy Booking System",
+    "projects.booking.subtitle": "redesign & warten",
     "projects.booking.desc":
-      'Die <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> hatte eine etablierte Buchungsplattform — und ein Team aus echten Menschen mit jahrelangen Workflows, die darauf aufgebaut waren. Sie brauchten neue Features und ein Redesign, aber nicht auf Kosten von dem, was bereits funktionierte. Wir haben ergänzt, was fehlte, und die Kanten geglättet, ohne jemandem den Boden unter den Füßen wegzuziehen.',
+      'Die Buchungsplattform der <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> läuft seit weit über zehn Jahren: ~100 Kurse, 150 Lehrkräfte, 7.000 Studierende pro Jahr. Nach einem Leitungswechsel wollten sie einen neuen Look and Feel, ohne die etablierten Workflows zu stören. Wir haben redesigned und erweitert. Seitdem sind wir ihr verlässlicher technischer Partner, machen Updates und implementieren kleine Features, und vor allem: springen schnell ein wenn etwas nicht funktioniert.',
     "projects.matching.title": "Matching-Algorithmus",
     "projects.matching.desc":
       'Die richtigen Baum-Samen den richtigen Waldgebieten zuzuordnen erfordert deutsche Rechtsvorschriften, ökologische Variablen und Dutzende von Sonderfällen. <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> hat das bisher manuell gehandhabt. Wir haben den gesamten Prozess automatisiert — mit einem Algorithmus, der direkt in ihre bestehende Infrastruktur eingebettet ist. Was früher menschliche Arbeit erforderte, läuft jetzt einfach im Hintergrund.',
@@ -302,8 +305,7 @@ const translations = {
     "range.tag.jobs.outcome":
       "stellenbörse mit redaktionellem backend und abrechnungsworkflows",
     "range.tag.simplewebsite.label": "einfache website",
-    "range.tag.simplewebsite.outcome":
-      "vom one-pager zur einfachen navigation",
+    "range.tag.simplewebsite.outcome": "vom one-pager zur einfachen navigation",
     "range.tag.matching.label": "matching-algorithmus",
     "range.tag.matching.outcome":
       "automatisierte baumsamen-zuordnung — manuelle verteilung durch einen algorithmus ersetzt, der rechtliche, ökologische und operative anforderungen abbildet",

@@ -17,12 +17,12 @@ Synthesized from call notes (P1–P9) + existing buyer feedback.
 
 ---
 
-## C3 — Projects section restructure
-**Source:** P1 + "other" note
-- Rename section to **"references"** (nav + section title + i18n keys)
-- change subsection header to **"current projects"** for the 2 active cards
-- **Current projects:** Skyseed ERP (Process Digitization) + FKA Booking System
-- Both cards updated to reflect the **ongoing maintainer contract** as well — frame as active, long-running partnerships, not one-off projects
+## ~~C3 — Projects section restructure~~ ✅ done
+~~**Source:** P1 + "other" note~~
+~~- Rename section to **"references"** (nav + section title + i18n keys)~~
+~~- change subsection header to **"current projects"** for the 2 active cards~~
+~~- **Current projects:** Skyseed ERP (Process Digitization) + FKA Booking System~~
+~~- Both cards updated to reflect the **ongoing maintainer contract** as well — frame as active, long-running partnerships, not one-off projects~~
 - Remaining 2 Skyseed cards (Matching Algorithm, Product Configurator) → add to Range?
 
 ---

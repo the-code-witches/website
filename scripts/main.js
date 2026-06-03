@@ -46,8 +46,8 @@ const updateActiveSection = () => {
   }
 
   // Hero has no nav link — nothing highlighted when hero is active.
-  // Sections that share a nav link (e.g. range is part of "references" → #clients)
-  const sectionAliases = { range: "clients" }
+  // Sections that share a nav link (range is part of "references")
+  const sectionAliases = { range: "references" }
   const effectiveId = sectionAliases[activeSectionId] || activeSectionId
   links.forEach((link) => {
     link.classList.toggle("active", link.getAttribute("href") === "#" + effectiveId)
