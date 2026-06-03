@@ -8,7 +8,7 @@ const translations = {
     "hero.tagline": "Software engineering & technical partnership",
     "hero.poem1": "A pioneering vision with no clear path yet",
     "hero.poem2": "Processes that are 80% workarounds",
-    "hero.poem3": "a legacy system nobody wants to touch",
+    "hero.poem3": "A legacy system that everyone wants to rewrite with AI.",
     "hero.poem4": "We hold the complexity, so you can lead",
     "hero.audience":
       "we partner with smes, technical teams, and founders — building software that serves people, not the other way around",
