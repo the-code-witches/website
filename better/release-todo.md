@@ -65,7 +65,7 @@ Synthesized from call notes (P1–P9) + existing buyer feedback.
 
 ---
 
-## C8 — Bio updates: personality and energy
+## ~~C8 — Bio updates: personality and energy~~ ✅ done
 **Source:** P6
 Specific for Denise: Ruhe, Humor, Klarheit. Spaß UND Tiefe.
 Specific for Sehera: her curiosity. can-do. when she hears of a problem she immediately jumps to how to solve it. she brings energy when things feel stuck and everyone wants to give up.
