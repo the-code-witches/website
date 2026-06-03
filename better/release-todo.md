@@ -46,13 +46,13 @@ Specificity is the goal.
 
 ---
 
-## C6 — Rewrite sparring description
-**Source:** P4
-Current: `"find out if we vibe. share your situation, pick our brains, and get clear recommendations for next steps."`
-Replace with:
-> "Bring your situation, your stuck point, your half-formed idea. You leave with clear thinking and concrete next steps — and a real sense of whether we're the right fit."
+## ~~C6 — Rewrite sparring description~~ ✅ done
+~~**Source:** P4~~
+~~Current: `"find out if we vibe. share your situation, pick our brains, and get clear recommendations for next steps."`~~
+~~Replace with:~~
+~~> "Bring your situation, your stuck point, your half-formed idea. You leave with clear thinking and concrete next steps — and a real sense of whether we're the right fit."~~
 
-reframe the right fit part. is not needed, is implied.
+~~reframe the right fit part. is not needed, is implied.~~
 
 ---
 

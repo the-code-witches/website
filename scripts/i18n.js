@@ -60,7 +60,7 @@ const translations = {
     "services.p4": "<b>Together we'll get you moving forward!</b>",
     "services.sparring.title": "1h sparring",
     "services.sparring.desc":
-      "find out if we vibe. share your situation, pick our brains, and get clear recommendations for next steps.",
+      "Bring your situation, your stuck point, your half-formed idea. You leave with clear thinking and concrete next steps.",
     "services.deepdive.title": "deep dive",
     "services.deepdive.desc":
       "tailored workshop for your most pressing pain point. we develop solutions together — architecture, roadmap, technical direction. you walk away with an actionable plan.",
@@ -211,7 +211,7 @@ const translations = {
     "services.p4": "<b>Gemeinsam bringen wir euch voran!</b>",
     "services.sparring.title": "1h sparring",
     "services.sparring.desc":
-      "herausfinden, ob wir zusammenpassen. ihr teilt euren stand, wir geben klare empfehlungen für die nächsten schritte.",
+      "Bringt eure Situation, eure Herausforderung, eure halbfertige Idee. Ihr geht raus mit klarem Kopf und konkreten nächsten Schritten.",
     "services.deepdive.title": "deep dive",
     "services.deepdive.desc":
       "maßgeschneiderter workshop für euren drängendsten pain point. wir entwickeln gemeinsam lösungen — architektur, roadmap, technische ausrichtung. ihr geht mit einem konkreten plan raus.",
