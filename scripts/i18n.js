@@ -14,7 +14,7 @@ const translations = {
       "we partner with smes, technical teams, and founders — building software that serves people, not the other way around",
     "about.title": "about",
     "about.p1":
-      "We partner up with changemakers and teams who want to support their work with the right digital tools or want to build their own tech product. Our passion lies in understanding complex systems, writing clean code, and creating clear communication that builds bridges.",
+      "rebels by heart, coders by craft. We partner up with changemakers and teams who want to support their work with the right digital tools or want to build their own tech product. Our passion lies in understanding complex systems, writing clean code, and creating clear communication that builds bridges.",
     "about.p2":
       "We are two experienced developers with 20+ years of combined practice in building software and data products across industries, stacks, and scales.",
     "about.p3":
@@ -158,7 +158,7 @@ const translations = {
       "Wir arbeiten mit KMUs, technischen Teams und Gründer*innen und bauen technische Produkte und digitale Prozesse, die euch wirklich dienen",
     "about.title": "über uns",
     "about.p1":
-      "Wir arbeiten mit Entscheidungsträger*innen und Teams, die ihre Arbeit mit den richtigen digitalen Werkzeugen unterstützen oder ihr eigenes Tech-Produkt entwickeln möchten. Unsere Leidenschaft liegt darin, komplexe Systeme zu verstehen, sauberen Code zu schreiben und klare Kommunikation zu schaffen, die Brücken baut.",
+      "rebels by heart, coders by craft. Wir arbeiten mit Entscheidungsträger*innen und Teams, die ihre Arbeit mit den richtigen digitalen Werkzeugen unterstützen oder ihr eigenes Tech-Produkt entwickeln möchten. Unsere Leidenschaft liegt darin, komplexe Systeme zu verstehen, sauberen Code zu schreiben und klare Kommunikation zu schaffen, die Brücken baut.",
     "about.p2":
       "Wir sind zwei erfahrene Entwicklerinnen mit über 20 Jahren gemeinsamer Praxis im Aufbau von Software- und Datenprodukten, branchen- und technologieübergreifend.",
     "about.p3":
