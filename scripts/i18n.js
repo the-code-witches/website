@@ -147,6 +147,7 @@ const translations = {
     "contact.text": "Let's discuss where you're at and where you want to go.",
     "contact.p2":
       "Nobody should feel judged for not knowing yet. Everything can be asked here.",
+    "contact.budget": "Not sure if your budget fits? Ask anyway.",
     "footer.rights": "All rights reserved",
   },
   de: {
@@ -297,6 +298,7 @@ const translations = {
     "contact.p1": "Lass uns besprechen, wo ihr steht und wo ihr hinwollt.",
     "contact.p2":
       "Jede*r verdient einen sicheren Raum in dem es keine blöden Fragen gibt. Bei uns findest du ihn.",
+    "contact.budget": "Nicht sicher, ob euer Budget passt? Fragt trotzdem.",
     "footer.rights": "Alle Rechte vorbehalten",
   },
 };
