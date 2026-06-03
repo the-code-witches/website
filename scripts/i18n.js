@@ -188,7 +188,7 @@ const translations = {
     "services.p1":
       "Wir bieten Software Entwicklung und technische Beratung aus einer Hand.",
     "services.p2":
-      "KI ist ein großer Teil dessen, was und wie wir entwickeln. Wir kennen die Tools gut genug, um euch auch zu sagen, wann sie nicht die Antwort sind.",
+      "KI gehört in jede Werkzeugkiste. Wir wissen wann KI in die Lösung gehört und auch wann nicht.",
     "services.p3":
       "Wir tragen die Komplexität, damit ihr handlungsfähig bleibt. Jede Frage bringt uns weiter. Je unklarer das Problem, desto mehr zieht es uns an. Und wir bringen ansteckende Energie mit, versprochen.",
     "services.li1":
@@ -208,7 +208,7 @@ const translations = {
     "services.offer.maintainer.pain":
       "Eure Organisation hängt an einem Legacy System, das repariert, modernisiert oder einfach gewartet werden muss ",
     "services.offer.maintainer.desc":
-      "Wir sind für erreichbar und handeln schnell, wenn etwas nicht funktioniert. Wir sind eure verlässlichen technischen Partnerinnen, die euch und eure Systeme kennen.",
+      "Wir sind für euch erreichbar und handeln schnell, wenn etwas nicht funktioniert. Wir sind eure verlässlichen technischen Partnerinnen, die euch und eure Systeme kennen.",
     "services.offer.process.title": "prozessdigitalisierung",
     "services.offer.process.pain":
       "Eure Abläufe hängen an Spreadsheets, manuellen Übergaben und Tools, die irgendwie nicht ineinander greifen.",
