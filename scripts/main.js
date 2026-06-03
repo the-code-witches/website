@@ -144,19 +144,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // Three clusters left→right: algorithmic | data | web.
   // Order matches HTML order.
   const seeds = [
-    [0.04, 0.20],  // 3D rendering (featured)     — algorithmic, upper-left
-    [0.15, 0.62],  // drone algorithm (featured)   — algorithmic, below-right of 3D
-    [0.04, 0.88],  // embedded systems (med)      — algorithmic, far lower-left, separate
-    [0.28, 0.12],  // survey algorithm (featured)  — algo→data bridge, same vertical center as 3D
-    [0.56, 0.50],  // data pipelines (featured)   — data, top ~= bottom of survey box
-    [0.38, 0.55],  // map & geospatial (med)      — data, lower-left (closer to algo side)
-    [0.47, 0.78],  // network analysis (small)    — data, lower-right
-    [0.57, 0.20],  // BI & analytics (med)        — data, upper-right
-    [0.78, 0.25],  // ecommerce (small)           — web cluster
-    [0.97, 0.25],  // offline apps (small)        — right of ecommerce, same row
-    [0.87, 0.42],  // web platforms (small)       — web cluster
-    [0.93, 0.08],  // booking platforms (med)     — upper-right corner
-    [0.79, 0.78],  // enterprise erp (featured)   — right, lower edge aligned with embedded systems
+    [0.04, 0.32],  // 3D rendering (featured)     — algorithmic, upper-left
+    [0.15, 0.74],  // drone algorithm (featured)   — algorithmic, below-right of 3D
+    [0.04, 0.99],  // embedded systems (med)      — algorithmic, far lower-left, separate
+    [0.28, 0.24],  // survey algorithm (featured)  — algo→data bridge, same vertical center as 3D
+    [0.55, 0.74],  // data pipelines (featured)   — data, top ~= bottom of survey box
+    [0.35, 0.86],  // map & geospatial (med)      — data, lower-left (closer to algo side)
+    [0.44, 0.99],  // network analysis (small)    — data, lower-right
+    [0.54, 0.46],  // BI & analytics (med)        — data, upper-right
+    [0.78, 0.37],  // ecommerce (small)           — web cluster
+    [0.97, 0.37],  // offline apps (small)        — right of ecommerce, same row
+    [0.87, 0.54],  // web platforms (small)       — web cluster
+    [0.93, 0.20],  // booking platforms (med)     — upper-right corner
+    [0.79, 0.90],  // enterprise erp (featured)   — right, lower edge aligned with embedded systems
+    [0.99, 0.65],  // simple website (small)      — web cluster, right of web platforms, lower
+    [0.48, 0.01],  // matching algorithm (small)  — above BI & data analytics
+    [0.70, 0.10],  // product configurator (small) — web cluster, above ecommerce
   ]
 
   function layoutCloud() {
@@ -251,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 0=3D rendering, 1=drone, 2=embedded, 3=survey
     // 4=data pipelines, 5=geo, 6=network analysis, 7=BI
     // 8=ecommerce, 9=offline apps, 10=web platforms, 11=booking
-    // 12=enterprise erp
+    // 12=enterprise erp, 13=simple website, 14=matching algo, 15=product configurator
     const edges = [
       // algorithmic cluster (fully connected)
       [0, 1], [0, 3], [1, 3],
@@ -261,6 +264,12 @@ document.addEventListener("DOMContentLoaded", () => {
       [4, 5], [4, 6], [4, 7], [5, 6], [5, 7], [6, 7],
       // web cluster (fully connected)
       [8, 9], [8, 10], [8, 11], [9, 10], [9, 11], [10, 11],
+      // simple website → web platforms
+      [10, 13],
+      // matching algo connections
+      [1, 14], [3, 14], [12, 14],
+      // product configurator connections
+      [8, 15], [11, 15], [13, 15], [12, 15],
       // survey → data bridges
       [3, 4], [3, 7],
       // erp cross-connections

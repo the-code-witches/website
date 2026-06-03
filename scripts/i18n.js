@@ -143,6 +143,15 @@ const translations = {
     "range.tag.jobs.label": "web platforms",
     "range.tag.jobs.outcome":
       "job board with editorial backend and invoicing workflows",
+    "range.tag.simplewebsite.label": "simple website",
+    "range.tag.simplewebsite.outcome":
+      "from a one pager to simple navigation",
+    "range.tag.matching.label": "matching algorithm",
+    "range.tag.matching.outcome":
+      "automated tree seed-to-forest matching — replacing manual allocation with an algorithm across legal, ecological, and operational constraints",
+    "range.tag.configurator.label": "product configurator",
+    "range.tag.configurator.outcome":
+      "interactive configurator that qualifies leads and routes them into CRM — inbound leads increased tenfold",
     "contact.title": "contact",
     "contact.p1": "Bring whatever you've got. We'll take it from there.",
     "contact.budget": "Not sure if your budget fits? Ask anyway.",
@@ -292,6 +301,15 @@ const translations = {
     "range.tag.jobs.label": "web-plattformen",
     "range.tag.jobs.outcome":
       "stellenbörse mit redaktionellem backend und abrechnungsworkflows",
+    "range.tag.simplewebsite.label": "einfache website",
+    "range.tag.simplewebsite.outcome":
+      "vom one-pager zur einfachen navigation",
+    "range.tag.matching.label": "matching-algorithmus",
+    "range.tag.matching.outcome":
+      "automatisierte baumsamen-zuordnung — manuelle verteilung durch einen algorithmus ersetzt, der rechtliche, ökologische und operative anforderungen abbildet",
+    "range.tag.configurator.label": "produkt-konfigurator",
+    "range.tag.configurator.outcome":
+      "interaktiver konfigurator qualifiziert leads und übergibt sie direkt ans crm — inbound-leads verzehnfacht",
     "contact.title": "kontakt",
     "contact.p1": "Kommt, wie ihr seid. Wir finden gemeinsam den nächsten Schritt.",
     "contact.budget": "Nicht sicher, ob euer Budget passt? Fragt trotzdem.",
