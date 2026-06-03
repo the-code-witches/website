@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="#fff7e5"/>
+
+  <!-- decorative wedge top-right -->
+  <polygon points="1200,0 1200,380 780,0" fill="#5a4fcf" opacity="0.12"/>
+
+  <!-- decorative wedge bottom-left -->
+  <polygon points="0,630 0,250 420,630" fill="#5a4fcf" opacity="0.07"/>
+
+  <!-- logo mark (from logo.svg, scaled 1.4×, centred at x=600) -->
+  <g transform="translate(530, 108) scale(1.4)">
+    <path d="M 50,10 70,50 H 30 Z" fill="#5a4fcf"/>
+    <rect x="20" y="60" width="60" height="8" rx="1" fill="#5a4fcf"/>
+    <text x="50" y="92.5"
+          dominant-baseline="middle"
+          text-anchor="middle"
+          font-size="28"
+          font-family="monospace"
+          fill="#211d2b">{ }</text>
+  </g>
+
+  <!-- wordmark -->
+  <text x="600" y="310"
+        text-anchor="middle"
+        font-family="'Lexend', sans-serif"
+        font-weight="200"
+        font-size="78"
+        letter-spacing="-1"
+        fill="#211d2b">the code witches</text>
+
+  <!-- tagline -->
+  <text x="600" y="362"
+        text-anchor="middle"
+        font-family="'Lexend', sans-serif"
+        font-weight="400"
+        font-size="27"
+        fill="#6b6480">software engineering &amp; technical partnership</text>
+
+  <!-- audience line in mono -->
+  <text x="600" y="410"
+        text-anchor="middle"
+        font-family="'JetBrains Mono', monospace"
+        font-size="17"
+        fill="#9e9aac">// smes · technical teams · founders</text>
+
+  <!-- domain -->
+  <text x="600" y="575"
+        text-anchor="middle"
+        font-family="'JetBrains Mono', monospace"
+        font-size="17"
+        fill="#5a4fcf">thecodewitches.de</text>
+
+</svg>
