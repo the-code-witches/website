@@ -70,7 +70,7 @@
   border: none;
   border-top: 1px solid rgba(21, 16, 19, 0.15);
   width: 100%;
-  margin: 0;
+  margin: 1.25rem 0;
 }
 
 .hero__tagline {
@@ -92,7 +92,7 @@
   text-align: left;
   width: fit-content;
   margin: 0 auto;
-  transform: translateX(1.5rem);
+
 }
 
 .hero__poem p {
@@ -131,6 +131,27 @@
   line-height: 1.75;
   margin: 0;
   white-space: nowrap;
+}
+
+.hero__audience-break {
+  display: none;
+}
+
+@media (max-width: 1450px) {
+  .hero__audience {
+    white-space: normal;
+    max-width: 80%;
+  }
+
+  .hero__audience-break {
+    display: inline;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero__audience {
+    max-width: none;
+  }
 }
 
 /* Desktop: preserve 1:2 angle, bottom vertex at lower corners */
