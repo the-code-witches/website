@@ -160,9 +160,15 @@
     font-size: var(--font-size-s);
   }
 
+  .hero__poem__lines {
+    transform: none;
+  }
+
   .hero__poem p {
     font-size: var(--font-size-xs);
     white-space: normal;
+    padding-left: 3ch;
+    text-indent: -3ch;
   }
 
   .hero__punchline {
