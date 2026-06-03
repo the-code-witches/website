@@ -8,7 +8,7 @@ const translations = {
     "hero.tagline": "Software engineering & technical partnership",
     "hero.poem1": "A pioneering vision with no clear path yet",
     "hero.poem2": "Processes that are 80% workarounds",
-    "hero.poem3": "A legacy system that everyone wants to rewrite with AI.",
+    "hero.poem3": "A legacy system everyone wants to rewrite with AI",
     "hero.poem4": "We hold the complexity, so you can lead",
     "hero.audience":
       "we partner with smes, technical teams, and founders — building software that serves people, not the other way around",
@@ -154,7 +154,9 @@ const translations = {
     "range.tag.configurator.outcome":
       "interactive configurator that qualifies leads and routes them into CRM — inbound leads increased tenfold",
     "contact.title": "contact",
-    "contact.p1": "Bring whatever you've got. We'll take it from there.",
+    "contact.p1":
+      "Here's your judgement-free space to bring whatever you've got.",
+    "contact.p2": "We'll take it from there.",
     "contact.budget": "Not sure if your budget fits? Ask anyway.",
     "footer.rights": "All rights reserved",
   },
@@ -179,9 +181,9 @@ const translations = {
     "about.p3":
       "<b>Wir arbeiten als Tandem:</b> ein eingespieltes Powerhouse Team aus zwei, das euch die Verlässlichkeit einer Agentur mit der Flexibilität und direkten Kommunikation eines Freelancers bietet. Wenn eine von uns nicht verfügbar ist, kennt die andere euer System und kann den Ball weitertragen.",
     "about.sehera":
-      "Wenn Sehera sich einem Problem annimmt, verändert sich die Stimmung im Raum. Festgefahrene Systeme können in Momenten umgeworfen werden und plötzlich fühlt sich alles möglich an. Sehera programmiert seit jeher, zu Beginn ihrer Karriere baute sie spektrale 3D-Renderer in C++ die in großen Filmproduktionen zum Einsatz kamen, später Web Systeme in jeder erdenklichen Sprache. Sie ist Agilität in Person und durchbricht immer wieder Perfektionismus mit schnellen Zyklen. Mit ihrer Wärme und ihrer Lösungsorientiertheit hält sie Projekte am Laufen und Teams motiviert.",
+      "Wenn Sehera sich einem Problem annimmt, verändert sich die Stimmung im Raum. Festgefahrenes löst sich, und plötzlich fühlt sich alles möglich an. Sehera programmiert seit jeher, zu Beginn ihrer Karriere baute sie spektrale 3D-Renderer in C++ die in großen Filmproduktionen zum Einsatz kamen, später Web Systeme in jeder erdenklichen Sprache. Sie ist Agilität in Person und durchbricht immer wieder Perfektionismus mit schnellen Zyklen. Mit ihrer Wärme und ihrer Lösungsorientiertheit hält sie Projekte am Laufen und Teams motiviert.",
     "about.denise":
-      "Man fühlt sich geerdet, wenn man mit Denise arbeitet. Sie hetzt nicht und gerät auch nicht in Panik, sie geht in die Tiefe, aber ihr Humor sorgt dafür, dass es sich nie schwer anfühlt. Denise, ursprünglich Statistikerin, kam über die intensive Arbeit mit Daten zum Machine Learning und über die Jahre zur Full-Stack Entwicklung. Sie hat Live Wahlprognose-Systeme und Echtzeit Dateninfrastruktur gebaut. Sie bringt glasklares Denken und Struktur in komplexe Probleme.",
+      "Man fühlt sich geerdet, wenn man mit Denise arbeitet. Sie hetzt nicht und gerät nicht in Panik. Sie geht in die Tiefe, aber ihr Humor sorgt dafür, dass es sich trotzdem leicht anfühlt. Denise ist ursprünglich Statistikerin und kam über die intensive Arbeit mit Daten zum Machine Learning und schließlich zur Full-Stack Entwicklung. Sie hat Live Wahlprognose-Systeme und Echtzeit Dateninfrastruktur und Web Tools gebaut. Sie bringt glasklares Denken und Struktur in komplexe Sachverhalte.",
     "services.title": "leistungen",
     "services.p1":
       "Wir bieten Software Entwicklung und technische Beratung aus einer Hand.",
@@ -313,8 +315,8 @@ const translations = {
     "range.tag.configurator.outcome":
       "interaktiver konfigurator qualifiziert leads und übergibt sie direkt ans crm — inbound-leads verzehnfacht",
     "contact.title": "kontakt",
-    "contact.p1":
-      "Kommt, wie ihr seid. Wir finden gemeinsam den nächsten Schritt.",
+    "contact.p1": "Kommt, wie ihr seid. Bei uns gibt es keine falschen Fragen.",
+    "contact.p2": "Wir finden gemeinsam den nächsten Schritt.",
     "contact.budget": "Nicht sicher, ob euer Budget passt? Fragt trotzdem.",
     "footer.rights": "Alle Rechte vorbehalten",
   },

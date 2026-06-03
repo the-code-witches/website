@@ -9,10 +9,29 @@
   background: var(--brand);
 }
 
+.section__contact .contact__main {
+  width: 100%;
+}
+
 .section__contact .content {
-  max-width: 70%;
+  width: 85%;
+  max-width: 85%;
   margin: 0 auto;
   color: var(--text-inv);
+}
+
+.section__contact .content p.contact__p1 {
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .section__contact .content {
+    width: 95%;
+    max-width: 95%;
+  }
+  .section__contact .content p.contact__p1 {
+    white-space: normal;
+  }
 }
 
 .section__contact .content p {
