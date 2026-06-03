@@ -117,6 +117,7 @@
   font-weight: var(--font-weight-normal) !important;
   opacity: 1 !important;
   white-space: normal !important;
+  text-align: center;
 }
 
 .hero__punchline::before {
@@ -173,6 +174,8 @@
 
   .hero__punchline {
     font-size: var(--font-size-s) !important;
+    padding-left: 0 !important;
+    text-indent: 0 !important;
   }
 
   .hero__audience {
