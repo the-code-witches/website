@@ -29,7 +29,7 @@ const translations = {
     "services.p2":
       "AI is a large part of what we build. We know it well enough to also tell you when it's not the answer.",
     "services.p3":
-      "We hold the complexity so you can stay in a position to act. Nobody should feel judged for not knowing yet. With us, every question is welcome, and we bring the expertise to actually answer it.",
+      "We hold the complexity so you can stay in a position to act. Every question moves things forward. The messier the problem, the more we want to dig in. We bring contagious enthusiasm, promised.",
     "services.li1":
       "You have an idea, maybe even vibecoded a bit, but now you want it to grow into something real, something you can feel accountable for.",
     "services.li2":
@@ -180,7 +180,7 @@ const translations = {
     "services.p2":
       "KI ist ein großer Teil dessen, was und wie wir entwickeln. Wir kennen die Tools gut genug, um euch auch zu sagen, wann sie nicht die Antwort sind.",
     "services.p3":
-      "Wir tragen die Komplexität, damit ihr handlungsfähig bleibt. Niemand sollte sich dafür schämen, etwas noch nicht zu wissen. Bei uns ist jede Frage willkommen, und wir bringen das Fachwissen, um sie zu beantworten.",
+      "Wir tragen die Komplexität, damit ihr handlungsfähig bleibt. Jede Frage bringt uns weiter. Je unklarer das Problem, desto mehr zieht es uns an. Und wir bringen ansteckende Energie mit, versprochen.",
     "services.li1":
       "Ihr habt eine Idee, habt vielleicht schon ein bisschen vibegecoded, die zu einem echten, stabilen Produkt werden soll",
     "services.li2":

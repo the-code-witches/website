@@ -56,12 +56,12 @@ Synthesized from call notes (P1–P9) + existing buyer feedback.
 
 ---
 
-## C7 — Tone shift in services copy
-**Source:** P5
-Current: *"Nobody should feel judged for not knowing yet."* — comes across as reassurance-heavy / patronizing.
-Reframe toward: open, welcoming, curious energy. We're here to understand YOUR problem and break it down. Fun, enthusiasm. Non-braggy.
-Affects: `services.p3`, possibly `contact.p2`.
-Direction: *don't* tell people they won't be judged — just make the space feel obviously warm and curious.
+## ~~C7 — Tone shift in services copy~~ ✅ done
+~~**Source:** P5~~
+~~Current: *"Nobody should feel judged for not knowing yet."* — comes across as reassurance-heavy / patronizing.~~
+~~Reframe toward: open, welcoming, curious energy. We're here to understand YOUR problem and break it down. Fun, enthusiasm. Non-braggy.~~
+~~Affects: `services.p3`, possibly `contact.p2`.~~
+~~Direction: *don't* tell people they won't be judged — just make the space feel obviously warm and curious.~~
 
 ---
 
