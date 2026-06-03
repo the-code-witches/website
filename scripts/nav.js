@@ -12,7 +12,7 @@
           <img src="assets/logo.svg" alt="Home" />
         </a>
         <a class="nav__link" href="${base}#services" data-i18n="nav.services">services</a>
-        <a class="nav__link" href="${base}#clients" data-i18n="nav.projects">projects</a>
+        <a class="nav__link" href="${base}#clients" data-i18n="nav.projects">references</a>
         <a class="nav__link" href="${base}#about" data-i18n="nav.about">about</a>
         <a class="nav__link" href="${base}#contact" data-i18n="nav.contact">contact</a>
       </div>

@@ -2,7 +2,7 @@ const translations = {
   en: {
     "nav.about": "about",
     "nav.services": "services",
-    "nav.projects": "projects",
+    "nav.projects": "references",
     "nav.contact": "contact",
     "nav.cta": "book free session",
     "hero.tagline": "Software engineering & technical partnership",
@@ -72,7 +72,7 @@ const translations = {
       "What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.",
     "clients.p2":
       "A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. Whatever the scale, we come with the depth to do it right.",
-    "clients.skyseed1.title": "Process Digitization",
+    "clients.skyseed1.title": "Custom ERP: Build & Maintainance",
     "clients.skyseed1.desc":
       'For our partner <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> we built an end-to-end platform that manages the full lifecycle of reforestation projects. One efficient system that consolidates complex processes from seed purchasing and production to tour planning and drone flight management.',
     "clients.booking.title": "Booking System",
@@ -84,15 +84,15 @@ const translations = {
     "clients.configurator.title": "Product Configurator",
     "clients.configurator.desc":
       'We created a product configurator for <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> that interactively guides users through their portfolio and generates tailored offers and qualified leads by integrating seamlessly with existing backend services and CRM system.',
-    "projects.title": "projects",
+    "projects.title": "current projects",
     "projects.p1":
       "What we build belongs to those who work with it: decentralized, open, designed for the long term. No lock-in, no black boxes, as little platform dependencies as possible.",
     "projects.p2":
       "A custom internal tool that replaces five spreadsheets. An algorithm that automates a painful manual process. A data pipeline that brings your analytics into one live view. A platform that handles your full operational workflow end to end. Whatever the scale, we come with the depth to do it right.",
-    "projects.digitization.title": "Process Digitization",
+    "projects.digitization.title": "Custom ERP: Development & Maintainance",
     "projects.digitization.desc":
       "<a href=\"https://www.skyseed.eco\" class=\"client__link\">Skyseed</a> is growing constantly, in headcount, scope and scale. this means a process can't live in one person's head. We built a system that could hold that institutional knowledge and scale with them: seed purchasing, production, tour planning, drone logistics, all in one place. That was the beginning. They're still running it, we're still building on it, and they're still growing.",
-    "projects.booking.title": "Booking System",
+    "projects.booking.title": "Legacy Booking System: Redesign & Maintenance",
     "projects.booking.desc":
       'The <a href="https://freie-kunst-akademie-augsburg.de/" class="client__link">Freie Kunst Akademie Augsburg</a> had an established booking platform — and a team of real people with years of workflows built around it. They needed new features and a redesign, but not at the cost of what already worked. We added what was missing and smoothed out the rough edges without pulling the rug out from under anyone.',
     "projects.matching.title": "Matching Algorithm",
@@ -160,7 +160,7 @@ const translations = {
   de: {
     "nav.about": "über uns",
     "nav.services": "leistungen",
-    "nav.projects": "projekte",
+    "nav.projects": "referenzen",
     "nav.contact": "kontakt",
     "nav.cta": "kostenloses gespräch",
     "hero.tagline": "Software Entwicklung & technische Begleitung",
@@ -242,7 +242,7 @@ const translations = {
     "clients.configurator.title": "Produktkonfigurator",
     "clients.configurator.desc":
       'Wir haben für <a href="https://www.skyseed.eco" class="client__link">Skyseed</a> einen Produktkonfigurator erstellt, der Nutzer:innen interaktiv durch ihr Portfolio führt und maßgeschneiderte Angebote und qualifizierte Leads generiert, indem er nahtlos mit bestehenden Backend-Diensten und CRM-System integriert.',
-    "projects.title": "projekte",
+    "projects.title": "Aktuelle Projekte",
     "projects.p1":
       "Was wir bauen, gehört denen, die damit arbeiten: dezentralisiert, offen, für die Langzeit gestaltet. Kein Lock-in, keine Black Boxes, so wenig Plattformabhängigkeiten wie möglich.",
     "projects.p2":
@@ -311,7 +311,8 @@ const translations = {
     "range.tag.configurator.outcome":
       "interaktiver konfigurator qualifiziert leads und übergibt sie direkt ans crm — inbound-leads verzehnfacht",
     "contact.title": "kontakt",
-    "contact.p1": "Kommt, wie ihr seid. Wir finden gemeinsam den nächsten Schritt.",
+    "contact.p1":
+      "Kommt, wie ihr seid. Wir finden gemeinsam den nächsten Schritt.",
     "contact.budget": "Nicht sicher, ob euer Budget passt? Fragt trotzdem.",
     "footer.rights": "Alle Rechte vorbehalten",
   },
