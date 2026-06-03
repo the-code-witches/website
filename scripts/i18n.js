@@ -144,9 +144,7 @@ const translations = {
     "range.tag.jobs.outcome":
       "job board with editorial backend and invoicing workflows",
     "contact.title": "contact",
-    "contact.text": "Let's discuss where you're at and where you want to go.",
-    "contact.p2":
-      "Nobody should feel judged for not knowing yet. Everything can be asked here.",
+    "contact.p1": "Bring whatever you've got. We'll take it from there.",
     "contact.budget": "Not sure if your budget fits? Ask anyway.",
     "footer.rights": "All rights reserved",
   },
@@ -295,9 +293,7 @@ const translations = {
     "range.tag.jobs.outcome":
       "stellenbörse mit redaktionellem backend und abrechnungsworkflows",
     "contact.title": "kontakt",
-    "contact.p1": "Lass uns besprechen, wo ihr steht und wo ihr hinwollt.",
-    "contact.p2":
-      "Jede*r verdient einen sicheren Raum in dem es keine blöden Fragen gibt. Bei uns findest du ihn.",
+    "contact.p1": "Kommt, wie ihr seid. Wir finden gemeinsam den nächsten Schritt.",
     "contact.budget": "Nicht sicher, ob euer Budget passt? Fragt trotzdem.",
     "footer.rights": "Alle Rechte vorbehalten",
   },
