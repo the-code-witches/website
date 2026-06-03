@@ -82,11 +82,33 @@ Also update the HTML fallback text in `index.html`. maybe a sentence on how the 
 
 ---
 
-## C11 — Outreach: draft testimonial request message
+## ~~C11 — Outreach: draft testimonial request message~~ ✅ done
 **Source:** P9 — *not a website change* yet
 Draft a message to send manually to existing clients (Skyseed, FKA) asking for a short testimonial or quote.
 Once received, add quotes to the references section.
 **Placement on site:** references/projects section, near or within the current project cards. or extra small section inbetween, we'll need to experiment here.
+
+### Requirements for the message
+
+- **Short.** 3–5 sentences. Clients are busy, don't front-load.
+- **Personal, not a blast.** Reference the actual project by name. It should feel like Sehera or Denise wrote it, not a PR agency.
+- **Specific ask.** One quote, 1–3 sentences, in their own words. Not a formal testimonial, not a form. Just: what was it like to work with us?
+- **Set the bar low.** One sentence is enough. Anonymous is fine if needed.
+- **Give context.** Tell them where it'll appear — on the website, in the project section next to their card.
+- **Optional anchor question.** Offer a prompt they can riff on if they're stuck, e.g. "what changed for your team?" — makes it easier to say yes.
+
+Hallo Charlotte,
+wir bauen gerade unsere Website um und haben eine Referenz-Sektion, auf der wir aktuelle Projekte und Partnerschaften vorstellen. Hättest du Lust, uns ein kurzes Zitat zu schicken? Ein bis zwei Sätze reichen völlig! Einfach was sich für dich durch die Zusammenarbeit verändert hat oder wie fühlt es sich an mit uns zu arbeiten.
+
+Wenn du möchtest, kann das auch anonym bleiben. 
+Kein Stress, aber wir würden uns sehr freuen. 🙏
+
+Hallo Ole,
+wir würden gerne auf unserer website ein kleines Testimonial von dir stehen  haben. Ein satz reicht völlig! Wenn du möchtest, kann das auch anonym bleiben. 
+
+Hallo Simon,
+wir brauchen ein paar konkrete Zitate für unsere Website. kannst du dir vorstellen einen Satz über unsere Zusamenarbeit zu schreiben?  wie fühlt es sich an mit uns zu arbeiten, oder was ändert sich durch die arbeit mit uns? Wenn du möchtest, kann das auch anonym bleiben. 
+
 
 ---
 
