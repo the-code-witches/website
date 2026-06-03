@@ -43,11 +43,11 @@ Specificity is the goal.
 
 ---
 
-## C5 — Tandem section: add continuity framing
-**Source:** P3
-Current `about.p3`: *"We work as a tandem: a well-established powerhouse team of two giving you the service and reliability of an agency…"*
-Add: **"If one of us is unavailable, the other knows your system and can keep things moving."**
-This is the key continuity pitch — make it explicit.
+## ~~C5 — Tandem section: add continuity framing~~ ✅ done
+~~**Source:** P3~~
+~~Current `about.p3`: *"We work as a tandem: a well-established powerhouse team of two giving you the service and reliability of an agency…"*~~
+~~Add: **"If one of us is unavailable, the other knows your system and can keep things moving."**~~
+~~This is the key continuity pitch — make it explicit.~~
 
 ---
 

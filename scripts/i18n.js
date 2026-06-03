@@ -18,7 +18,7 @@ const translations = {
     "about.p2":
       "We are two experienced developers with 20+ years of combined practice in building software and data products across industries, stacks, and scales.",
     "about.p3":
-      "<b>We work as a tandem:</b> a-well established powerhouse team of two giving you the service and reliability of an agency, with the flexibility and direct communication of working with individuals.",
+      "<b>We work as a tandem:</b> a well-established powerhouse team of two giving you the service and reliability of an agency, with the flexibility and direct communication of working with individuals. If one of us is unavailable, the other knows your system and can keep things moving.",
     "about.sehera":
       "Sehera has been coding since forever, whether it's building spectral 3D renderers in C++ — used in major film productions — or spinning up systems in any language you can name. She's agility at work, breaking through perfectionism with quick cycles. With her warmth and can-do attitude, she keeps projects moving and people energized.",
     "about.denise":
@@ -169,7 +169,7 @@ const translations = {
     "about.p2":
       "Wir sind zwei erfahrene Entwicklerinnen mit über 20 Jahren gemeinsamer Praxis im Aufbau von Software- und Datenprodukten, branchen- und technologieübergreifend.",
     "about.p3":
-      "<b>Wir arbeiten als Tandem:</b> ein eingespieltes Powerhouse Team aus zwei, das euch die Verlässlichkeit einer Agentur mit der Flexibilität und direkten Kommunikation eines Freelancers bietet.",
+      "<b>Wir arbeiten als Tandem:</b> ein eingespieltes Powerhouse Team aus zwei, das euch die Verlässlichkeit einer Agentur mit der Flexibilität und direkten Kommunikation eines Freelancers bietet. Wenn eine von uns nicht verfügbar ist, kennt die andere euer System und kann den Ball weitertragen.",
     "about.sehera":
       "Sehera programmiert seit jeher, zu Beginn ihrer Karriere baute sie spektrale 3D-Renderer in C++ die in großen Filmproduktionen zum Einsatz kamen, später Web Systeme in jeder erdenklichen Sprache. Sie ist Agilität in Person und durchbricht immer wieder Perfektionismus mit schnellen Zyklen. Mit ihrer Wärme und ihrer Lösungsorientiertheit hält sie Projekte am Laufen und Teams motiviert.",
     "about.denise":
