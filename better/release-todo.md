@@ -27,14 +27,14 @@ Synthesized from call notes (P1–P9) + existing buyer feedback.
 
 ---
 
-## C4 — Add numbers to case studies
-**Source:** P2 + buyer feedback
-Add at least one concrete metric per current project card or just get more precise. Examples:
-- "replaced 4 separate tools with one system"
-- "what took 3 days of manual work now runs overnight"
-- "handles full operational workflow for a team of 25"
-- from hours to minutes gets specific - from 6h to 2m
-Specificity is the goal.
+## ~~C4 — Add numbers to case studies~~ ✅ done
+~~**Source:** P2 + buyer feedback~~
+~~Add at least one concrete metric per current project card or just get more precise. Examples:~~
+~~- "replaced 4 separate tools with one system"~~
+~~- "what took 3 days of manual work now runs overnight"~~
+~~- "handles full operational workflow for a team of 25"~~
+~~- from hours to minutes gets specific - from 6h to 2m~~
+~~Specificity is the goal.~~
 
 ---
 

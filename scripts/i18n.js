@@ -106,25 +106,25 @@ const translations = {
       "whatever the domain — if it runs on a computer, we've probably built something like it.",
     "range.tag.film.label": "3D movie rendering",
     "range.tag.film.outcome":
-      "researched and built a spectral c++ rendering engine. deployed in major film productions: the hobbit, tintin, and rise of the planet of the apes. parallel scene processing, cuda acceleration.",
+      "researched and built a spectral c++ rendering engine. deployed in major film productions: the hobbit, tintin, and rise of the planet of the apes. handles massive scene data in parallel.",
     "range.tag.drone.label": "drone algorithm",
     "range.tag.drone.outcome":
-      "reduced obstacle avoidance computation from hours to minutes. rewrote the algorithm in c++ by translating operational constraints directly with domain experts.",
+      "reduced obstacle avoidance computation from ~6 hours to 2 minutes. rewrote the algorithm in c++ by translating operational constraints directly with domain experts.",
     "range.tag.election.label": "survey algorithm",
     "range.tag.election.outcome":
-      "built a real-time survey weighting and live election forecasting system — from research questions to data models, algorithms, and live broadcast outputs.",
+      "built a real-time survey weighting and live election forecasting system processing ~500,000 survey answers per day — from research questions to data models, algorithms, and live broadcast outputs.",
     "range.tag.data.label": "data pipelines",
     "range.tag.data.outcome":
-      "real-time kafka pipeline combining marketing, tracking, and business data",
+      "real-time kafka pipeline combining marketing, tracking, and business data — ~200,000 active app users",
     "range.tag.bi.label": "BI & Data Analytics",
     "range.tag.bi.outcome":
-      "defined and supplied major KPIs and success metrics to stakeholders",
+      "defined and supplied major KPIs and success metrics to stakeholders — team of ~30",
     "range.tag.erp.label": "enterprise erp",
     "range.tag.erp.outcome":
-      "replaced full spreadsheet-based operations with one end-to-end system",
+      "replaced 5+ spreadsheets per season with one end-to-end system — for a team that grew from 6 to 20 people",
     "range.tag.academic.label": "booking platforms",
     "range.tag.academic.outcome":
-      "course booking, enrollment, certificates, and administration",
+      "course booking, enrollment, certificates, and administration — ~100 courses, 150 teachers, 7,000 students per year",
     "range.tag.ecommerce.label": "ecommerce solutions",
     "range.tag.ecommerce.outcome":
       "shopify customization and bespoke backend integrations",
@@ -133,7 +133,7 @@ const translations = {
       "escape room control systems — sensors, actuators, game state",
     "range.tag.hospitality.label": "offline apps",
     "range.tag.hospitality.outcome":
-      "offline recipe app for high-pressure bar service",
+      "offline recipe app for high-pressure bar service — 200+ high-class recipes",
     "range.tag.network.label": "network analysis",
     "range.tag.network.outcome":
       "twitter interaction network and political data visualization",
@@ -257,25 +257,25 @@ const translations = {
       "egal welche domäne — wenn es auf einem computer läuft, haben wir wahrscheinlich schon etwas ähnliches gebaut.",
     "range.tag.film.label": "3D-film-rendering",
     "range.tag.film.outcome":
-      "spektralen c++-rendering-engine entwickelt und in major-filmproduktionen eingesetzt: the hobbit, tintin und rise of the planet of the apes. parallele szenenverarbeitung, cuda-beschleunigung.",
+      "spektralen c++-rendering-engine entwickelt und in major-filmproduktionen eingesetzt: the hobbit, tintin und rise of the planet of the apes. verarbeitet massive szenendaten parallel.",
     "range.tag.drone.label": "drohnen-algorithmus",
     "range.tag.drone.outcome":
-      "kollisionsvermeidungs-berechnung von stunden auf minuten reduziert. algorithmus in c++ neu geschrieben — operationelle anforderungen direkt mit domänenexperten erarbeitet.",
+      "kollisionsvermeidungs-berechnung von ~6 stunden auf 2 minuten reduziert. algorithmus in c++ neu geschrieben — operationelle anforderungen direkt mit domänenexperten erarbeitet.",
     "range.tag.election.label": "umfrage-algorithmus",
     "range.tag.election.outcome":
-      "echtzeit-umfragewichtungs- und live-wahlprognose-system entwickelt — von forschungsfragen zu datenmodellen, algorithmen und live-ausspielungen.",
+      "echtzeit-umfragewichtungs- und live-wahlprognose-system entwickelt — ~500.000 umfrageantworten pro tag verarbeitet. von forschungsfragen zu datenmodellen, algorithmen und live-ausspielungen.",
     "range.tag.data.label": "datenpipelines",
     "range.tag.data.outcome":
-      "echtzeit-kafka-pipeline für marketing-, tracking- und business-daten",
+      "echtzeit-kafka-pipeline für marketing-, tracking- und business-daten — ~200.000 aktive app-nutzer",
     "range.tag.bi.label": "BI & Datenanalyse",
     "range.tag.bi.outcome":
-      "wesentliche KPIs und erfolgskennzahlen für stakeholder definiert und bereitgestellt",
+      "wesentliche KPIs und erfolgskennzahlen für stakeholder definiert und bereitgestellt — team von ~30 personen",
     "range.tag.erp.label": "enterprise erp",
     "range.tag.erp.outcome":
-      "spreadsheet-basierte prozesse durch ein end-to-end-system ersetzt",
+      "5+ spreadsheets pro saison durch ein end-to-end-system ersetzt — für ein team, das von 6 auf 20 personen gewachsen ist",
     "range.tag.academic.label": "buchungsplattformen",
     "range.tag.academic.outcome":
-      "kursbuchung, einschreibung, zertifikate und verwaltung",
+      "kursbuchung, einschreibung, zertifikate und verwaltung — ~100 kurse, 150 lehrkräfte, 7.000 studierende pro jahr",
     "range.tag.ecommerce.label": "ecommerce solutions",
     "range.tag.ecommerce.outcome":
       "shopify-anpassung und individuelle backend-integrationen",
@@ -284,7 +284,7 @@ const translations = {
       "escape-room-steuerung — sensoren, aktoren, spielzustand",
     "range.tag.hospitality.label": "offline-apps",
     "range.tag.hospitality.outcome":
-      "offline-rezept-app für stressige bar-umgebungen",
+      "offline-rezept-app für stressige bar-umgebungen — 200+ hochwertige rezepte",
     "range.tag.network.label": "netzwerkanalyse",
     "range.tag.network.outcome":
       "twitter-interaktionsnetzwerk und politische datenvisualisierung",
