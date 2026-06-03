@@ -4,12 +4,12 @@ Synthesized from call notes (P1–P9) + existing buyer feedback.
 
 ---
 
-## C1 — Hero: update poem3 line (EN)
-**Source:** call note + explicit instruction
-Replace EN:
-> `"a legacy system nobody wants to touch"`
-→ `"A legacy system that everybody wants to rewrite with AI"`
-DE translation already corect.
+## ~~C1 — Hero: update poem3 line (EN)~~ ✅ done
+~~**Source:** call note + explicit instruction~~
+~~Replace EN:~~
+~~`"a legacy system nobody wants to touch"`~~
+~~→ `"A legacy system that everybody wants to rewrite with AI"`~~
+~~DE translation already correct.~~
 
 ---
 
@@ -76,11 +76,11 @@ Also update the HTML fallback text in `index.html`. maybe a sentence on how the 
 
 ---
 
-## C10 — Budget reassurance
-**Source:** P8
-Add somewhere near contact CTA or services bottom:
-> "Not sure if your budget fits? Ask anyway."
-Placement: contact section or below the service-steps onramp line.
+## ~~C10 — Budget reassurance~~ ✅ done
+~~**Source:** P8~~
+~~Add somewhere near contact CTA or services bottom:~~
+~~"Not sure if your budget fits? Ask anyway."~~
+~~Placement: contact section or below the service-steps onramp line.~~
 
 ---
 

@@ -261,8 +261,8 @@ Use the existing color-band design language as visual separators between section
 
 ## Summary — If you only do 5 things
 
-1. **Rewrite the hero** — problem-first copy (30 min, transformative)
-2. **Add the domain breadth section** — film, drones, elections are invisible (1–2h, biggest credibility gap)
-3. **Rewrite project cards** as outcome stories (1–2h)
-4. **Fix section order** — About moves after Projects (1h)
+1. ~~**Rewrite the hero** — problem-first copy (30 min, transformative)~~ ✅ done
+2. ~~**Add the domain breadth section** — film, drones, elections are invisible (1–2h, biggest credibility gap)~~ ✅ done
+3. ~~**Rewrite project cards** as outcome stories (1–2h)~~ ✅ done
+4. ~~**Fix section order** — About moves after Projects (1h)~~ ✅ done
 5. **Reach out for testimonials today** — even one quote changes the page
