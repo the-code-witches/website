@@ -9,9 +9,10 @@ const translations = {
     "hero.poem1": "A pioneering vision with no clear path yet",
     "hero.poem2": "Processes that are 80% workarounds",
     "hero.poem3": "A legacy system everyone wants to rewrite with AI",
-    "hero.poem4": "We hold the complexity, <span style='white-space:nowrap'>so you can lead</span>",
+    "hero.poem4":
+      "We hold the complexity, <span style='white-space:nowrap'>so you can lead</span>",
     "hero.audience":
-      "we partner with smes, technical teams, and founders<br>building software that serves people, not the other way around",
+      "we partner with smes, technical teams, and founders<br>building tech products and digital processes that serve people, not the other way around",
     "about.title": "about",
     "about.p1":
       "rebels by heart, coders by craft. We partner up with changemakers and teams who want to support their work with the right digital tools or want to build their own tech product. Our passion lies in understanding complex systems, writing clean code, and creating clear communication that builds bridges.",
@@ -153,7 +154,8 @@ const translations = {
     "hero.poem1": "Eine Vision, für die Klarheit oder Expertise fehlt",
     "hero.poem2": "Prozesse, die zu 80% aus Workarounds bestehen",
     "hero.poem3": "Ein Legacy-System, das alle mit KI neu schreiben wollen",
-    "hero.poem4": "Wir tragen die Komplexität, <span style='white-space:nowrap'>damit ihr führen könnt</span>",
+    "hero.poem4":
+      "Wir tragen die Komplexität, <span style='white-space:nowrap'>damit ihr führen könnt</span>",
     "hero.audience":
       "Wir arbeiten mit KMUs, technischen Teams und Gründer*innen<br>und bauen technische Produkte und digitale Prozesse, die euch wirklich dienen",
     "about.title": "über uns",
