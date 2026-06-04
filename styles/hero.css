@@ -60,17 +60,17 @@
 
 .hero__title {
   font-size: clamp(3.5rem, 4.5vw, 4.5rem);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-light);
   color: var(--text);
-  margin: 0;
+  margin: 0 0 -0.5rem;
   line-height: 1.05;
 }
 
 .hero__sep {
   border: none;
   border-top: 1px solid rgba(21, 16, 19, 0.15);
-  width: 100%;
-  margin: 1.25rem 0;
+  width: 90%;
+  margin: 0;
 }
 
 .hero__tagline {
@@ -130,28 +130,6 @@
   font-weight: var(--font-weight-light);
   line-height: 1.75;
   margin: 0;
-  white-space: nowrap;
-}
-
-.hero__audience-break {
-  display: none;
-}
-
-@media (max-width: 1450px) {
-  .hero__audience {
-    white-space: normal;
-    max-width: 80%;
-  }
-
-  .hero__audience-break {
-    display: inline;
-  }
-}
-
-@media (max-width: 700px) {
-  .hero__audience {
-    max-width: none;
-  }
 }
 
 /* Desktop: preserve 1:2 angle, bottom vertex at lower corners */

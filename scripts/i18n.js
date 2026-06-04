@@ -11,7 +11,7 @@ const translations = {
     "hero.poem3": "A legacy system everyone wants to rewrite with AI",
     "hero.poem4": "We hold the complexity, <span style='white-space:nowrap'>so you can lead</span>",
     "hero.audience":
-      "we partner with smes, technical teams, and founders — building software that serves people, not the other way around",
+      "we partner with smes, technical teams, and founders<br>building software that serves people, not the other way around",
     "about.title": "about",
     "about.p1":
       "rebels by heart, coders by craft. We partner up with changemakers and teams who want to support their work with the right digital tools or want to build their own tech product. Our passion lies in understanding complex systems, writing clean code, and creating clear communication that builds bridges.",
@@ -155,7 +155,7 @@ const translations = {
     "hero.poem3": "Ein Legacy-System, das alle mit KI neu schreiben wollen",
     "hero.poem4": "Wir tragen die Komplexität, <span style='white-space:nowrap'>damit ihr führen könnt</span>",
     "hero.audience":
-      "Wir arbeiten mit KMUs, technischen Teams und Gründer*innen und bauen technische Produkte und digitale Prozesse, die euch wirklich dienen",
+      "Wir arbeiten mit KMUs, technischen Teams und Gründer*innen<br>und bauen technische Produkte und digitale Prozesse, die euch wirklich dienen",
     "about.title": "über uns",
     "about.p1":
       "rebels by heart, coders by craft. Wir arbeiten mit Entscheidungsträger*innen und Teams, die ihre Arbeit mit den richtigen digitalen Werkzeugen unterstützen oder ihr eigenes Tech-Produkt entwickeln möchten. Unsere Leidenschaft liegt darin, komplexe Systeme zu verstehen, sauberen Code zu schreiben und klare Kommunikation zu schaffen, die Brücken baut.",
